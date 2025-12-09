@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7icb6k3ji63o"]
+
+[ext_resource type="Script" uid="uid://cvuykgg6tl1wj" path="res://code/game/environment/gridlayer.gd" id="1_2mp2b"]
+[ext_resource type="Script" uid="uid://dvm8ql4nk3p66" path="res://code/common/basicmovement.gd" id="2_2mp2b"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7tku2"]
+particle_flag_disable_z = true
+angular_velocity_min = -157.97
+angular_velocity_max = 139.75
+gravity = Vector3(0, 98, 0)
+scale_min = 20.0
+scale_max = 90.0
+
+[node name="MoveGym" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Environment"]
+script = ExtResource("1_2mp2b")
+
+[node name="Player" type="Sprite2D" parent="."]
+script = ExtResource("2_2mp2b")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Player"]
+position = Vector2(314, 231)
+process_material = SubResource("ParticleProcessMaterial_7tku2")
+
+[node name="DestinationPointer" type="Sprite2D" parent="Player"]
