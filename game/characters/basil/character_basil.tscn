@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bosdb7rkslkgd"]
+
+[ext_resource type="Script" uid="uid://3vxki4jth1ld" path="res://game/characters/basil/character_basil.gd" id="1_ikao3"]
+[ext_resource type="Texture2D" uid="uid://cdjjo3o6ycwdn" path="res://art/character/player_idle.png" id="2_lqm0a"]
+
+[node name="CharacterBasil" type="Area2D"]
+script = ExtResource("1_ikao3")
+flips_when = 2
+dialog_pos = Vector2(-57.062347, -353.78653)
+popochiu_placeholder = null
+script_name = "Basil"
+description = "Basil"
+cursor = 8
+interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -129)
+texture = ExtResource("2_lqm0a")
