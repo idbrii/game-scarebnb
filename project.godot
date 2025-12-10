@@ -33,10 +33,13 @@ G="*res://addons/popochiu/engine/interfaces/i_graphic_interface.gd"
 
 [display]
 
-window/size/viewport_width=3840
-window/size/viewport_height=2160
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/mode=2
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/size/width=1920
 window/size/height=1080
 
@@ -254,10 +257,6 @@ project/assembly_name="ScareBnB"
 [physics]
 
 common/enable_pause_aware_picking=true
-
-[popochiu]
-
-pixel/pixel_art_textures=true
 
 [rendering]
 
