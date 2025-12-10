@@ -17,8 +17,6 @@ popochiu_placeholder = null
 [node name="WalkableAreas" type="Node2D" parent="."]
 
 [node name="Floor" parent="WalkableAreas" instance=ExtResource("2_vs6xq")]
-position = Vector2(960, 540)
-interaction_polygon = [PackedVector2Array(-880, 358, 271, 111, 874, 356, 889, 501, -874, 493)]
 
 [node name="Props" type="Node2D" parent="."]
 
@@ -39,7 +37,7 @@ interaction_polygon = PackedVector2Array(-947, 442, -593, 415, -456, 535, -956, 
 
 [node name="Window" parent="Hotspots" instance=ExtResource("6_tdeui")]
 position = Vector2(960, 540)
-baseline = 169
+baseline = -542
 walk_to_point = Vector2(473.6173, 155.9704)
 look_at_point = Vector2(604.8607, -117.928894)
 interaction_polygon = PackedVector2Array(467, -260, 729, -315, 739, -3, 428, -22)
