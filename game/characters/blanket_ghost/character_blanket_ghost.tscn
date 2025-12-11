@@ -5,6 +5,7 @@
 
 [node name="CharacterBlanketGhost" type="Area2D"]
 script = ExtResource("1_aws6g")
+text_color = Color(0.32941177, 0.4392157, 0.4392157, 1)
 flips_when = 2
 dialog_pos = Vector2(-16.59314, -335.76694)
 popochiu_placeholder = null

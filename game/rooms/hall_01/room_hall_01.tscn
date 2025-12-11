@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bc5gy710a8e7u"]
+[gd_scene load_steps=10 format=3 uid="uid://bc5gy710a8e7u"]
 
 [ext_resource type="Script" uid="uid://dwkab5ayf10hk" path="res://game/rooms/hall_01/room_hall_01.gd" id="1_0y88w"]
 [ext_resource type="PackedScene" uid="uid://dk45ihc6j0pa3" path="res://game/rooms/hall_01/props/background/prop_background.tscn" id="2_gwg2h"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://qbq2bh38tl2q" path="res://game/rooms/hall_01/hotspots/library_door/hotspot_library_door.tscn" id="6_4kf0y"]
 [ext_resource type="PackedScene" uid="uid://cs2cw3j6yopr6" path="res://game/rooms/hall_01/hotspots/pirate_door/hotspot_pirate_door.tscn" id="7_b1ob0"]
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="8_cbabt"]
+[ext_resource type="PackedScene" uid="uid://d31nllkuxefhb" path="res://game/characters/headphone_ghost/character_headphone_ghost.tscn" id="9_hloqe"]
 
 [node name="RoomHall01" type="Node2D"]
 script = ExtResource("1_0y88w")
@@ -62,3 +63,8 @@ interaction_polygon = PackedVector2Array(423, -113, 562, -184, 568, 398, 421, 31
 position = Vector2(1068, 1067)
 baseline = -1069
 look_at_point = Vector2(149.99988, 47.999878)
+
+[node name="CharacterHeadphoneGhost *" parent="Characters" instance=ExtResource("9_hloqe")]
+position = Vector2(916, 863)
+walk_to_point = Vector2(83.69141, 5.7061768)
+look_at_point = Vector2(-3.8041992, -79.88733)

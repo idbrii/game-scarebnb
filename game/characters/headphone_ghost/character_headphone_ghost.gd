@@ -18,11 +18,7 @@ func _on_room_set() -> void:
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    # Replace the call to E.command_fallback() to implement your code.
-    E.command_fallback()
-    # For example, you can make the player character walk to this character, gaze at it, and then
-    # say something:
-#    await InteractUtil.approach_and_say("Hi!")
+    await InteractUtil.approach_and_say("Hi! Whatcha listening to?")
 
 
 # Teleport: Node is double left clicked.
@@ -34,11 +30,7 @@ func _on_double_click() -> void:
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    # Replace the call to E.command_fallback() to implement your code.
-    E.command_fallback()
-    # For example, you can make the player character gaze at this character and then say something:
-#    await InteractUtil.approach_and_say("Under the table was a small coin.")
-#    await InteractUtil.face_and_say("A window.")
+    await InteractUtil.face_and_say("One of our spectral... er, special guests.")
 
 
 # When the node is middle clicked
