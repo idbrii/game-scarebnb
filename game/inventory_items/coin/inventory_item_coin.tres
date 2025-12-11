@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://rsus2yx4gg2l"]
+
+[ext_resource type="Script" path="res://game/inventory_items/coin/inventory_item_coin_state.gd" id="1_cb6ey"]
+
+[resource]
+resource_name = "Coin"
+script = ExtResource("1_cb6ey")
+script_name = "Coin"
+scene = "res://game/inventory_items/coin/inventory_item_coin.tscn"

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c62thmb51laxx"]
+
+[ext_resource type="Script" uid="uid://cb15hjyyjch" path="res://game/inventory_items/coin/inventory_item_coin.gd" id="1_4ptxd"]
+[ext_resource type="Texture2D" uid="uid://boienaxwkh0or" path="res://art/inventory/item_coin.png" id="1_nvmwq"]
+
+[node name="ItemCoin" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_nvmwq")
+stretch_mode = 5
+script = ExtResource("1_4ptxd")
+script_name = "Coin"
+description = "Coin"
