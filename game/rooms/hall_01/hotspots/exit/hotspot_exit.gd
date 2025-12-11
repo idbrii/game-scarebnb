@@ -8,6 +8,7 @@ extends PopochiuHotspot
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
+    # TODO(dbriscoe): Need somewhere else to go.
     await RoomUtil.use_door(R.Hall01)
 
 
@@ -17,7 +18,7 @@ func _on_double_click() -> void:
 
 # When the node is right clicked
 func _on_right_click() -> void:
-    await RoomUtil.look_door("This is the exit back to the {0}.".format([InteractUtil.get_room_pretty_name(R.Hall01)]))
+    await RoomUtil.look_door("That way goes to the {0}.".format([InteractUtil.get_room_pretty_name(R.Hall01)]))
 
 
 # When the node is middle clicked

@@ -34,3 +34,11 @@ I got stuck before moving on.
 
 Gui inconsistently uses "cancel" vs "Cancel".
 
+
+# Functionality
+
+* Creating a background should lock it by default. Annoying to try to set walkable areas and constantly moving the background by mistake.
+
+* Bug: Sometimes when I create a hotspot, it disappears from the Popochiu > Rooms > Hotspots list. I'm not sure when it disappears, but I noticed after I setup the interaction polygon and started editing its script.
+
+* Would be nice to give pretty names to rooms so you can reference them from script. That way it's much easier to rename the room later. I could do this with a custom subclass of PopochiuRoom, but feels like a missing piece. Instead, I implemented a map function.

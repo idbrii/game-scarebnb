@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://bc5gy710a8e7u"]
+
+[ext_resource type="Script" uid="uid://dwkab5ayf10hk" path="res://game/rooms/hall_01/room_hall_01.gd" id="1_0y88w"]
+[ext_resource type="PackedScene" uid="uid://dk45ihc6j0pa3" path="res://game/rooms/hall_01/props/background/prop_background.tscn" id="2_gwg2h"]
+[ext_resource type="PackedScene" uid="uid://v1r532gqu0nu" path="res://game/rooms/hall_01/walkable_areas/floor/walkable_area_floor.tscn" id="2_qa6m4"]
+[ext_resource type="Texture2D" uid="uid://dt4bj2okyului" path="res://art/room/hall1.png" id="3_oqh4r"]
+[ext_resource type="PackedScene" uid="uid://dca6dkwrmcd82" path="res://game/rooms/hall_01/hotspots/exit/hotspot_exit.tscn" id="5_wp7dk"]
+[ext_resource type="PackedScene" uid="uid://qbq2bh38tl2q" path="res://game/rooms/hall_01/hotspots/library_door/hotspot_library_door.tscn" id="6_4kf0y"]
+[ext_resource type="PackedScene" uid="uid://cs2cw3j6yopr6" path="res://game/rooms/hall_01/hotspots/pirate_door/hotspot_pirate_door.tscn" id="7_b1ob0"]
+[ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="8_cbabt"]
+
+[node name="RoomHall01" type="Node2D"]
+script = ExtResource("1_0y88w")
+script_name = "Hall01"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Floor" parent="WalkableAreas" instance=ExtResource("2_qa6m4")]
+position = Vector2(417, 1062)
+interaction_polygon = [PackedVector2Array(519, -329, 747, -341, 1284, 7, -10, 10)]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_gwg2h")]
+position = Vector2(960, 540)
+texture = ExtResource("3_oqh4r")
+interaction_polygon = PackedVector2Array(-60, 226, 271, 247, 715, 518, -528, 521)
+metadata/_edit_lock_ = true
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Exit" parent="Hotspots" instance=ExtResource("5_wp7dk")]
+position = Vector2(960, 540)
+script_name = "NorthExit"
+interaction_polygon = PackedVector2Array(-86, -47, 274, -47, 295, 248, -77, 233)
+
+[node name="LibraryDoor" parent="Hotspots" instance=ExtResource("6_4kf0y")]
+position = Vector2(960, 540)
+baseline = 478
+walk_to_point = Vector2(-540.00006, 507)
+look_at_point = Vector2(230.99988, 443.99976)
+interaction_polygon = PackedVector2Array(-830, -220, -585, -136, -590, 538, -821, 545)
+
+[node name="PirateDoor" parent="Hotspots" instance=ExtResource("7_b1ob0")]
+position = Vector2(960, 540)
+baseline = 316
+walk_to_point = Vector2(401.99988, 340.5)
+look_at_point = Vector2(200.99988, 316.49988)
+interaction_polygon = PackedVector2Array(423, -113, 562, -184, 568, 398, 421, 314)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="CharacterBasil *" parent="Characters" instance=ExtResource("8_cbabt")]
+position = Vector2(1068, 1067)
+baseline = -1069
+look_at_point = Vector2(149.99988, 47.999878)

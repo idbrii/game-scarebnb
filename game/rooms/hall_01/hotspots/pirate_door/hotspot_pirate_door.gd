@@ -8,16 +8,18 @@ extends PopochiuHotspot
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
-    await RoomUtil.use_door(R.Hall01)
+    await C.player.say("It's locked.")
+    #~ await RoomUtil.use_door(R.Bedroom01)
 
 
 func _on_double_click() -> void:
-    await RoomUtil.teleport_door(R.Hall01)
+    await _on_click()
+    #~ await RoomUtil.teleport_door(R.Bedroom01)
 
 
 # When the node is right clicked
 func _on_right_click() -> void:
-    await RoomUtil.look_door("This is the exit back to the {0}.".format([InteractUtil.get_room_pretty_name(R.Hall01)]))
+    await RoomUtil.look_door("The Pirate Room is under repairs\nafter the last guest brought a cannon.")
 
 
 # When the node is middle clicked

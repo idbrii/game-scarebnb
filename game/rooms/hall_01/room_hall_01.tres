@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://drp0rw4ii4rgk"]
+
+[ext_resource type="Script" uid="uid://b2r1rkrg7dexj" path="res://game/rooms/hall_01/room_hall_01_state.gd" id="1_gd0ru"]
+
+[resource]
+resource_name = "Hall01"
+script = ExtResource("1_gd0ru")
+script_name = "Hall01"
+scene = "uid://bc5gy710a8e7u"
