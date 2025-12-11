@@ -8,7 +8,7 @@ from pathlib import Path
 import git
 
 # Configuration
-project = "TODO"
+project = "scarebnb"
 itch_project = f"idbrii/{project}"
 export_root = Path("C:/code/builds/") / project
 
