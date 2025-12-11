@@ -1,0 +1,23 @@
+# Unifies coding style for different editors and IDEs.
+# See also http://EditorConfig.org
+
+# Avoid using [*] so we don't mess up filetypes we don't know about.
+
+[*.{gd,h,c,hpp,cpp,inl,lua,bat}]
+indent_style = tab
+indent_size = 4
+
+charset = utf-8
+end_of_line = lf
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+
+[*.py]
+indent_size = 4
+indent_style = space
+end_of_line = lf
+
+[Makefile]
+indent_style = tab
+end_of_line = lf
