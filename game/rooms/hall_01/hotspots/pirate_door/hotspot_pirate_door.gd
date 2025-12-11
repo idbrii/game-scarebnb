@@ -8,7 +8,7 @@ extends PopochiuHotspot
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
-    await C.player.say("It's locked.")
+    await RoomUtil.look_door("It's locked.")
     #~ await RoomUtil.use_door(R.Bedroom01)
 
 

@@ -19,8 +19,6 @@ popochiu_placeholder = null
 [node name="WalkableAreas" type="Node2D" parent="."]
 
 [node name="Floor" parent="WalkableAreas" instance=ExtResource("2_qa6m4")]
-position = Vector2(417, 1062)
-interaction_polygon = [PackedVector2Array(519, -329, 747, -341, 1284, 7, -10, 10)]
 
 [node name="Props" type="Node2D" parent="."]
 
@@ -35,20 +33,23 @@ metadata/_edit_lock_ = true
 [node name="Exit" parent="Hotspots" instance=ExtResource("5_wp7dk")]
 position = Vector2(960, 540)
 script_name = "NorthExit"
+baseline = -534
+walk_to_point = Vector2(89.114746, 208.86243)
+look_at_point = Vector2(116.96301, 86.32977)
 interaction_polygon = PackedVector2Array(-86, -47, 274, -47, 295, 248, -77, 233)
 
 [node name="LibraryDoor" parent="Hotspots" instance=ExtResource("6_4kf0y")]
 position = Vector2(960, 540)
-baseline = 478
+baseline = 441
 walk_to_point = Vector2(-540.00006, 507)
-look_at_point = Vector2(230.99988, 443.99976)
+look_at_point = Vector2(-710.2737, 76.40173)
 interaction_polygon = PackedVector2Array(-830, -220, -585, -136, -590, 538, -821, 545)
 
 [node name="PirateDoor" parent="Hotspots" instance=ExtResource("7_b1ob0")]
 position = Vector2(960, 540)
-baseline = 316
-walk_to_point = Vector2(401.99988, 340.5)
-look_at_point = Vector2(200.99988, 316.49988)
+baseline = 274
+walk_to_point = Vector2(396.43018, 357.20886)
+look_at_point = Vector2(498.97717, 26.877014)
 interaction_polygon = PackedVector2Array(423, -113, 562, -184, 568, 398, 421, 314)
 
 [node name="Regions" type="Node2D" parent="."]

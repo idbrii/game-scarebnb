@@ -17,6 +17,7 @@ Doesn't work. but the next section addresses:
 > If you ran the game, you may have seen that, while the character moves towards the window, a message is printed on top of the scene: Can't INTERACT with it.
 I got stuck before moving on.
 
+It wasn't clear to me that "Look At Point" means "this is where the character looks" as opposed to "this is where we walk when trying to look". "Look At Point" doesn't appear anywhere in the docs.
 
 
 # Template
