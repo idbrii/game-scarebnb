@@ -6,7 +6,8 @@ const Data := preload('room_bedroom_01_state.gd')
 var state: Data = load("res://game/rooms/bedroom_01/room_bedroom_01.tres")
 
 
-#region Virtual ####################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func _on_room_entered() -> void:
@@ -27,4 +28,4 @@ func _on_room_exited() -> void:
 	pass
 
 
-#endregion
+

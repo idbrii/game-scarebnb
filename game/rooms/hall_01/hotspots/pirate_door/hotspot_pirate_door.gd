@@ -5,7 +5,8 @@ extends PopochiuHotspot
 # the function until the sequence of events finishes.
 
 
-#region Virtual ####################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 # When the node is clicked
 func _on_click() -> void:
     await RoomUtil.look_door("It's locked.")
@@ -38,13 +39,14 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 #        await C.player.say("No can do")
 
 
-#endregion
 
-#region Public #####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Public ░░░░ {{{1
+
 # You can add here functions triggered by the GUI commands. For example, if your GUI has a command
 # for look_at, you could have the function:
 #func on_look_at() -> void:
     #pass
 
 
-#endregion
+
