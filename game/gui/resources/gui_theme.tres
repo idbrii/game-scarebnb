@@ -1,7 +1,5 @@
-[gd_resource type="Theme" load_steps=20 format=3 uid="uid://dtl6huqxgifkk"]
+[gd_resource type="Theme" load_steps=18 format=3 uid="uid://dtl6huqxgifkk"]
 
-[ext_resource type="Texture2D" uid="uid://pl1ch71kfj72" path="res://addons/popochiu/engine/objects/gui/resources/images/check_button_checked.png" id="1_si1k4"]
-[ext_resource type="Texture2D" uid="uid://dukr75slqli45" path="res://addons/popochiu/engine/objects/gui/resources/images/check_button_unchecked.png" id="2_f3v6j"]
 [ext_resource type="Texture2D" uid="uid://cqxqfxobqltga" path="res://addons/popochiu/engine/objects/gui/resources/images/grabber.png" id="3_aqb6g"]
 [ext_resource type="Texture2D" uid="uid://d1ywqbehmtuv" path="res://addons/popochiu/engine/objects/gui/resources/images/down_arrow.png" id="4_emke0"]
 [ext_resource type="FontFile" uid="uid://mx218ma3u162" path="res://art/font/Scabber.woff" id="5_si1k4"]
@@ -72,8 +70,6 @@ Button/styles/focus = SubResource("StyleBoxEmpty_d35rj")
 Button/styles/hover = SubResource("StyleBoxFlat_27bc1")
 Button/styles/normal = SubResource("StyleBoxFlat_qtjmj")
 Button/styles/pressed = SubResource("StyleBoxFlat_unia7")
-CheckButton/icons/checked = ExtResource("1_si1k4")
-CheckButton/icons/unchecked = ExtResource("2_f3v6j")
 CheckButton/styles/disabled = SubResource("StyleBoxEmpty_31m68")
 CheckButton/styles/hover = SubResource("StyleBoxEmpty_w3oqt")
 CheckButton/styles/hover_pressed = SubResource("StyleBoxEmpty_hdknt")
