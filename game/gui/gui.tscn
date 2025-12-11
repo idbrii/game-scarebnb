@@ -1,9 +1,11 @@
-[gd_scene load_steps=35 format=3 uid="uid://cbv05upf36ljq"]
+[gd_scene load_steps=33 format=3 uid="uid://cbv05upf36ljq"]
 
 [ext_resource type="Theme" uid="uid://dtl6huqxgifkk" path="res://game/gui/resources/gui_theme.tres" id="1_tl1ue"]
 [ext_resource type="Script" uid="uid://c4pxaourtg0sk" path="res://game/gui/gui.gd" id="2_bjqyy"]
+[ext_resource type="Texture2D" uid="uid://b5hwvel7lendh" path="res://art/cursor/cursor_active.png" id="3_4jprg"]
 [ext_resource type="Texture2D" uid="uid://dkvjfroldn8un" path="res://game/gui/images/simple_click_cursor.png" id="3_jeqvj"]
 [ext_resource type="PackedScene" uid="uid://de622vimtwnhf" path="res://game/gui/components/hover_text/hover_text.tscn" id="4_4jprg"]
+[ext_resource type="Texture2D" uid="uid://cnw71jjgsm7mo" path="res://art/cursor/cursor_idle.png" id="4_qnvga"]
 [ext_resource type="PackedScene" uid="uid://cslrv1ghwp0it" path="res://game/gui/components/dialog_text/dialog_caption/dialog_caption.tscn" id="5_b83v5"]
 [ext_resource type="PackedScene" uid="uid://darbhjjla7yqw" path="res://game/gui/components/dialog_menu/dialog_menu.tscn" id="6_75iei"]
 [ext_resource type="PackedScene" uid="uid://57k5yw6o5p05" path="res://game/gui/components/inventory_bar/inventory_bar.tscn" id="7_tneg5"]
@@ -14,18 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://bmf0qah2sn4sl" path="res://game/gui/components/popups/sound_settings_popup/sound_settings_popup.tscn" id="12_unoue"]
 [ext_resource type="PackedScene" uid="uid://cx7kbwdhl0wft" path="res://game/gui/components/popups/history_popup/history_popup.tscn" id="13_l2iqn"]
 [ext_resource type="PackedScene" uid="uid://7xpx6vh01ptw" path="res://game/gui/components/popups/quit_popup/quit_popup.tscn" id="14_s50ci"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bjqyy"]
-atlas = ExtResource("3_jeqvj")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_be73h"]
-atlas = ExtResource("3_jeqvj")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0m1b2"]
-atlas = ExtResource("3_jeqvj")
-region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_brng2"]
 atlas = ExtResource("3_jeqvj")
@@ -54,10 +44,6 @@ region = Rect2(256, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_4po70"]
 atlas = ExtResource("3_jeqvj")
 region = Rect2(288, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lwin8"]
-atlas = ExtResource("3_jeqvj")
-region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c5ddb"]
 atlas = ExtResource("3_jeqvj")
@@ -95,19 +81,7 @@ region = Rect2(544, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bjqyy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_be73h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0m1b2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0m1b2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_be73h")
+"texture": ExtResource("3_4jprg")
 }],
 "loop": true,
 "name": &"active",
@@ -161,7 +135,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lwin8")
+"texture": ExtResource("4_qnvga")
 }],
 "loop": false,
 "name": &"normal",
@@ -237,7 +211,7 @@ script = ExtResource("2_bjqyy")
 texture_filter = 1
 position = Vector2(0, 4)
 sprite_frames = SubResource("SpriteFrames_tvs6t")
-animation = &"normal"
+animation = &"active"
 
 [node name="HoverText" parent="." instance=ExtResource("4_4jprg")]
 layout_mode = 1
