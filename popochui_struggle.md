@@ -43,3 +43,5 @@ Gui inconsistently uses "cancel" vs "Cancel".
 * Bug: Sometimes when I create a hotspot, it disappears from the Popochiu > Rooms > Hotspots list. I'm not sure when it disappears, but I noticed after I setup the interaction polygon and started editing its script.
 
 * Would be nice to give pretty names to rooms so you can reference them from script. That way it's much easier to rename the room later. I could do this with a custom subclass of PopochiuRoom, but feels like a missing piece. Instead, I implemented a map function.
+
+* It's not clear the the project setting "text_speed" is the time between characters. I found it very confusing that it only went up to 0.1. However, it looks like Godot doesn't yet support setting tooltips on these settings: https://github.com/godotengine/godot-proposals/discussions/8224
