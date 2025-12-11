@@ -17,7 +17,8 @@ func _on_click() -> void:
         await C.player.face_right()
         await E.wait(0.3)
     await C.player.face_clicked()
-    await C.player.say("I wanted to open the window,\nbut I can't find the handle.")
+    await C.player.say("I wanted to open the window,")
+    await C.player.say("but I can't find the handle.")
 
 
 func _on_double_click() -> void:
@@ -30,11 +31,9 @@ func _on_double_click() -> void:
 
 # When the node is right clicked
 func _on_right_click() -> void:
-    # Replace the call to E.command_fallback() with your code.
-    PopochiuUtils.e.command_fallback()
-    # For example, you can make the player character gaze at this hotspot and then say something:
-#    await C.player.face_clicked()
-#    await C.player.say("A window")
+    await C.player.face_clicked()
+    await C.player.say("The weather is so nice today.")
+    await C.player.say("Can I open that window?")
 
 
 # When the node is middle clicked
