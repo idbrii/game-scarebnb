@@ -18,8 +18,8 @@ script = ExtResource("2_18djq")
 unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 0
-offset_right = 36.0
-offset_bottom = 24.0
+offset_right = 282.0
+offset_bottom = 188.0
 
 [node name="Box" type="HBoxContainer" parent="PanelContainer"]
 unique_name_in_owner = true

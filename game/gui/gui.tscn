@@ -231,10 +231,12 @@ layout_mode = 1
 
 [node name="InventoryBar" parent="." instance=ExtResource("7_tneg5")]
 layout_mode = 1
+input_zone_height = 200
 
 [node name="SettingsBar" parent="." instance=ExtResource("8_wh5po")]
 unique_name_in_owner = true
 layout_mode = 1
+input_zone_height = 200
 
 [node name="SystemText" parent="." instance=ExtResource("9_vmv0f")]
 layout_mode = 1
