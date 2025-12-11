@@ -8,17 +8,17 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5r7t1"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6kt5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jecay"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kq5y2"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qh6vf"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iv4hg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vfob0"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iv4hg"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qh6vf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kq5y2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jecay"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6kt5"]
 
 [node name="TextSettingsPopup" type="Control" groups=["popochiu_gui_popup"]]
 layout_mode = 3
@@ -80,6 +80,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Overlay/PanelContainer/VBoxContainer/BodyContainer/TextSpeedContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Typing speed"
 
 [node name="TextSpeed" type="HSlider" parent="Overlay/PanelContainer/VBoxContainer/BodyContainer/TextSpeedContainer"]
@@ -96,6 +97,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Overlay/PanelContainer/VBoxContainer/BodyContainer/DialogStyleContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Style"
 horizontal_alignment = 1
 
@@ -107,6 +109,7 @@ size_flags_horizontal = 3
 selected = 0
 item_count = 3
 popup/item_0/text = "Above character"
+popup/item_0/id = 0
 popup/item_1/text = "Portrait"
 popup/item_1/id = 1
 popup/item_2/text = "Caption"
@@ -117,6 +120,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Overlay/PanelContainer/VBoxContainer/BodyContainer/ContinueModeContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Autoadvance"
 horizontal_alignment = 1
 
@@ -124,14 +128,14 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 6
 size_flags_vertical = 0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_y6kt5")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_jecay")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kq5y2")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_qh6vf")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_vfob0")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_iv4hg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vfob0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qh6vf")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kq5y2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jecay")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y6kt5")
 icon_alignment = 2
 
 [node name="FooterContainer" type="HBoxContainer" parent="Overlay/PanelContainer/VBoxContainer"]
@@ -143,7 +147,7 @@ alignment = 1
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
-text = "OK"
+text = "Okay"
 
 [node name="Cancel" type="Button" parent="Overlay/PanelContainer/VBoxContainer/FooterContainer"]
 unique_name_in_owner = true

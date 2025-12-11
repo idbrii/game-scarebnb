@@ -30,7 +30,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_1f74v")
 
 [node name="PanelContainer" type="PanelContainer" parent="Overlay"]
-custom_minimum_size = Vector2(256, 0)
+custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -38,6 +38,7 @@ theme_override_styles/panel = ExtResource("3_ou8w6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Overlay/PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 80
 
 [node name="HeaderContainer" type="HBoxContainer" parent="Overlay/PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -62,6 +63,7 @@ texture_hover = ExtResource("5_8umn4")
 [node name="Question" type="Label" parent="Overlay/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
 text = "Are you sure you want to quit?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -75,7 +77,7 @@ alignment = 1
 [node name="Ok" type="Button" parent="Overlay/PanelContainer/VBoxContainer/FooterContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "OK"
+text = "Okay"
 
 [node name="Cancel" type="Button" parent="Overlay/PanelContainer/VBoxContainer/FooterContainer"]
 unique_name_in_owner = true
