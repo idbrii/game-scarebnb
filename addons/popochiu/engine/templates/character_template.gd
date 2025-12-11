@@ -9,36 +9,36 @@ const Data := preload('character_state_template.gd')
 var state: Data = null
 
 
-#region Virtual ####################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
+
 # When the room in which this node is located finishes being added to the tree
 func _on_room_set() -> void:
     pass
 
 
-# When the node is clicked
+# Interact: When the node is left clicked.
 func _on_click() -> void:
     # Replace the call to E.command_fallback() to implement your code.
     PopochiuUtils.e.command_fallback()
     # For example, you can make the player character walk to this character, gaze at it, and then
     # say something:
-#    await C.player.walk_to_clicked()
-#    await C.player.face_clicked()
-#    await C.player.say("Hi!")
+#    await InteractUtil.approach_and_say("Hi!")
 
 
+# Teleport: Node is double left clicked.
 func _on_double_click() -> void:
     # Replace the call to E.command_fallback() with your code.
     PopochiuUtils.e.command_fallback()
     # For example, you could make the player instantly do something instead of walking there first
 
 
-# When the node is right clicked
+# Look: When the node is right clicked.
 func _on_right_click() -> void:
     # Replace the call to E.command_fallback() to implement your code.
     PopochiuUtils.e.command_fallback()
     # For example, you can make the player character gaze at this character and then say something:
-#    await C.player.face_clicked()
-#    await C.player.say("Is someone...")
+#    await InteractUtil.approach_and_say("Under the table was a small coin.")
+#    await InteractUtil.face_and_say("A window.")
 
 
 # When the node is middle clicked

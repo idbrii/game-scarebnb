@@ -5,8 +5,9 @@ extends PopochiuProp
 # the function until the sequence of events finishes.
 
 
-#region Virtual ####################################################################################
-# When the node is clicked
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
+
+# Interact: When the node is left clicked.
 func _on_click() -> void:
     # Replace the call to E.command_fallback() to implement your code.
     PopochiuUtils.e.command_fallback()
@@ -14,22 +15,22 @@ func _on_click() -> void:
     # something:
 #    await C.player.walk_to_clicked()
 #    await C.player.face_clicked()
-#    await C.player.say("Not picking that up!")
+#    await InteractUtil.approach_and_say("Not picking that up!")
 
 
+# Teleport: Node is double left clicked.
 func _on_double_click() -> void:
     # Replace the call to E.command_fallback() with your code.
     PopochiuUtils.e.command_fallback()
     # For example, you could make the player instantly do something instead of walking there first
 
 
-# When the node is right clicked
+# Look: When the node is right clicked.
 func _on_right_click() -> void:
     # Replace the call to E.command_fallback() to implement your code.
     PopochiuUtils.e.command_fallback()
-    # For example, you can make the player character gaze at this prop and then say something:
-#    await C.player.face_clicked()
-#    await C.player.say("A deck of cards")
+    # For example, you can make the player character gaze at this character and then say something:
+#    await InteractUtil.face_and_say("A deck of cards")
 
 
 # When the node is middle clicked
