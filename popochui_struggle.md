@@ -1,4 +1,6 @@
-Issues during dev:
+Issues during dev
+
+# Following Tutorial
 
 * When I created room Bedroom, I think I added my background texture directly to the Background scene instead of to the node in the Room scene. This meant that my character never showed up.
     https://carenalgas.github.io/popochiu/how-to-develop-a-game/create-the-first-room/
@@ -8,6 +10,16 @@ Issues during dev:
 
 * Doesn't show how to make it the main scene:
     https://carenalgas.github.io/popochiu/how-to-develop-a-game/create-the-first-room/
+
+> Clicking on the hotspot, the character will move to the point we defined and face the window.
+https://carenalgas.github.io/popochiu/how-to-develop-a-game/create-the-first-room/
+Doesn't work. but the next section addresses:
+> If you ran the game, you may have seen that, while the character moves towards the window, a message is printed on top of the scene: Can't INTERACT with it.
+I got stuck before moving on.
+
+
+
+# Template
 
 * Setting 2D gui with a large window doesn't scale the gui scene
     * Need to adjust:
@@ -20,12 +32,5 @@ Issues during dev:
         * all popups should double in min size
 
 
-> Clicking on the hotspot, the character will move to the point we defined and face the window.
-https://carenalgas.github.io/popochiu/how-to-develop-a-game/create-the-first-room/
-Doesn't work. but the next section addresses:
-> If you ran the game, you may have seen that, while the character moves towards the window, a message is printed on top of the scene: Can't INTERACT with it.
-I got stuck before moving on.
-
-
-
 Gui inconsistently uses "cancel" vs "Cancel".
+
