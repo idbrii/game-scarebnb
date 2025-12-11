@@ -14,7 +14,7 @@ config/name="ScareBnB"
 config/tags=PackedStringArray("created_by_me")
 run/main_scene="res://game/rooms/bedroom_01/room_bedroom_01.tscn"
 config/features=PackedStringArray("4.5")
-config/icon="res://icon.png"
+config/icon="uid://cnw71jjgsm7mo"
 config/windows_native_icon="res://icon.ico"
 
 [autoload]
