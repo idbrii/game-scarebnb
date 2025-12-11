@@ -10,3 +10,17 @@ static func get_room_pretty_name(room: PopochiuRoom):
             return "Library Room"
 
     return room.script_name
+
+
+# Look verb on things you need to approach to examine.
+static func approach_and_say(text):
+    await C.player.walk_to_clicked()
+    await face_and_say(text)
+
+
+# Look verb on things you can see from a distance.
+static func face_and_say(text):
+    await C.player.face_clicked()
+    await C.player.say(text)
+
+

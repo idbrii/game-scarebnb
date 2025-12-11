@@ -4,7 +4,6 @@ extends Resource
 
 # Look verb on doors.
 static func look_door(text):
-    await C.player.walk_to_clicked()
     await C.player.face_clicked()
     await C.player.say(text)
 
