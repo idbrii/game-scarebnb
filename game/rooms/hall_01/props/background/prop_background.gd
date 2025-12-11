@@ -7,7 +7,7 @@ extends PopochiuProp
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
-# When the node is clicked
+# Interact: When the node is left clicked.
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
 	PopochiuUtils.e.command_fallback()
@@ -24,7 +24,7 @@ func _on_double_click() -> void:
 	# For example, you could make the player instantly do something instead of walking there first
 
 
-# When the node is right clicked
+# Look: When the node is right clicked.
 func _on_right_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
 	PopochiuUtils.e.command_fallback()

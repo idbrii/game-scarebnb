@@ -7,7 +7,7 @@ extends PopochiuHotspot
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
-# When the node is clicked
+# Interact: When the node is left clicked.
 func _on_click() -> void:
     await RoomUtil.use_door(R.Bedroom01)
 
@@ -16,7 +16,7 @@ func _on_double_click() -> void:
     await RoomUtil.teleport_door(R.Bedroom01)
 
 
-# When the node is right clicked
+# Look: When the node is right clicked.
 func _on_right_click() -> void:
     await RoomUtil.look_door("That is the {0}.\nA bit stuffy, but plush.".format([InteractUtil.get_room_pretty_name(R.Bedroom01)]))
 
@@ -27,7 +27,7 @@ func _on_middle_click() -> void:
     PopochiuUtils.e.command_fallback()
 
 
-# When the node is clicked and there is an inventory item selected
+# Interact: When the node is left clicked. and there is an inventory item selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
     # Replace the call to E.command_fallback() to implement your code.
     PopochiuUtils.e.command_fallback()
