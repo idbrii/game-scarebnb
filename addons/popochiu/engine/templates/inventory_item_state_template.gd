@@ -10,14 +10,14 @@ extends PopochiuInventoryItemData
 # Use this to save custom data for this PopochiuInventoryItem when saving the game.
 # The Dictionary must contain only JSON supported types: bool, int, float, String.
 func on_save() -> Dictionary:
-	return {}
+    return {}
 
 
 # Called when the game is loaded.
 # This Dictionary should has the same structure you defined for the returned
 # one in on_save().
 func on_load(data: Dictionary) -> void:
-	prints(data)
+    prints(data)
 
 
 #endregion
