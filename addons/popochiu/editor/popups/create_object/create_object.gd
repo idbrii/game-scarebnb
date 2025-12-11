@@ -28,6 +28,9 @@ func _ready() -> void:
 	
 	error_container.hide()
 
+	await get_tree().process_frame
+	input.grab_focus()
+
 
 #endregion
 
