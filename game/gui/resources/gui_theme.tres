@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dukr75slqli45" path="res://addons/popochiu/engine/objects/gui/resources/images/check_button_unchecked.png" id="2_f3v6j"]
 [ext_resource type="Texture2D" uid="uid://cqxqfxobqltga" path="res://addons/popochiu/engine/objects/gui/resources/images/grabber.png" id="3_aqb6g"]
 [ext_resource type="Texture2D" uid="uid://d1ywqbehmtuv" path="res://addons/popochiu/engine/objects/gui/resources/images/down_arrow.png" id="4_emke0"]
-[ext_resource type="FontFile" uid="uid://dm6h44ck2nm2b" path="res://addons/popochiu/engine/objects/gui/fonts/minecraftia-regular.ttf" id="5_13x2e"]
+[ext_resource type="FontFile" uid="uid://mx218ma3u162" path="res://art/font/Scabber.woff" id="5_si1k4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3v5ri"]
 content_margin_left = 2.0
@@ -59,8 +59,8 @@ thickness = 4
 bg_color = Color(0, 0, 0, 0.705882)
 
 [resource]
-default_font = ExtResource("5_13x2e")
-default_font_size = 8
+default_font = ExtResource("5_si1k4")
+default_font_size = 50
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_disabled_color = Color(0.482353, 0.482353, 0.482353, 1)
 Button/colors/font_focus_color = Color(0.305882, 0.305882, 0.862745, 1)
