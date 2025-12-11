@@ -18,7 +18,9 @@ func _on_room_set() -> void:
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    await InteractUtil.approach_and_say("Hi! Whatcha listening to?")
+    await C.player.walk_to_clicked()
+    await C.player.face_clicked()
+    D.PhonesHallChat.start()
 
 
 # Teleport: Node is double left clicked.
