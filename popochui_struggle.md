@@ -5,9 +5,6 @@ Issues during dev
 * When I created room Bedroom, I think I added my background texture directly to the Background scene instead of to the node in the Room scene. This meant that my character never showed up.
     https://carenalgas.github.io/popochiu/how-to-develop-a-game/create-the-first-room/
 
-* Many of the "create new" popups should put focus on the name of the object instead of the ok button -- you can't click ok until you provide a name.
-
-
 * Doesn't show how to make it the main scene:
     https://carenalgas.github.io/popochiu/how-to-develop-a-game/create-the-first-room/
 
@@ -18,6 +15,10 @@ Doesn't work. but the next section addresses:
 I got stuck before moving on.
 
 It wasn't clear to me that "Look At Point" means "this is where the character looks" as opposed to "this is where we walk when trying to look". "Look At Point" doesn't appear anywhere in the docs.
+
+> Remember to turn on this property to follow up with this tutorial!
+rephrase 
+> Make sure this property *is set to On* to follow the rest of this tutorial!
 
 
 # Template
@@ -45,3 +46,8 @@ Gui inconsistently uses "cancel" vs "Cancel".
 * Would be nice to give pretty names to rooms so you can reference them from script. That way it's much easier to rename the room later. I could do this with a custom subclass of PopochiuRoom, but feels like a missing piece. Instead, I implemented a map function.
 
 * It's not clear the the project setting "text_speed" is the time between characters. I found it very confusing that it only went up to 0.1. However, it looks like Godot doesn't yet support setting tooltips on these settings: https://github.com/godotengine/godot-proposals/discussions/8224
+
+* Many of the "create new" popups should put focus on the name of the object instead of the ok button -- you can't click ok until you provide a name.
+    * Fixed. make a PR.
+
+
