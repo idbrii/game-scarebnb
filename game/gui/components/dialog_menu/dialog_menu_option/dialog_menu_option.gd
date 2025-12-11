@@ -19,7 +19,7 @@ var _state := "normal" : set = set_state
 @onready var handler: Button = %Handler
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	handler.pressed.connect(_on_pressed)
 	handler.mouse_entered.connect(_on_mouse_entered)
@@ -30,7 +30,7 @@ func _ready() -> void:
 	_update_font_color()
 
 
-#endregion
+
 
 #region SetGet #####################################################################################
 func set_dialog_option(value: PopochiuDialogOption) -> void:
@@ -58,7 +58,7 @@ func set_state(value: String) -> void:
 	_update_font_color()
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _on_pressed() -> void:
@@ -89,4 +89,4 @@ func _update_font_color() -> void:
 	)
 
 
-#endregion
+

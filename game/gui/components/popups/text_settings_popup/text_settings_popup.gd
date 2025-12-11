@@ -6,7 +6,7 @@ extends PopochiuPopup
 @onready var continue_mode: CheckButton = %ContinueMode
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	super()
 	
@@ -22,7 +22,7 @@ func _ready() -> void:
 	continue_mode.toggled.connect(_on_continue_mode_toggled)
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _on_text_speed_changed(value: float) -> void:
@@ -37,4 +37,4 @@ func _on_continue_mode_toggled(toggled_on: bool) -> void:
 	PopochiuUtils.e.settings.auto_continue_text = toggled_on
 
 
-#endregion
+

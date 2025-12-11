@@ -11,7 +11,7 @@ var _can_change_size := false
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	set_meta(DFLT_SIZE, rich_text_label.size)
 	
@@ -38,9 +38,9 @@ func _input(event: InputEvent) -> void:
 		close()
 
 
-#endregion
 
-#region Public #####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Public ░░░░ {{{1
 func appear() -> void:
 	show()
 	set_process_input(true)
@@ -59,7 +59,7 @@ func close() -> void:
 	PopochiuUtils.g.system_text_hidden.emit()
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _show_text(msg := "") -> void:
@@ -78,4 +78,4 @@ func _show_text(msg := "") -> void:
 		close()
 
 
-#endregion
+

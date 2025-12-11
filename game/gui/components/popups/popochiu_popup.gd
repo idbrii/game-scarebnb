@@ -13,30 +13,32 @@ extends Control
 @onready var btn_close: TextureButton = %Close
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
+
 func _ready() -> void:
 	if not title.is_empty():
 		lbl_title.text = title
-	
+
 	if Engine.is_editor_hint(): return
-	
+
 	# Connect to own signals
 	$Overlay.gui_input.connect(_check_click)
-	
+
 	# Connect to child signals
 	btn_ok.pressed.connect(on_ok_pressed)
 	btn_cancel.pressed.connect(on_cancel_pressed)
 	btn_close.pressed.connect(on_cancel_pressed)
-	
+
 	# Connect to singleton signals
 	PopochiuUtils.g.popup_requested.connect(_on_popup_requested)
-	
+
 	close()
 
 
-#endregion
 
-#region Virtual ####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 ## Called when the popup is opened. At this point it is not visible yet.
 func _open() -> void:
 	pass
@@ -57,20 +59,20 @@ func _on_cancel() -> void:
 	pass
 
 
-#endregion
 
-#region Public #####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Public ░░░░ {{{1
 ## Shows the popup scaling it and blocking interactions with the graphic interface.
 func open() -> void:
 	_open()
-	
+
 	PopochiuUtils.g.block()
 	PopochiuUtils.cursor.show_cursor("gui", true)
 	# Never open a popup on top of another
 	if not PopochiuUtils.e.gui.popups_stack.is_empty():
 		PopochiuUtils.e.gui.popups_stack.back().hide()
 	PopochiuUtils.e.gui.popups_stack.append(self)
-	
+
 	show()
 
 
@@ -78,14 +80,14 @@ func open() -> void:
 func close() -> void:
 	PopochiuUtils.e.gui.popups_stack.erase(self)
 	hide()
-	
+
 	if PopochiuUtils.e.gui.popups_stack.is_empty():
 		PopochiuUtils.g.unblock()
 		PopochiuUtils.cursor.unblock()
 	else:
 		# Idempotent call, no need to check the mode
 		PopochiuUtils.e.gui.popups_stack.back().show()
-	
+
 	_close()
 
 
@@ -108,17 +110,17 @@ func on_close_pressed() -> void:
 	close()
 
 
-#endregion
+
 
 #region SetGet #####################################################################################
 func set_title(value: String) -> void:
 	title = value
-	
+
 	if is_instance_valid(lbl_title):
 		lbl_title.text = title
 
 
-#endregion
+
 
 #region Private ####################################################################################
 ## Checks if the overlay area of the popup was clicked in order to close it.
@@ -136,4 +138,4 @@ func _on_popup_requested(popup_script_name: StringName) -> void:
 		open()
 
 
-#endregion
+

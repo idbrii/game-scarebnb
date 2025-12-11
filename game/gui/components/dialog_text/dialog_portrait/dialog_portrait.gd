@@ -6,7 +6,7 @@ extends PopochiuDialogText
 @onready var right_avatar: TextureRect = %RightAvatar
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	super()
 	
@@ -14,7 +14,7 @@ func _ready() -> void:
 	PopochiuUtils.c.character_spoke.connect(_update_avatar)
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _update_avatar(chr: PopochiuCharacter, _msg := '') -> void:
@@ -42,4 +42,4 @@ func _set_default_size() -> void:
 	pass
 
 
-#endregion
+

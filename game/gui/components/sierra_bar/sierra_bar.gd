@@ -7,7 +7,7 @@ extends Control
 @onready var lbl_score: Label = %LblScore
 
 
-#region Public #####################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Public ░░░░ {{{1
 func set_game_name(game_name: String) -> void:
 	lbl_game_name.text = game_name
 
@@ -27,11 +27,11 @@ func subtract_score(value: int) -> void:
 	_update_text()
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _update_text() -> void:
 	lbl_score.text = "%d/%d" % [score, max_score]
 
 
-#endregion
+

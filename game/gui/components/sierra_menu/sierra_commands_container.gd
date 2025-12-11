@@ -1,14 +1,14 @@
 extends HBoxContainer
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	PopochiuUtils.e.command_selected.connect(_on_command_selected)
 
 
-#endregion
 
-#region Public #####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Public ░░░░ {{{1
 func _on_command_selected() -> void:
 	for b in get_children():
 		(b as TextureButton).set_pressed_no_signal(false)
@@ -17,4 +17,4 @@ func _on_command_selected() -> void:
 	PopochiuUtils.cursor.show_cursor(PopochiuUtils.e.get_current_command_name().to_snake_case())
 
 
-#endregion
+

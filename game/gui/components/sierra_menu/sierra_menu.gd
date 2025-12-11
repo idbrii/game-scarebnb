@@ -12,7 +12,7 @@ extends Control
 @onready var quit = %Quit
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready():
 	inventory.pressed.connect(_on_inventory_pressed)
 	settings.pressed.connect(_on_settings_pressed)
@@ -53,7 +53,7 @@ func _input(event: InputEvent) -> void:
 			hide()
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _on_inventory_pressed() -> void:
@@ -75,4 +75,4 @@ func _on_quit_pressed() -> void:
 	PopochiuUtils.g.popup_requested.emit("QuitPopup")
 
 
-#endregion
+

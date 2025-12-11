@@ -6,15 +6,15 @@ const MUTE_VOLUME := -70
 var dflt_volumes := {}
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	# Connect to AudioManager ready signal
 	PopochiuUtils.e.am.ready.connect(_on_audio_manager_ready)
 
 
-#endregion
 
-#region Public #####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Public ░░░░ {{{1
 func update_sliders() -> void:
 	for slider in $SlidersContainer.get_children():
 		if not slider.has_meta("bus_name"): continue
@@ -33,7 +33,7 @@ func restore_last_volumes() -> void:
 		PopochiuUtils.e.am.set_bus_volume_db(bus_name, dflt_volumes[bus_name])
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _on_audio_manager_ready() -> void:
@@ -70,4 +70,4 @@ func _on_volume_slider_changed(value: float, bus_name_param: String) -> void:
 		PopochiuUtils.e.am.set_bus_volume_db(bus_name_param, MUTE_VOLUME)
 
 
-#endregion
+

@@ -14,4 +14,4 @@ func _append_text(msg: String, props: Dictionary) -> void:
 	rich_text_label.text = "[center][color=%s]%s[/color][/center]" % [props.color.to_html(), msg]
 
 
-#endregion
+

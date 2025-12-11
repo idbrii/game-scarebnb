@@ -1,7 +1,7 @@
 extends PopochiuSettingsBarButton
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	super()
 	PopochiuUtils.e.game_saved.connect(show)
@@ -12,4 +12,4 @@ func _ready() -> void:
 		hide()
 
 
-#endregion
+

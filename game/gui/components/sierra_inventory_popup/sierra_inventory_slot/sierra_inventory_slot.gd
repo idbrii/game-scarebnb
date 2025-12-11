@@ -9,7 +9,7 @@ var _is_selected := false
 @onready var _dflt_border_color := _style_box_flat.border_color
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	add_theme_stylebox_override("panel", _style_box_flat)
 	
@@ -20,15 +20,15 @@ func _ready() -> void:
 	child_exiting_tree.connect(_on_item_removed)
 
 
-#endregion
 
-#region Public #####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Public ░░░░ {{{1
 func get_content_height() -> float:
 	# Subtract the value of the sum of the top and bottom borders of the StyleBoxFlat of this slot
 	return size.y - 2
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _on_mouse_entered() -> void:
@@ -73,4 +73,4 @@ func _on_item_unselected() -> void:
 	_style_box_flat.border_color = _dflt_border_color
 
 
-#endregion
+

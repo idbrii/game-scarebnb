@@ -10,7 +10,7 @@ signal option_selected(option_name)
 @onready var quit: Button = %Quit
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	super()
 	
@@ -32,11 +32,11 @@ func _ready() -> void:
 		quit.hide()
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _on_option_pressed(option_name: String) -> void:
 	option_selected.emit(option_name)
 
 
-#endregion
+

@@ -23,7 +23,7 @@ var _is_mouse_hover := false
 @onready var hidden_y := panel_container.position.y - panel_container.size.y
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	if not always_visible:
 		panel_container.position.y = hidden_y
@@ -77,14 +77,14 @@ func _input(event: InputEvent) -> void:
 		_close()
 
 
-#endregion
 
-#region Public #####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Public ░░░░ {{{1
 func is_open() -> bool:
 	return _is_hidden == false
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _open() -> void:
@@ -140,4 +140,4 @@ func _on_button_clicked(button: TextureButton) -> void:
 	option_selected.emit(button.script_name)
 
 
-#endregion
+

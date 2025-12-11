@@ -9,19 +9,21 @@ extends PopochiuPopup
 @onready var lines_scroll: ScrollContainer = %LinesScroll
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
+
 func _ready() -> void:
 	super()
-	
+
 	if Engine.is_editor_hint(): return
-	
+
 	for c in lines_list.get_children():
 		(c as Control).queue_free()
 
 
-#endregion
 
-#region Virtual ####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 func _open() -> void:
 	if PopochiuUtils.e.history.is_empty():
 		empty.show()
@@ -29,10 +31,10 @@ func _open() -> void:
 	else:
 		empty.hide()
 		lines_scroll.show()
-	
+
 	for data in PopochiuUtils.e.history:
 		var lbl: RichTextLabel
-		
+
 		if data.has("character"):
 			lbl = dialog_line.instantiate()
 			lbl.text = "[color=%s]%s:[/color] %s" % [
@@ -45,7 +47,7 @@ func _open() -> void:
 			lbl.text = "[color=edf171]%s[/color] [color=a9ff9f]%s[/color]" % [
 				data.action, data.target
 			]
-	
+
 		lines_list.add_child(lbl)
 
 
@@ -54,4 +56,4 @@ func _close() -> void:
 		(c as Control).queue_free()
 
 
-#endregion
+

@@ -23,7 +23,7 @@ var current_options := []
 @onready var dialog_options_container: VBoxContainer = %DialogOptionsContainer
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready() -> void:
 	for child in dialog_options_container.get_children():
 		child.queue_free()
@@ -41,7 +41,7 @@ func _ready() -> void:
 	hide()
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _clicked(event: InputEvent) -> void:
@@ -141,4 +141,4 @@ func _on_option_clicked(opt: PopochiuDialogOption) -> void:
 	PopochiuUtils.d.option_selected.emit(opt)
 
 
-#endregion
+

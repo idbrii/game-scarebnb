@@ -17,7 +17,7 @@ var _is_hidden := true
 @onready var hidden_y := panel_container.position.y - panel_container.size.y
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready():
 	if not always_visible:
 		panel_container.position.y = hidden_y
@@ -57,7 +57,7 @@ func _input(event: InputEvent) -> void:
 		_close()
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _open() -> void:
@@ -180,4 +180,4 @@ func _show_and_hide(time := 1.0) -> void:
 	PopochiuUtils.i.inventory_shown.emit()
 
 
-#endregion
+

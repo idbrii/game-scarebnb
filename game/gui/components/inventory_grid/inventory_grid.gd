@@ -26,7 +26,7 @@ var slot_size: float = 0.0
 @onready var gap_size: int = box.get_theme_constant("v_separation")
 
 
-#region Godot ######################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Godot ░░░░ {{{1
 func _ready():
 	if Engine.is_editor_hint():
 		_update_box()
@@ -53,7 +53,7 @@ func _ready():
 	_check_scroll_buttons()
 
 
-#endregion
+
 
 #region SetGet #####################################################################################
 func set_visible_rows(value: int) -> void:
@@ -93,7 +93,7 @@ func set_show_arrows(value: bool) -> void:
 		scroll_buttons.visible = value
 
 
-#endregion
+
 
 #region Private ####################################################################################
 func _update_box() -> void:
@@ -223,4 +223,4 @@ func _on_scroll(_value: float) -> void:
 	_check_scroll_buttons()
 
 
-#endregion
+
