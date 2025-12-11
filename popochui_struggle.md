@@ -50,4 +50,4 @@ Gui inconsistently uses "cancel" vs "Cancel".
 * Many of the "create new" popups should put focus on the name of the object instead of the ok button -- you can't click ok until you provide a name.
     * Fixed. make a PR.
 
-
+* When working with large images (not pixel art), it's frustrating when the default interaction polygon is super small. Would be awesome if it automatically used the size of the texture.

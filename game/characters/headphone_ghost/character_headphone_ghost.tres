@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cwmitlng4tvgq"]
+
+[ext_resource type="Script" path="res://game/characters/headphone_ghost/character_headphone_ghost_state.gd" id="1_acm5d"]
+
+[resource]
+resource_name = "HeadphoneGhost"
+script = ExtResource("1_acm5d")
+script_name = "HeadphoneGhost"
+scene = "res://game/characters/headphone_ghost/character_headphone_ghost.tscn"

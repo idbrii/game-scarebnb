@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://d31nllkuxefhb"]
+
+[ext_resource type="Script" uid="uid://w6pxe1gepsr" path="res://game/characters/headphone_ghost/character_headphone_ghost.gd" id="1_4gm31"]
+[ext_resource type="Texture2D" uid="uid://waqk58ju0hya" path="res://art/character/ghost_headphone.png" id="2_trop8"]
+
+[node name="CharacterHeadphoneGhost" type="Area2D"]
+script = ExtResource("1_4gm31")
+flips_when = 1
+dialog_pos = Vector2(-43.87149, -284.10477)
+popochiu_placeholder = null
+script_name = "HeadphoneGhost"
+description = "Headphone Ghost"
+cursor = 8
+interaction_polygon = PackedVector2Array(-53.627815, -101.72519, -5, -125, 39.923485, -105.159, 29, -27, 3, -8, -34, -24)
+interaction_polygon_position = Vector2(5.012186, -20.252625)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(5.012186, -20.252625)
+scale = Vector2(1.7530488, 1.747329)
+polygon = PackedVector2Array(-53.627815, -101.72519, -5, -125, 39.923485, -105.159, 29, -27, 3, -8, -34, -24)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -139)
+texture = ExtResource("2_trop8")
+metadata/_edit_lock_ = true

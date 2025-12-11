@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://1gm3qvum822b"]
+
+[ext_resource type="Script" path="res://game/characters/blanket_ghost/character_blanket_ghost_state.gd" id="1_vcibt"]
+
+[resource]
+resource_name = "BlanketGhost"
+script = ExtResource("1_vcibt")
+script_name = "BlanketGhost"
+scene = "res://game/characters/blanket_ghost/character_blanket_ghost.tscn"
