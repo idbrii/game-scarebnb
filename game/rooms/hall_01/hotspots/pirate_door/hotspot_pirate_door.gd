@@ -19,7 +19,7 @@ func _on_double_click() -> void:
 
 # When the node is right clicked
 func _on_right_click() -> void:
-    await RoomUtil.look_door("The Pirate Room is under repairs\nafter the last guest brought a cannon.")
+    await RoomUtil.look_door("The Pirate Room is under repairs\nafter the last guest brought a [shake]cannon[/shake].")
 
 
 # When the node is middle clicked
