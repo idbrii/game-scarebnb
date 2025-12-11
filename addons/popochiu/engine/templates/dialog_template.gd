@@ -2,7 +2,8 @@
 extends PopochiuDialog
 
 
-#region Virtual ####################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 func _on_start() -> void:
     # One can put here something to execute before showing the dialog options.
     # E.g. Make the PC to look at the character which it will talk to, walk to
@@ -41,4 +42,4 @@ func _on_load(data: Dictionary) -> void:
     prints(data)
 
 
-#endregion
+

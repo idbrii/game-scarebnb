@@ -2,7 +2,8 @@
 extends PopochiuRegion
 
 
-#region Virtual ####################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 func _on_character_entered(chr: PopochiuCharacter) -> void:
     # This is optional. You can put here anything you want to happen when a
     # character enters the area.
@@ -14,4 +15,4 @@ func _on_character_exited(chr: PopochiuCharacter) -> void:
     chr.modulate = Color.WHITE
 
 
-#endregion
+

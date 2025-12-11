@@ -1,7 +1,8 @@
 extends PopochiuGraphicInterface
 
 
-#region Virtual ####################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 # Called when the GUI is blocked and not intended to handle input events.
 func _on_blocked(props := { blocking = true }) -> void:
     super(props)
@@ -86,4 +87,4 @@ func _get_cursor_name() -> String:
     return super()
 
 
-#endregion
+

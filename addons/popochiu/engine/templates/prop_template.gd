@@ -5,7 +5,7 @@ extends PopochiuProp
 # the function until the sequence of events finishes.
 
 
-# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
@@ -61,13 +61,13 @@ func _on_linked_item_discarded() -> void:
     pass
 
 
-#endregion
 
-#region Public #####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Public ░░░░ {{{1
 # You can add here functions triggered by the GUI commands. For example, if your GUI has a command
 # for look_at, you could have the function:
 #func on_look_at() -> void:
     #pass
 
 
-#endregion
+

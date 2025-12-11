@@ -5,7 +5,8 @@ const Data := preload('inventory_item_state_template.gd')
 var state: Data = null
 
 
-#region Virtual ####################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 # When the item is clicked in the inventory
 func _on_click() -> void:
     # Replace the call to E.command_fallback() to implement your code.
@@ -48,4 +49,4 @@ func _on_discard() -> void:
     super()
 
 
-#endregion
+

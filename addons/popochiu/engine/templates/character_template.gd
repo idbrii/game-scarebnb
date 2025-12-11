@@ -9,7 +9,7 @@ const Data := preload('character_state_template.gd')
 var state: Data = null
 
 
-# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 # When the room in which this node is located finishes being added to the tree
 func _on_room_set() -> void:
@@ -83,13 +83,13 @@ func _on_move_ended() -> void:
     pass
 
 
-#endregion
 
-#region Public #####################################################################################
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Public ░░░░ {{{1
 # You can add here functions triggered by the GUI commands. For example, if your GUI has a command
 # for look_at, you could have the function:
 #func on_look_at() -> void:
     #pass
 
 
-#endregion
+

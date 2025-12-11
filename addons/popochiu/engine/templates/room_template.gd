@@ -6,7 +6,8 @@ const Data := preload('room_state_template.gd')
 var state: Data = null
 
 
-#region Virtual ####################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func _on_room_entered() -> void:
@@ -27,4 +28,4 @@ func _on_room_exited() -> void:
     pass
 
 
-#endregion
+

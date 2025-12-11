@@ -2,7 +2,8 @@
 extends PopochiuPopup
 
 
-#region Virtual ####################################################################################
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 ## Called when the popup is opened. At this point it is not visible yet.
 func _open() -> void:
     pass
@@ -23,4 +24,4 @@ func _on_cancel() -> void:
     pass
 
 
-#endregion
+
