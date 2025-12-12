@@ -9,6 +9,8 @@ const Data := preload('character_headphone_ghost_state.gd')
 var state: Data = load("res://game/characters/headphone_ghost/character_headphone_ghost.tres")
 
 
+var seen_intro := false
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 # When the room in which this node is located finishes being added to the tree
@@ -20,7 +22,12 @@ func _on_room_set() -> void:
 func _on_click() -> void:
     await C.player.walk_to_clicked()
     await C.player.face_clicked()
-    _intro_convo()
+    if seen_intro:
+        _idle_talk()
+    else:
+        _intro_convo()
+        seen_intro = true
+    # Using a long convo instead of a dialog.
     #~ D.EvanHomeNoiseComplaint.start()
 
 
@@ -103,3 +110,12 @@ func _intro_convo():
         "HeadphoneGhost: If I could find that one [b]SOUND[/b] to complete my soul-song? Man… That’d be pure “Honnnh yeah,” man.",
         "Player: Well, we’ll do our best to make your stay pure “Honnnh yeah.” Man."
     ])
+
+func _idle_talk():
+    var lines = [
+        "Writing songs is hard, man. It’s like, what even [i]is[/i] songs? ",
+        "Songs are like ghosts… Yeah, sounds deep. I should put that in a song…",
+        "I write songs to touch people’s souls. I don’t know what a ‘soul’ is, if I’m bein’ honest, man, but I wanna touch it. …I think? That sounds bad.",
+        "I don’t know where my songs end and I begin, man. Probably my mouth, though. ",
+    ]
+    await say(Random.choose_value(lines))
