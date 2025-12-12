@@ -34,6 +34,7 @@ rephrase
             * size and layout
             * I think for SettingsBar, I need to create new large icons. Changing scale didn't work (it didn't hide properly).
         * all popups should double in min size
+        * dialog_menu needs bigger max_height (50 -> 300)
 
 
 Gui inconsistently uses "cancel" vs "Cancel".
