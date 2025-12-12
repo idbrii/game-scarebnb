@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://djmva2o53dl4l"]
+[gd_scene load_steps=11 format=3 uid="uid://djmva2o53dl4l"]
 
 [ext_resource type="Script" uid="uid://2j3b2xb2gxek" path="res://game/rooms/horse_room/room_horse_room.gd" id="1_usna1"]
 [ext_resource type="PackedScene" uid="uid://cg6uvl3ml8bpv" path="res://game/rooms/horse_room/props/background/prop_background.tscn" id="2_a273q"]
@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://ct4hph1atrg1b" path="res://game/rooms/horse_room/hotspots/exit_hallway/hotspot_exit_hallway.tscn" id="4_5m7tt"]
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="4_dauab"]
 [ext_resource type="PackedScene" uid="uid://cqbeowfrd14en" path="res://game/rooms/horse_room/props/bed/prop_bed.tscn" id="4_pimc8"]
+[ext_resource type="Texture2D" uid="uid://dmkdnf4fvh7fx" path="res://art/room/horse.png" id="4_tvnmi"]
+[ext_resource type="Texture2D" uid="uid://cdbxrxv3ogx3" path="res://art/room/horse_prop_bed.png" id="6_qv5e0"]
+[ext_resource type="PackedScene" uid="uid://gsah8wmkdeg2" path="res://game/rooms/horse_room/props/rocking_horse/prop_rocking_horse.tscn" id="7_qv5e0"]
+[ext_resource type="Texture2D" uid="uid://dkbe54kg87swo" path="res://art/room/horse_prop_toy.png" id="8_gekwn"]
 
 [node name="RoomHorseRoom" type="Node2D"]
 script = ExtResource("1_usna1")
@@ -17,24 +21,43 @@ popochiu_placeholder = null
 [node name="WalkableAreas" type="Node2D" parent="."]
 
 [node name="Floor" parent="WalkableAreas" instance=ExtResource("2_xxjwv")]
+interaction_polygon = [PackedVector2Array(273, 122, 960, 313, 957, 538, 87, 541, 309, 475, 286, 287, 58, 131)]
 
 [node name="Props" type="Node2D" parent="."]
 
 [node name="Background" parent="Props" instance=ExtResource("2_a273q")]
 position = Vector2(960, 540)
+texture = ExtResource("4_tvnmi")
+look_at_point = Vector2(62.999878, 20.999939)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Bed" parent="Props" instance=ExtResource("4_pimc8")]
 position = Vector2(960, 540)
 input_pickable = true
+texture = ExtResource("6_qv5e0")
 clickable = true
+baseline = 348
+walk_to_point = Vector2(127.49988, 132)
+look_at_point = Vector2(-264.00006, 58.49994)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="RockingHorse" parent="Props" instance=ExtResource("7_qv5e0")]
+position = Vector2(960, 540)
+texture = ExtResource("8_gekwn")
+baseline = 277
+walk_to_point = Vector2(395.99976, 245.99988)
+look_at_point = Vector2(652.4999, 43.49994)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
 
 [node name="ExitHallway" parent="Hotspots" instance=ExtResource("4_5m7tt")]
 position = Vector2(960, 540)
-interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+baseline = 538
+walk_to_point = Vector2(874.4999, 478.5)
+look_at_point = Vector2(926.99976, 338.99988)
+cursor = 6
+interaction_polygon = PackedVector2Array(729, 316, 958, 179, 960, 538, 648, 542)
 
 [node name="Regions" type="Node2D" parent="."]
 
@@ -43,4 +66,4 @@ interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="CharacterBasil *" parent="Characters" instance=ExtResource("4_dauab")]
-position = Vector2(960, 540)
+position = Vector2(1811, 1011)
