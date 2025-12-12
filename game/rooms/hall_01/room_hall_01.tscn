@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://bc5gy710a8e7u"]
+[gd_scene load_steps=13 format=3 uid="uid://bc5gy710a8e7u"]
 
 [ext_resource type="Script" uid="uid://dwkab5ayf10hk" path="res://game/rooms/hall_01/room_hall_01.gd" id="1_0y88w"]
 [ext_resource type="PackedScene" uid="uid://dk45ihc6j0pa3" path="res://game/rooms/hall_01/props/background/prop_background.tscn" id="2_gwg2h"]
 [ext_resource type="PackedScene" uid="uid://v1r532gqu0nu" path="res://game/rooms/hall_01/walkable_areas/floor/walkable_area_floor.tscn" id="2_qa6m4"]
 [ext_resource type="Texture2D" uid="uid://dt4bj2okyului" path="res://art/room/hall1.png" id="3_oqh4r"]
+[ext_resource type="PackedScene" uid="uid://ow2iw78ox6yc" path="res://game/rooms/hall_01/props/chair/prop_chair.tscn" id="5_t3nlx"]
 [ext_resource type="PackedScene" uid="uid://dca6dkwrmcd82" path="res://game/rooms/hall_01/hotspots/exit/hotspot_exit.tscn" id="5_wp7dk"]
 [ext_resource type="PackedScene" uid="uid://qbq2bh38tl2q" path="res://game/rooms/hall_01/hotspots/library_door/hotspot_library_door.tscn" id="6_4kf0y"]
+[ext_resource type="Texture2D" uid="uid://f5o2ilqpo8at" path="res://art/room/hall1_prop_chair.png" id="6_gh7o8"]
 [ext_resource type="PackedScene" uid="uid://cs2cw3j6yopr6" path="res://game/rooms/hall_01/hotspots/pirate_door/hotspot_pirate_door.tscn" id="7_b1ob0"]
 [ext_resource type="PackedScene" uid="uid://bav3nlxxn5edy" path="res://game/rooms/hall_01/regions/walk_scale/region_walk_scale.tscn" id="8_8cdjc"]
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="8_cbabt"]
@@ -29,6 +31,14 @@ position = Vector2(960, 540)
 texture = ExtResource("3_oqh4r")
 interaction_polygon = PackedVector2Array(-60, 226, 271, 247, 715, 518, -528, 521)
 metadata/_edit_lock_ = true
+
+[node name="Chair" parent="Props" instance=ExtResource("5_t3nlx")]
+position = Vector2(1559, 856)
+texture = ExtResource("6_gh7o8")
+baseline = 222
+walk_to_point = Vector2(-214.35901, 92.23932)
+look_at_point = Vector2(90.94006, -63.65808)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
 

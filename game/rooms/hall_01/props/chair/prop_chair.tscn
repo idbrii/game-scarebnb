@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://ow2iw78ox6yc"]
+
+[ext_resource type="Script" uid="uid://cftdm64ijxg8f" path="res://game/rooms/hall_01/props/chair/prop_chair.gd" id="1_wkqaw"]
+[ext_resource type="Texture2D" uid="uid://f5o2ilqpo8at" path="res://art/room/hall1_prop_chair.png" id="2_27ieq"]
+
+[node name="Chair" type="Area2D"]
+script = ExtResource("1_wkqaw")
+texture = ExtResource("2_27ieq")
+script_name = "Chair"
+description = "Chair"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -12, 13.228509, -10.222525, 12.7308855, 15.661435, -32.552914, 14.940616)
+interaction_polygon_position = Vector2(112.5, -20.000015)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(112.5, -20.000015)
+scale = Vector2(12.057292, 15.260417)
+polygon = PackedVector2Array(-12, -12, 13.228509, -10.222525, 12.7308855, 15.661435, -32.552914, 14.940616)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_27ieq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
