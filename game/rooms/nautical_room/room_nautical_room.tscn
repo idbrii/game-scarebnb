@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://6f3s64mtpvjt"]
+[gd_scene load_steps=13 format=3 uid="uid://6f3s64mtpvjt"]
 
 [ext_resource type="Script" uid="uid://buvsrksme3lqo" path="res://game/rooms/nautical_room/room_nautical_room.gd" id="1_ytbjs"]
 [ext_resource type="PackedScene" uid="uid://or4krxwm8sbe" path="res://game/rooms/nautical_room/walkable_areas/floor/walkable_area_floor.tscn" id="2_i0afs"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bh3gmpgn4smw2" path="res://game/rooms/nautical_room/props/wardrobe/prop_wardrobe.tscn" id="6_vle6s"]
 [ext_resource type="Texture2D" uid="uid://dl8e44v2atfhe" path="res://art/room/pirate_prop_wardrobe.png" id="8_2vmt3"]
 [ext_resource type="PackedScene" uid="uid://qiipj3hxroft" path="res://game/rooms/nautical_room/hotspots/window/hotspot_window.tscn" id="10_2vmt3"]
+[ext_resource type="PackedScene" uid="uid://d31nllkuxefhb" path="res://game/characters/headphone_ghost/character_headphone_ghost.tscn" id="12_nx2mq"]
 
 [node name="RoomNauticalRoom" type="Node2D"]
 script = ExtResource("1_ytbjs")
@@ -22,8 +23,6 @@ popochiu_placeholder = null
 [node name="WalkableAreas" type="Node2D" parent="."]
 
 [node name="Floor" parent="WalkableAreas" instance=ExtResource("2_i0afs")]
-interaction_polygon = [PackedVector2Array(-41, 49, 157, 224, 732, -5, 570, -169, 787, -134, 775, -212, 1284, -86, 1224, -2, 1471, 116, 1471, 264, -431, 251, -432, 88, -175, 149)]
-interaction_polygon_position = Vector2(-513, 278)
 
 [node name="Props" type="Node2D" parent="."]
 
@@ -76,3 +75,8 @@ interaction_polygon = PackedVector2Array(474, -229, 645, -239, 646, -52, 478, -3
 
 [node name="CharacterBasil *" parent="Characters" instance=ExtResource("4_f2una")]
 position = Vector2(87, 1053)
+
+[node name="CharacterHeadphoneGhost *" parent="Characters" instance=ExtResource("12_nx2mq")]
+position = Vector2(1627, 872)
+walk_to_point = Vector2(-271.47827, 20.750061)
+look_at_point = Vector2(-8.64563, -134.87457)

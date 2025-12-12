@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://djmva2o53dl4l"]
+[gd_scene load_steps=12 format=3 uid="uid://djmva2o53dl4l"]
 
 [ext_resource type="Script" uid="uid://2j3b2xb2gxek" path="res://game/rooms/horse_room/room_horse_room.gd" id="1_usna1"]
 [ext_resource type="PackedScene" uid="uid://cg6uvl3ml8bpv" path="res://game/rooms/horse_room/props/background/prop_background.tscn" id="2_a273q"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cdbxrxv3ogx3" path="res://art/room/horse_prop_bed.png" id="6_qv5e0"]
 [ext_resource type="PackedScene" uid="uid://gsah8wmkdeg2" path="res://game/rooms/horse_room/props/rocking_horse/prop_rocking_horse.tscn" id="7_qv5e0"]
 [ext_resource type="Texture2D" uid="uid://dkbe54kg87swo" path="res://art/room/horse_prop_toy.png" id="8_gekwn"]
+[ext_resource type="PackedScene" uid="uid://d4nvp2yrwm6jl" path="res://game/characters/granny_ghost/character_granny_ghost.tscn" id="11_otv3t"]
 
 [node name="RoomHorseRoom" type="Node2D"]
 script = ExtResource("1_usna1")
@@ -67,3 +68,9 @@ interaction_polygon = PackedVector2Array(729, 316, 958, 179, 960, 538, 648, 542)
 
 [node name="CharacterBasil *" parent="Characters" instance=ExtResource("4_dauab")]
 position = Vector2(1811, 1011)
+
+[node name="CharacterGrannyGhost *" parent="Characters" instance=ExtResource("11_otv3t")]
+position = Vector2(1326, 792)
+baseline = 2
+walk_to_point = Vector2(290.99988, 64.49988)
+look_at_point = Vector2(8.999878, -147.00006)
