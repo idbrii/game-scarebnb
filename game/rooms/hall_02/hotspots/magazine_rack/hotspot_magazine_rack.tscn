@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4rndt6jw041k"]
+
+[ext_resource type="Script" path="res://game/rooms/hall_02/hotspots/magazine_rack/hotspot_magazine_rack.gd" id="1_7uyje"]
+
+[node name="MagazineRack" type="Area2D"]
+script = ExtResource("1_7uyje")
+script_name = "MagazineRack"
+description = "Magazine Rack"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

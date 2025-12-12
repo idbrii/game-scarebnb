@@ -39,3 +39,8 @@ static func face_and_say(text):
     await C.player.say(text)
 
 
+static func setup_dapper_joke(d, item):
+    if item.in_inventory:
+        d.turn_on_options(["GOOD"])
+    else:
+        d.turn_off_options(["GOOD"])

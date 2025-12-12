@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmofyxn3cyof5"]
+
+[ext_resource type="Script" uid="uid://dcqm3k36xgdsw" path="res://game/inventory_items/magazine/inventory_item_magazine.gd" id="1_3otim"]
+[ext_resource type="Texture2D" uid="uid://cwh5w1qf35fbc" path="res://art/inventory/item_magazine.png" id="1_m66a8"]
+
+[node name="ItemMagazine" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_m66a8")
+stretch_mode = 5
+script = ExtResource("1_3otim")
+script_name = "Magazine"
+description = "Magazine"

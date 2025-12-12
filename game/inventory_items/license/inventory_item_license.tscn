@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://jyuopw5d678r"]
+
+[ext_resource type="Script" uid="uid://x30xu8ilc1sb" path="res://game/inventory_items/license/inventory_item_license.gd" id="1_5c03t"]
+[ext_resource type="Texture2D" uid="uid://b5fqkboveleg2" path="res://art/inventory/item_license.png" id="1_fhtt2"]
+
+[node name="ItemLicense" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_fhtt2")
+stretch_mode = 5
+script = ExtResource("1_5c03t")
+script_name = "License"
+description = "License"

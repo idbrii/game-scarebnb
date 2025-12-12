@@ -50,6 +50,13 @@ func _option_selected(opt: PopochiuDialogOption) -> void:
             C.DapperGhost.has_seen_intro = true
             stop()
 
+        "COMEDY":
+            # This is a shortcut to skip the intro and go straight into the jokes.
+            await D.say_selected()
+            stop()
+            D.DapperHomeJoke.start()
+            return
+
         _:
             await C.player.say("Have a wonderful time!")
             # By default close the dialog. Options won't show after calling

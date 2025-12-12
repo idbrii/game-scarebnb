@@ -5,19 +5,19 @@ extends PopochiuHotspot
 # the function until the sequence of events finishes.
 
 
-var has_collected_sheet := false
+var has_collected_license := false
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    if has_collected_sheet:
-        await InteractUtil.approach_and_say("I don't want to get clobbered by a broom.")
+    if has_collected_license:
+        await InteractUtil.approach_and_say("Nothing interesting to read.")
 
     else:
-        await InteractUtil.approach_and_say("Something fell out when I tried to open the door,\nso I slammed it shut again.")
-        I.Sheet.add()
-        has_collected_sheet = true
+        await InteractUtil.approach_and_say("Someone left their license here!")
+        I.License.add()
+        has_collected_license = true
 
 
 # Teleport: Node is double left clicked.
@@ -31,8 +31,7 @@ func _on_double_click() -> void:
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await InteractUtil.face_and_say("Where we keep the cleaning supplies...")
-    await InteractUtil.face_and_say("And maybe the cleaners too?")
+    await InteractUtil.face_and_say("We try to keep something to entertain guests when they're waiting for their local haunts to open.")
 
 
 # Unused.
