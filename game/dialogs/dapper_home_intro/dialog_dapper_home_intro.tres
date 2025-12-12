@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://co8y1ht774kbo"]
+
+[ext_resource type="Script" uid="uid://m70lhemw53rj" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_fbuqm"]
+[ext_resource type="Script" uid="uid://sxgleinxqnbk" path="res://game/dialogs/dapper_home_intro/dialog_dapper_home_intro.gd" id="2_5p6vw"]
+
+[sub_resource type="Resource" id="Resource_fbuqm"]
+resource_name = "DRINK"
+script = ExtResource("1_fbuqm")
+id = "DRINK"
+text = "I don’t know."
+
+[sub_resource type="Resource" id="Resource_5p6vw"]
+resource_name = "BAR"
+script = ExtResource("1_fbuqm")
+id = "BAR"
+text = "From a bar?"
+
+[resource]
+resource_name = "DapperHomeIntro"
+script = ExtResource("2_5p6vw")
+script_name = "DapperHomeIntro"
+options = Array[ExtResource("1_fbuqm")]([SubResource("Resource_fbuqm"), SubResource("Resource_5p6vw")])

@@ -8,25 +8,36 @@ func _on_start() -> void:
     # something to execute before showing the dialog options.
     # (!) It MUST always use an await
     await E.queue([
-        C.player.queue_say("Hi! Whatcha listening to?"),
-        C.HeadphoneGhost.queue_say("My favourite album."),
+        "DapperGhost: Say, do you know how I died?",
         ])
     await PopochiuUtils.e.get_tree().process_frame
 
 
 func _option_selected(opt: PopochiuDialogOption) -> void:
     # You can make the player character say the selected option with:
-    await D.say_selected()
-
+    #~ await D.say_selected()
 
     # Use match to check which option was selected and execute something for
     # each one
     match opt.id:
-        "WhoAlbum":
-            C.HeadphoneGhost.say("My favourite artist.")
-        "ListenRoom":
-            C.HeadphoneGhost.say("Are my headphones leaking sound again? I didn't think I was making too much noise.")
+        "BAD":
+            await E.queue([
+                "Player: Oh, heavens no. I’d never ask that.",
+                "DapperGhost: I… Well, I know how this JOKE died.",
+            ])
+            stop()
+
+        "GOOD":
+            await E.queue([
+                "Player: Oh, a terrible car accident.",
+                "DapperGhost: Really? But I’m a perfect driver!",
+                "Player: So perfect you thought you didn’t need your [shake]SHEET BELT![/shake]",
+            ])
+            # TODO: trigger next dialog
+            stop()
+
         _:
+            await C.player.say("I just remembered I left the tap running.")
             # By default close the dialog. Options won't show after calling
             # stop()
             stop()
