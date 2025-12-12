@@ -20,10 +20,18 @@ func _on_room_set() -> void:
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
+    var jokes = [
+            D.DapperHomeJoke,
+            D.DapperHomeJoke2,
+        ]
+
     await C.player.walk_to_clicked()
     await C.player.face_clicked()
     if has_seen_intro:
-        D.DapperHomeJoke.start()
+        for dialogue in jokes:
+            if not dialogue.has_completed_good_joke:
+                dialogue.start()
+                break
     else:
         #~ has_seen_intro = true
         D.DapperHomeIntro.start()

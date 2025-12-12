@@ -9,10 +9,10 @@ var has_completed_good_joke := false
 func _on_start() -> void:
     # something to execute before showing the dialog options.
     # (!) It MUST always use an await
-    InteractUtil.setup_dapper_joke(self, I.License)
+    InteractUtil.setup_dapper_joke(self, I.Sheet)
     await E.queue([
         "DapperGhost: Hey, you’re back. You wanna try a joke with me? Alright, here we go…",
-        "DapperGhost: Say, do you know how I died?",
+        "DapperGhost: Should I start exor-cising? ",
         ])
     await PopochiuUtils.e.get_tree().process_frame
 
@@ -26,7 +26,9 @@ func _option_selected(opt: PopochiuDialogOption) -> void:
     match opt.id:
         "BAD":
             await E.queue([
-                "Player: Oh, heavens no. I’d never ask that.",
+                "Player: Yes, exercise is good for overall health.",
+                "DapperGhost: (sigh) And I’ll exercise my right to kick you outta my room!",
+
                 "DapperGhost: I… Well, I know how this JOKE died.",
 
                 "DapperGhost: Go [shake]find some INSPIRATION[/shake] around here, kid!",
@@ -35,9 +37,8 @@ func _option_selected(opt: PopochiuDialogOption) -> void:
 
         "GOOD":
             await E.queue([
-                "Player: Oh, a terrible car accident.",
-                "DapperGhost: Really? But I’m a perfect driver!",
-                "Player: So perfect you thought you didn’t need your [shake]SHEET BELT![/shake]",
+                "Player: Now why would you say a thing like that?",
+                "DapperGhost: I recently went from a queen to a king-sized sheet!",
 
                 "DapperGhost: Ooh, that was a chippy zinger, kid! Keep it up! Come back when you’ve got more [shake]INSPIRATION![/shake]",
             ])
@@ -45,7 +46,9 @@ func _option_selected(opt: PopochiuDialogOption) -> void:
             stop()
 
         _:
-            await C.player.say("I just remembered I left the tap running.")
+            await C.player.say("Is that the front desk phone ringing?")
+            await C.DapperGhost.say("I don't hear anything.")
+            await C.player.say("Bye!")
             # By default close the dialog. Options won't show after calling
             # stop()
             stop()
