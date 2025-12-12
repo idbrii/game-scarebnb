@@ -4,6 +4,36 @@
 [ext_resource type="Texture2D" uid="uid://b2dykte6yjv2m" path="res://art/character/ghost_dapper.png" id="2_uy1wc"]
 [ext_resource type="Texture2D" uid="uid://ciyt3sggs6a8h" path="res://art/character/ghost_dapper_talk.png" id="3_w47ix"]
 
+[sub_resource type="Animation" id="Animation_b36at"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_uy1wc")]
+}
+
+[sub_resource type="Animation" id="Animation_by1vt"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_uy1wc")]
+}
+
 [sub_resource type="Animation" id="Animation_dx58k"]
 resource_name = "talk"
 length = 0.3
@@ -19,24 +49,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [ExtResource("2_uy1wc"), ExtResource("3_w47ix"), ExtResource("2_uy1wc")]
-}
-
-[sub_resource type="Animation" id="Animation_by1vt"]
-resource_name = "idle"
-
-[sub_resource type="Animation" id="Animation_b36at"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_uy1wc")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o1na6"]
