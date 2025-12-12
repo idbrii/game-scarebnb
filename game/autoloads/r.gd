@@ -8,6 +8,7 @@ const PRHall02 := preload("res://game/rooms/hall_02/room_hall_02.gd")
 const PRNauticalRoom := preload("res://game/rooms/nautical_room/room_nautical_room.gd")
 const PRHorseRoom := preload("res://game/rooms/horse_room/room_horse_room.gd")
 const PRCircusRoom := preload("res://game/rooms/circus_room/room_circus_room.gd")
+const PRTitle := preload("res://game/rooms/title/room_title.gd")
 # ---- classes
 
 # nodes ----
@@ -17,6 +18,7 @@ var Hall02: PRHall02 : get = get_Hall02
 var NauticalRoom: PRNauticalRoom : get = get_NauticalRoom
 var HorseRoom: PRHorseRoom : get = get_HorseRoom
 var CircusRoom: PRCircusRoom : get = get_CircusRoom
+var Title: PRTitle : get = get_Title
 # ---- nodes
 
 # functions ----
@@ -26,5 +28,6 @@ func get_Hall02() -> PRHall02: return get_runtime_room("Hall02")
 func get_NauticalRoom() -> PRNauticalRoom: return get_runtime_room("NauticalRoom")
 func get_HorseRoom() -> PRHorseRoom: return get_runtime_room("HorseRoom")
 func get_CircusRoom() -> PRCircusRoom: return get_runtime_room("CircusRoom")
+func get_Title() -> PRTitle: return get_runtime_room("Title")
 # ---- functions
 

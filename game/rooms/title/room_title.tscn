@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://hggujuoywfhq"]
+
+[ext_resource type="Script" uid="uid://ckojnjre0iikn" path="res://game/rooms/title/room_title.gd" id="1_fby0j"]
+[ext_resource type="PackedScene" uid="uid://cakwt7w1rmfhn" path="res://game/rooms/title/props/background/prop_background.tscn" id="2_6mipb"]
+[ext_resource type="Texture2D" uid="uid://dpqc1ny0rbamv" path="res://art/titlepage.png" id="3_8k04p"]
+[ext_resource type="PackedScene" uid="uid://bwlrbaa2e20l" path="res://game/rooms/title/hotspots/start/hotspot_start.tscn" id="4_56k6e"]
+[ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="5_56k6e"]
+
+[node name="RoomTitle" type="Node2D"]
+script = ExtResource("1_fby0j")
+script_name = "Title"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_6mipb")]
+position = Vector2(960, 540)
+texture = ExtResource("3_8k04p")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Start" parent="Hotspots" instance=ExtResource("4_56k6e")]
+position = Vector2(960, 540)
+look_at_point = Vector2(-57.000122, 4.499939)
+interaction_polygon = PackedVector2Array(-949, -537, 949, -534, 958, 536, -964, 538)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="CharacterBasil *" parent="Characters" instance=ExtResource("5_56k6e")]
+position = Vector2(816, 1001)
