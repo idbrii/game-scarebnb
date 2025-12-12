@@ -20,7 +20,8 @@ func _on_room_set() -> void:
 func _on_click() -> void:
     await C.player.walk_to_clicked()
     await C.player.face_clicked()
-    D.EvanHomeNoiseComplaint.start()
+    _intro_convo()
+    #~ D.EvanHomeNoiseComplaint.start()
 
 
 # Teleport: Node is double left clicked.
@@ -87,3 +88,18 @@ func _on_move_ended() -> void:
 
 
 
+func _intro_convo():
+    E.queue([
+        "HeadphoneGhost: [shake] Ohhh heyyy ohhh[/shake] Shamma lamma scriddle dama ding dong! [shake]Honnnh YEAH![/shake]",
+        "Player: Er, hello? ",
+        "HeadphoneGhost: [shake]Ohhh heyyy ohhh[/shake] Flimma flamma shraddle ringa manga shonen isekai! [shake]Honn–ARGGH! DON’T INTERRUPT THE PROCESS, MAN!![/shake]",
+        "Player: Sorry, I’ve just received complaints of someone pummelling a goose with a cold in here. ",
+        "HeadphoneGhost: Huh? Naw, man. It’s the sound of searching for my SOUND. And I can’t [i]find[/i] it, my guy…",
+        "Player: Your… sound? ",
+        "HeadphoneGhost: When I croaked, I was searching for the ONE sound that would complete my song, man. ",
+        "HeadphoneGhost: And not just ANY song, man. My SOUL song. ",
+        "Player: I see. Your soul sounds like assaulting a sick goose. Bummer. ",
+        "HeadphoneGhost: NO, man! That’s the problem! It’s missing a [b]SOUND[/b]. The sound that’ll transform it from a beat-down bird to a soaring swan! ",
+        "HeadphoneGhost: If I could find that one [b]SOUND[/b] to complete my soul-song? Man… That’d be pure “Honnnh yeah,” man.",
+        "Player: Well, we’ll do our best to make your stay pure “Honnnh yeah.” Man."
+    ])
