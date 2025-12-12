@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6ydy74bgtgik"]
+
+[ext_resource type="Script" path="res://game/rooms/front_desk/hotspots/light/hotspot_light.gd" id="1_2ntk0"]
+
+[node name="Light" type="Area2D"]
+script = ExtResource("1_2ntk0")
+script_name = "Light"
+description = "Light"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

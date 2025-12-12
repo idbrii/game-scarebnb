@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ceprclntojfxe"]
+
+[ext_resource type="Script" path="res://game/rooms/front_desk/room_front_desk_state.gd" id="1_1sn0l"]
+
+[resource]
+resource_name = "FrontDesk"
+script = ExtResource("1_1sn0l")
+script_name = "FrontDesk"
+scene = "res://game/rooms/front_desk/room_front_desk.tscn"

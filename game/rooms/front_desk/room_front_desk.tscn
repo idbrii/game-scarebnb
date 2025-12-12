@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://da6wsq2uup8vl"]
+
+[ext_resource type="Script" uid="uid://ybtx1fxypvbm" path="res://game/rooms/front_desk/room_front_desk.gd" id="1_bskkf"]
+[ext_resource type="PackedScene" uid="uid://cms4e0crby1vl" path="res://game/rooms/front_desk/props/background/prop_background.tscn" id="2_kn2gr"]
+[ext_resource type="PackedScene" uid="uid://dfdad3x36whhv" path="res://game/rooms/front_desk/walkable_areas/floor/walkable_area_floor.tscn" id="2_ruewk"]
+[ext_resource type="Texture2D" uid="uid://lq2qpsnxpyxw" path="res://art/room/frontdesk.png" id="3_e4ksq"]
+[ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="5_62cmu"]
+[ext_resource type="PackedScene" uid="uid://cyo80o4v8s4id" path="res://game/rooms/front_desk/hotspots/calendar/hotspot_calendar.tscn" id="5_oqcwu"]
+[ext_resource type="PackedScene" uid="uid://c6ydy74bgtgik" path="res://game/rooms/front_desk/hotspots/light/hotspot_light.tscn" id="6_0nh58"]
+
+[node name="RoomFrontDesk" type="Node2D"]
+script = ExtResource("1_bskkf")
+script_name = "FrontDesk"
+width = 2279
+height = 1080
+limit_top = -540.0
+limit_bottom = 540.0
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Floor" parent="WalkableAreas" instance=ExtResource("2_ruewk")]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_kn2gr")]
+position = Vector2(1021, 539.5)
+texture = ExtResource("3_e4ksq")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+metadata/_edit_lock_ = true
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Calendar" parent="Hotspots" instance=ExtResource("5_oqcwu")]
+position = Vector2(960, 540)
+baseline = -540
+walk_to_point = Vector2(871.15186, 625.78357)
+look_at_point = Vector2(911.09546, -47.55197)
+interaction_polygon = PackedVector2Array(-12, -12, -0.7254486, -16.46715, 12, -12, 12, 12, -12, 12)
+interaction_polygon_position = Vector2(924.5, -36.000046)
+
+[node name="Light" parent="Hotspots" instance=ExtResource("6_0nh58")]
+position = Vector2(960, 540)
+baseline = -539
+walk_to_point = Vector2(108.41846, 620.0773)
+look_at_point = Vector2(209.22852, 102.71222)
+interaction_polygon = PackedVector2Array(-12, -12, 0.13616943, -16.069687, 12, -12, 12, 12, -12, 12)
+interaction_polygon_position = Vector2(206.40001, 159.90001)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="CharacterBasil *" parent="Characters" instance=ExtResource("5_62cmu")]
+position = Vector2(429, 1118)
