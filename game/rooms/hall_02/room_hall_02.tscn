@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dw3sgpjilr1i0"]
+[gd_scene load_steps=12 format=3 uid="uid://dw3sgpjilr1i0"]
 
 [ext_resource type="Script" uid="uid://chv4dfsklqcpb" path="res://game/rooms/hall_02/room_hall_02.gd" id="1_lgcfy"]
 [ext_resource type="PackedScene" uid="uid://dyyfokmuh8nr1" path="res://game/rooms/hall_02/props/background/prop_background.tscn" id="2_2qv3b"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://bacueirrm3k6u" path="res://game/rooms/hall_02/props/plant/prop_plant.tscn" id="5_rmu7h"]
 [ext_resource type="Texture2D" uid="uid://becp2tg7fdhue" path="res://art/room/hall2_prop_plant.png" id="6_ox6wj"]
 [ext_resource type="PackedScene" uid="uid://b1igybrbvhyxk" path="res://game/rooms/hall_02/hotspots/exit_left/hotspot_exit_left.tscn" id="8_rmu7h"]
-[ext_resource type="PackedScene" uid="uid://d4nvp2yrwm6jl" path="res://game/characters/granny_ghost/character_granny_ghost.tscn" id="8_vg7fk"]
 [ext_resource type="PackedScene" uid="uid://6rkiqo6qgkiy" path="res://game/rooms/hall_02/hotspots/exit_stairs/hotspot_exit_stairs.tscn" id="9_ox6wj"]
 
 [node name="RoomHall02" type="Node2D"]
@@ -84,9 +83,3 @@ metadata/_edit_lock_ = true
 
 [node name="CharacterBasil *" parent="Characters" instance=ExtResource("5_r5irm")]
 position = Vector2(859, 779)
-
-[node name="CharacterGrannyGhost *" parent="Characters" instance=ExtResource("8_vg7fk")]
-position = Vector2(756, 874)
-baseline = -6
-walk_to_point = Vector2(121.04138, 8.645874)
-look_at_point = Vector2(-10.375, -214.41602)

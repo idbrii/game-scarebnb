@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7whniva3dptp"]
+[gd_scene load_steps=10 format=3 uid="uid://7whniva3dptp"]
 
 [ext_resource type="Script" uid="uid://do2lqqgyop5mo" path="res://game/rooms/circus_room/room_circus_room.gd" id="1_gba1i"]
 [ext_resource type="PackedScene" uid="uid://cgwvm31b3tulk" path="res://game/rooms/circus_room/props/background/prop_background.tscn" id="2_itgtw"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="4_jrdtu"]
 [ext_resource type="Texture2D" uid="uid://t41w2ibbawtw" path="res://art/room/clown.png" id="4_pfwxb"]
 [ext_resource type="Texture2D" uid="uid://b5jcjflgc5ijx" path="res://art/room/clown_prop_bed.png" id="6_bmd06"]
+[ext_resource type="PackedScene" uid="uid://cchoj1w6n8jxe" path="res://game/characters/dapper_ghost/character_dapper_ghost.tscn" id="9_bmd06"]
 
 [node name="RoomCircusRoom" type="Node2D"]
 script = ExtResource("1_gba1i")
@@ -19,7 +20,7 @@ popochiu_placeholder = null
 [node name="WalkableAreas" type="Node2D" parent="."]
 
 [node name="Floor" parent="WalkableAreas" instance=ExtResource("2_nnbud")]
-interaction_polygon = [PackedVector2Array(292, 125, 955, 392, 957, 536, -47, 530, 373, 394, -14, 121)]
+interaction_polygon = [PackedVector2Array(292, 125, 955, 392, 957, 536, -47, 530, 373, 394, 90, 148)]
 
 [node name="Props" type="Node2D" parent="."]
 
@@ -32,6 +33,9 @@ metadata/_edit_lock_ = true
 [node name="Bed" parent="Props" instance=ExtResource("4_jdh74")]
 position = Vector2(960, 540)
 texture = ExtResource("6_bmd06")
+baseline = 413
+walk_to_point = Vector2(152.45996, 176.66003)
+look_at_point = Vector2(-189.56671, -54.853333)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 metadata/_edit_lock_ = true
 
@@ -53,3 +57,9 @@ interaction_polygon = PackedVector2Array(-185, -191, 70, -344, 73, 68, -330, 61)
 
 [node name="CharacterBasil *" parent="Characters" instance=ExtResource("4_jrdtu")]
 position = Vector2(1767, 1041)
+
+[node name="CharacterDapperGhost *" parent="Characters" instance=ExtResource("9_bmd06")]
+position = Vector2(1382, 867)
+baseline = -3
+walk_to_point = Vector2(307.22058, -4.319336)
+look_at_point = Vector2(8.689941, -238.8161)
