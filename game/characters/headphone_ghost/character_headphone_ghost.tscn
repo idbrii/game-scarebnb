@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1, 2, 3, 4),
 "transitions": PackedFloat32Array(-2, -2, -2, -2, -2),
 "update": 0,
-"values": [Vector2(-1, -139), Vector2(2, -154), Vector2(-1, -139), Vector2(-9, -151), Vector2(-1, -139)]
+"values": [Vector2(0, -129), Vector2(2, -154), Vector2(0, -129), Vector2(-9, -151), Vector2(0, -129)]
 }
 
 [sub_resource type="Animation" id="Animation_5yx8b"]
@@ -43,12 +43,12 @@ _data = {
 
 [node name="CharacterHeadphoneGhost" type="Area2D"]
 script = ExtResource("1_4gm31")
-text_color = Color(0.14117648, 0.14117648, 0.18039216, 1)
+text_color = Color(0.28767148, 0.28774977, 0.35357207, 1)
 flips_when = 1
 dialog_pos = Vector2(-43.87149, -284.10477)
 popochiu_placeholder = null
 script_name = "HeadphoneGhost"
-description = "Headphone Ghost"
+description = "Evan Flow"
 cursor = 8
 interaction_polygon = PackedVector2Array(-53.627815, -101.72519, -5, -125, 39.923485, -105.159, 29, -27, 3, -8, -34, -24)
 interaction_polygon_position = Vector2(5.012186, -20.252625)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b16povf8vvtu3"]
+
+[ext_resource type="Script" uid="uid://blqea8rokx4ii" path="res://game/characters/granny_ghost/character_granny_ghost_state.gd" id="1_cp6gp"]
+
+[resource]
+resource_name = "GrannyGhost"
+script = ExtResource("1_cp6gp")
+script_name = "GrannyGhost"
+scene = "res://game/characters/granny_ghost/character_granny_ghost.tscn"

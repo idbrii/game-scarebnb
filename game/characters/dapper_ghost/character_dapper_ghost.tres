@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dk4iibeeshycl"]
+
+[ext_resource type="Script" uid="uid://d1dc1ujtb3ssh" path="res://game/characters/dapper_ghost/character_dapper_ghost_state.gd" id="1_ngcst"]
+
+[resource]
+resource_name = "DapperGhost"
+script = ExtResource("1_ngcst")
+script_name = "DapperGhost"
+scene = "res://game/characters/dapper_ghost/character_dapper_ghost.tscn"
