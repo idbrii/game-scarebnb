@@ -9,17 +9,19 @@ extends PopochiuHotspot
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    await RoomUtil.use_door(R.Bedroom01)
+    await InteractUtil.approach_and_say("It's not ready for guests yet.")
+    #~ await RoomUtil.use_door(R.CircusRoom)
 
 
 # Teleport: Node is double left clicked.
 func _on_double_click() -> void:
-    await RoomUtil.teleport_door(R.Bedroom01)
+    await InteractUtil.approach_and_say("It's not ready for guests yet.")
+    #~ await RoomUtil.teleport_door(R.CircusRoom)
 
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await RoomUtil.look_door("That is the always entertaining {0}.\nWe steer the coulrophobics clear of this one.".format([InteractUtil.get_room_pretty_name(R.Bedroom01)]))
+    await RoomUtil.look_door("That is the always entertaining {0}.\nWe steer the coulrophobics clear of this one.".format([InteractUtil.get_room_pretty_name(R.CircusRoom)]))
 
 
 # Unused.

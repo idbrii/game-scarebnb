@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://08bixuhhynd5"]
+
+[ext_resource type="Script" path="res://game/rooms/nautical/room_nautical_state.gd" id="1_3rviq"]
+
+[resource]
+resource_name = "Nautical"
+script = ExtResource("1_3rviq")
+script_name = "Nautical"
+scene = "res://game/rooms/nautical/room_nautical.tscn"

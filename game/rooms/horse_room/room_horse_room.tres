@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b4v4kfuv66ok2"]
+
+[ext_resource type="Script" path="res://game/rooms/horse_room/room_horse_room_state.gd" id="1_5sa0u"]
+
+[resource]
+resource_name = "HorseRoom"
+script = ExtResource("1_5sa0u")
+script_name = "HorseRoom"
+scene = "res://game/rooms/horse_room/room_horse_room.tscn"

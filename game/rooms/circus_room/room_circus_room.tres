@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://x2ta0d8pmrul"]
+
+[ext_resource type="Script" path="res://game/rooms/circus_room/room_circus_room_state.gd" id="1_tiolv"]
+
+[resource]
+resource_name = "CircusRoom"
+script = ExtResource("1_tiolv")
+script_name = "CircusRoom"
+scene = "res://game/rooms/circus_room/room_circus_room.tscn"

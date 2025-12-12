@@ -10,17 +10,17 @@ extends PopochiuHotspot
 # Interact: When the node is left clicked.
 func _on_click() -> void:
     await RoomUtil.look_door("It's locked.")
-    #~ await RoomUtil.use_door(R.Bedroom01)
+    #~ await RoomUtil.use_door(R.NauticalRoom)
 
 
 func _on_double_click() -> void:
     await _on_click()
-    #~ await RoomUtil.teleport_door(R.Bedroom01)
+    #~ await RoomUtil.teleport_door(R.NauticalRoom)
 
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await RoomUtil.look_door("The {0} is under repairs\nafter the last guest brought a [shake]cannon[/shake].".format([InteractUtil.get_room_pretty_name(R.Bedroom01)]))
+    await RoomUtil.look_door("The {0} is under repairs\nafter the last guest brought a [shake]cannon[/shake].".format([InteractUtil.get_room_pretty_name(R.NauticalRoom)]))
 
 
 # When the node is middle clicked

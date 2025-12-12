@@ -5,11 +5,19 @@ extends Resource
 static func get_room_pretty_name(room: PopochiuRoom):
     match room:
         R.Hall01:
-            return "South Hall"
+            return "Guest Hall"
+        R.Hall02:
+            return "Guest Hall"
+        R.CircusRoom:
+            return "Three Ring Room"
         R.Bedroom01:
+            return "Equestrian Room"
+        R.HorseRoom:
             return "Equestrian Room"
         R.FrontDesk:
             return "Front Desk"
+        R.NauticalRoom:
+            return "Nautical Room"
 
     return room.script_name
 

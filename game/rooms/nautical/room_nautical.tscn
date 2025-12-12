@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://p3f7qsn7ebg8"]
+
+[ext_resource type="Script" uid="uid://cc46fkqerroxr" path="res://game/rooms/nautical/room_nautical.gd" id="1_cnmkm"]
+
+[node name="RoomNautical" type="Node2D"]
+script = ExtResource("1_cnmkm")
+script_name = "Nautical"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]

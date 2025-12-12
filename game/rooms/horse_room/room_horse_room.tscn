@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://djmva2o53dl4l"]
+
+[ext_resource type="Script" path="res://game/rooms/horse_room/room_horse_room.gd" id="1_usna1"]
+
+[node name="RoomHorseRoom" type="Node2D"]
+script = ExtResource("1_usna1")
+script_name = "HorseRoom"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
