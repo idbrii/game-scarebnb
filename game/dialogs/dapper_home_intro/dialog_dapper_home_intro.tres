@@ -19,7 +19,7 @@ text = "From a bar?"
 resource_name = "COMEDY"
 script = ExtResource("1_fbuqm")
 id = "COMEDY"
-text = "You were a comedian?"
+text = "(DEV SKIP) You were a comedian?"
 
 [resource]
 resource_name = "DapperHomeIntro"
