@@ -41,6 +41,7 @@ interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
 visible = false
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+disabled = true
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
