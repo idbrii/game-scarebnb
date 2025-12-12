@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwlrbaa2e20l"]
+
+[ext_resource type="Script" path="res://game/rooms/title/hotspots/start/hotspot_start.gd" id="1_djr8n"]
+
+[node name="Start" type="Area2D"]
+script = ExtResource("1_djr8n")
+script_name = "Start"
+description = "Start"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
