@@ -1,7 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4nvp2yrwm6jl"]
+[gd_scene load_steps=8 format=3 uid="uid://d4nvp2yrwm6jl"]
 
 [ext_resource type="Script" uid="uid://b8pq75dy4g4n" path="res://game/characters/granny_ghost/character_granny_ghost.gd" id="1_dtaid"]
 [ext_resource type="Texture2D" uid="uid://cgdfpgr6rieeg" path="res://art/character/ghost_granny.png" id="2_mks4l"]
+[ext_resource type="Texture2D" uid="uid://o5x23vsu22n4" path="res://art/character/ghost_granny_talk.png" id="3_r05ut"]
+
+[sub_resource type="Animation" id="Animation_r05ut"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -155)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_mks4l")]
+}
 
 [sub_resource type="Animation" id="Animation_mks4l"]
 resource_name = "idle"
@@ -19,25 +47,28 @@ tracks/0/keys = {
 "values": [Vector2(0, -155), Vector2(-11, -168), Vector2(0, -155), Vector2(13, -154), Vector2(0, -155)]
 }
 
-[sub_resource type="Animation" id="Animation_r05ut"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_g3v6s"]
+resource_name = "talk"
+length = 0.5
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -155)]
+"times": PackedFloat32Array(0, 0.13333334, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_mks4l"), ExtResource("3_r05ut"), ExtResource("2_mks4l")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g3v6s"]
 _data = {
 &"RESET": SubResource("Animation_r05ut"),
-&"idle": SubResource("Animation_mks4l")
+&"idle": SubResource("Animation_mks4l"),
+&"talk": SubResource("Animation_g3v6s")
 }
 
 [node name="CharacterGrannyGhost" type="Area2D"]

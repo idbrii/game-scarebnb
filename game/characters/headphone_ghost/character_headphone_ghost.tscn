@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d31nllkuxefhb"]
+[gd_scene load_steps=8 format=3 uid="uid://d31nllkuxefhb"]
 
 [ext_resource type="Script" uid="uid://w6pxe1gepsr" path="res://game/characters/headphone_ghost/character_headphone_ghost.gd" id="1_4gm31"]
 [ext_resource type="Texture2D" uid="uid://waqk58ju0hya" path="res://art/character/ghost_headphone.png" id="2_trop8"]
+[ext_resource type="Texture2D" uid="uid://r5gn6eb8mwq6" path="res://art/character/ghost_headphone_talk.png" id="3_5yx8b"]
 
 [sub_resource type="Animation" id="Animation_5yx8b"]
 length = 0.001
@@ -16,6 +17,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-1, -139)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_trop8")]
 }
 
 [sub_resource type="Animation" id="Animation_trop8"]
@@ -35,10 +48,28 @@ tracks/0/keys = {
 "values": [Vector2(0, -129), Vector2(2, -154), Vector2(0, -129), Vector2(-9, -151), Vector2(0, -129)]
 }
 
+[sub_resource type="Animation" id="Animation_fc17q"]
+resource_name = "talk"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_trop8"), ExtResource("3_5yx8b"), ExtResource("2_trop8")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fc17q"]
 _data = {
 &"RESET": SubResource("Animation_5yx8b"),
-&"idle": SubResource("Animation_trop8")
+&"idle": SubResource("Animation_trop8"),
+&"talk": SubResource("Animation_fc17q")
 }
 
 [node name="CharacterHeadphoneGhost" type="Area2D"]
