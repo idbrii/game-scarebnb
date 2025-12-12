@@ -154,7 +154,9 @@ func _ready():
 		set_process(follow_player)
 
 	for child in get_children():
-		if not child is Sprite2D:
+		# Normally expecting Sprite2D, but also allow AnimatedSprite2D to
+		# trigger position updates. Necessary for anti_glide_animation.
+		if not child.has_signal("frame_changed"):
 			continue
 		child.frame_changed.connect(_update_position)
 
