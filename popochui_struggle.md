@@ -58,3 +58,6 @@ Gui inconsistently uses "cancel" vs "Cancel".
 * CursorType would be easier to use if the directions had a common prefix so they were adjacent in the Hotspot dropdown.
 
 * I thought the rectangular box when editing Hotspot interaction polygon was a convenience to resize my polygon. But instead, it adjusts scale and popochiu seems to regularly reset the scale to 1. This makes my interaction boxes shrink and I was confused why interaction kept getting reset. Instead of just resetting the scale, could popochiu also adjust the polygon to manually scale it up? That would prevent this kind of confusion and even make the scale box useful!
+
+
+I didn't realize the box was unchecked when I deleted a Character and was confused when they re-appeared on another machine. Maybe the box should change what it displays when the box is checked?
