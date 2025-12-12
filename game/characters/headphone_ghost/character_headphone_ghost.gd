@@ -20,7 +20,7 @@ func _on_room_set() -> void:
 func _on_click() -> void:
     await C.player.walk_to_clicked()
     await C.player.face_clicked()
-    D.PhonesHallChat.start()
+    D.EvanHomeNoiseComplaint.start()
 
 
 # Teleport: Node is double left clicked.
