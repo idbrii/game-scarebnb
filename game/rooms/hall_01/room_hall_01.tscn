@@ -53,22 +53,21 @@ look_at_point = Vector2(116.96301, 86.32977)
 cursor = 0
 interaction_polygon = PackedVector2Array(-86, -47, 274, -47, 295, 248, -77, 233)
 
-[node name="LibraryDoor" parent="Hotspots" instance=ExtResource("6_4kf0y")]
+[node name="BarnDoor" parent="Hotspots" instance=ExtResource("6_4kf0y")]
 position = Vector2(960, 540)
-description = "Barn Door"
 baseline = 441
 walk_to_point = Vector2(-540.00006, 507)
 look_at_point = Vector2(-710.2737, 76.40173)
-interaction_polygon = PackedVector2Array(-830, -220, -585, -136, -590, 538, -821, 545)
+interaction_polygon = PackedVector2Array(-999.8336, -279.41278, -672.8336, -140.41278, -693.8336, 554.5872, -994, 571)
 interaction_polygon_position = Vector2(134.83362, -32.58722)
 
 [node name="PirateDoor" parent="Hotspots" instance=ExtResource("7_b1ob0")]
 position = Vector2(960, 540)
-description = "Nautical Door"
+description = "Aft Cabin Door"
 baseline = 332
 walk_to_point = Vector2(396.43018, 357.20886)
 look_at_point = Vector2(498.97717, 26.877014)
-interaction_polygon = PackedVector2Array(423, -113, 562, -184, 561.0423, 287.70026, 471.67828, 342.95917, 421, 314)
+interaction_polygon = PackedVector2Array(495, -124, 679.29285, -226.81506, 666.29285, 318.18494, 542.29285, 380.18494, 496.29285, 348.18494)
 interaction_polygon_position = Vector2(-96.29287, -0.18490791)
 
 [node name="CircusDoor" parent="Hotspots" instance=ExtResource("9_gh7o8")]
@@ -76,7 +75,7 @@ position = Vector2(960, 540)
 baseline = 349
 walk_to_point = Vector2(-194.01196, 353.78656)
 look_at_point = Vector2(-275.80133, 77.98517)
-interaction_polygon = PackedVector2Array(-17.334412, -19.512325, 12.204041, -15.56712, 12, 12, -16.816193, 17.884937)
+interaction_polygon = PackedVector2Array(-75.04932, -222.81836, 39.950684, -189.81836, 40.950684, 145.18164, -73.04932, 211.18164)
 interaction_polygon_position = Vector2(-261.95065, 169.81837)
 
 [node name="ExitRight" parent="Hotspots" instance=ExtResource("10_fnc7a")]
