@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cawch70wcabga"]
+
+[ext_resource type="Script" path="res://game/rooms/hall_02/hotspots/janitor_door/hotspot_janitor_door.gd" id="1_nuakl"]
+
+[node name="JanitorDoor" type="Area2D"]
+script = ExtResource("1_nuakl")
+script_name = "JanitorDoor"
+description = "Janitor Door"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

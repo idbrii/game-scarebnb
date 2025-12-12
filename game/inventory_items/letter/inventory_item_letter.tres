@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cl4yi7rfrfx3g"]
+
+[ext_resource type="Script" path="res://game/inventory_items/letter/inventory_item_letter_state.gd" id="1_efd0y"]
+
+[resource]
+resource_name = "Letter"
+script = ExtResource("1_efd0y")
+script_name = "Letter"
+scene = "res://game/inventory_items/letter/inventory_item_letter.tscn"

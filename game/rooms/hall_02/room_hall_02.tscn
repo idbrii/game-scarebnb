@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://dw3sgpjilr1i0"]
+
+[ext_resource type="Script" uid="uid://chv4dfsklqcpb" path="res://game/rooms/hall_02/room_hall_02.gd" id="1_lgcfy"]
+[ext_resource type="PackedScene" uid="uid://dyyfokmuh8nr1" path="res://game/rooms/hall_02/props/background/prop_background.tscn" id="2_2qv3b"]
+[ext_resource type="PackedScene" uid="uid://gbsg6hq0jm4a" path="res://game/rooms/hall_02/walkable_areas/floor/walkable_area_floor.tscn" id="2_d0r5s"]
+[ext_resource type="Texture2D" uid="uid://dt4bj2okyului" path="res://art/room/hall1.png" id="3_lxke8"]
+[ext_resource type="PackedScene" uid="uid://cawch70wcabga" path="res://game/rooms/hall_02/hotspots/janitor_door/hotspot_janitor_door.tscn" id="5_1ftkv"]
+[ext_resource type="PackedScene" uid="uid://kjgnu05gkmpv" path="res://game/rooms/hall_02/regions/walk_scale/region_walk_scale.tscn" id="5_al18g"]
+[ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="5_r5irm"]
+
+[node name="RoomHall02" type="Node2D"]
+script = ExtResource("1_lgcfy")
+script_name = "Hall02"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Floor" parent="WalkableAreas" instance=ExtResource("2_d0r5s")]
+interaction_polygon = [PackedVector2Array(-208, 193, 36, 193, 66, 228, 52, 260, 127, 289, 494, 545, -780, 532, -302, 305)]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_2qv3b")]
+position = Vector2(0, 540)
+texture = ExtResource("3_lxke8")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+metadata/_edit_lock_ = true
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="JanitorDoor" parent="Hotspots" instance=ExtResource("5_1ftkv")]
+position = Vector2(960, 540)
+baseline = 381
+walk_to_point = Vector2(-420.92297, 402.73486)
+look_at_point = Vector2(-494.97424, 42.871765)
+interaction_polygon = PackedVector2Array(-39.5, -316.5, 111.5, -246.5, 97.5, 209.5, -39.5, 258.5)
+interaction_polygon_position = Vector2(-522.5, 154.49997)
+metadata/_edit_lock_ = true
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="WalkScale" parent="Regions" instance=ExtResource("5_al18g")]
+position = Vector2(960, 540)
+scaling = true
+scale_top = 0.3
+interaction_polygon = PackedVector2Array(-156, -154, 88, -156, 851, 76, -664, 74)
+interaction_polygon_position = Vector2(-61, 338)
+metadata/_edit_lock_ = true
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="CharacterBasil *" parent="Characters" instance=ExtResource("5_r5irm")]
+position = Vector2(859, 779)
