@@ -1,0 +1,29 @@
+[gd_resource type="Resource" load_steps=6 format=3 uid="uid://dtcmxyma7q68m"]
+
+[ext_resource type="Script" uid="uid://m70lhemw53rj" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_y6n4f"]
+[ext_resource type="Script" uid="uid://cq6b32jjq5khn" path="res://game/dialogs/dapper_home_joke/dialog_dapper_home_joke.gd" id="2_m64vb"]
+
+[sub_resource type="Resource" id="Resource_y6n4f"]
+resource_name = "GOOD"
+script = ExtResource("1_y6n4f")
+id = "GOOD"
+text = "Oh, a terrible car accident."
+visible = false
+
+[sub_resource type="Resource" id="Resource_m64vb"]
+resource_name = "BAD"
+script = ExtResource("1_y6n4f")
+id = "BAD"
+text = "Oh, heavens no. I’d never ask that."
+
+[sub_resource type="Resource" id="Resource_s41dv"]
+resource_name = "EXIT"
+script = ExtResource("1_y6n4f")
+id = "EXIT"
+text = "(Make an excuse to leave.)"
+
+[resource]
+resource_name = "DapperHomeJoke"
+script = ExtResource("2_m64vb")
+script_name = "DapperHomeJoke"
+options = Array[ExtResource("1_y6n4f")]([SubResource("Resource_y6n4f"), SubResource("Resource_m64vb"), SubResource("Resource_s41dv")])

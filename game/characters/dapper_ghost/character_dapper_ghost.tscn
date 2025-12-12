@@ -5,8 +5,8 @@
 
 [node name="CharacterDapperGhost" type="Area2D"]
 script = ExtResource("1_b5dh1")
-text_color = Color(0.5372549, 0.18039216, 0.18039216, 1)
-dialog_pos = Vector2(-22.54718, -433.7641)
+text_color = Color(0.8499311, 0.35447973, 0.34536615, 1)
+dialog_pos = Vector2(-29.692444, -478.06488)
 popochiu_placeholder = null
 script_name = "DapperGhost"
 description = "Dapper Dan"
