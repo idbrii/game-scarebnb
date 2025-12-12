@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bav3nlxxn5edy"]
+
+[ext_resource type="Script" path="res://game/rooms/hall_01/regions/walk_scale/region_walk_scale.gd" id="1_fwtrj"]
+
+[node name="WalkScale" type="Area2D"]
+monitorable = false
+script = ExtResource("1_fwtrj")
+script_name = "WalkScale"
+description = "Walk Scale"
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(0, 1, 1, 1)
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)

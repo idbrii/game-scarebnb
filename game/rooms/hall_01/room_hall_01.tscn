@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bc5gy710a8e7u"]
+[gd_scene load_steps=11 format=3 uid="uid://bc5gy710a8e7u"]
 
 [ext_resource type="Script" uid="uid://dwkab5ayf10hk" path="res://game/rooms/hall_01/room_hall_01.gd" id="1_0y88w"]
 [ext_resource type="PackedScene" uid="uid://dk45ihc6j0pa3" path="res://game/rooms/hall_01/props/background/prop_background.tscn" id="2_gwg2h"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dca6dkwrmcd82" path="res://game/rooms/hall_01/hotspots/exit/hotspot_exit.tscn" id="5_wp7dk"]
 [ext_resource type="PackedScene" uid="uid://qbq2bh38tl2q" path="res://game/rooms/hall_01/hotspots/library_door/hotspot_library_door.tscn" id="6_4kf0y"]
 [ext_resource type="PackedScene" uid="uid://cs2cw3j6yopr6" path="res://game/rooms/hall_01/hotspots/pirate_door/hotspot_pirate_door.tscn" id="7_b1ob0"]
+[ext_resource type="PackedScene" uid="uid://bav3nlxxn5edy" path="res://game/rooms/hall_01/regions/walk_scale/region_walk_scale.tscn" id="8_8cdjc"]
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="8_cbabt"]
 [ext_resource type="PackedScene" uid="uid://d31nllkuxefhb" path="res://game/characters/headphone_ghost/character_headphone_ghost.tscn" id="9_hloqe"]
 
@@ -20,7 +21,6 @@ popochiu_placeholder = null
 [node name="WalkableAreas" type="Node2D" parent="."]
 
 [node name="Floor" parent="WalkableAreas" instance=ExtResource("2_qa6m4")]
-interaction_polygon = [PackedVector2Array(519, -329, 747, -341, 1154, -24, -10, 10)]
 
 [node name="Props" type="Node2D" parent="."]
 
@@ -55,6 +55,12 @@ look_at_point = Vector2(498.97717, 26.877014)
 interaction_polygon = PackedVector2Array(423, -113, 562, -184, 568, 398, 421, 314)
 
 [node name="Regions" type="Node2D" parent="."]
+
+[node name="WalkScale" parent="Regions" instance=ExtResource("8_8cdjc")]
+position = Vector2(960, 540)
+scaling = true
+scale_top = 0.1
+interaction_polygon = PackedVector2Array(-30, -20, 215, -26, 856, 517, -623, 515)
 
 [node name="Markers" type="Node2D" parent="."]
 
