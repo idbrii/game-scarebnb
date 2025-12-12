@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c3murc3rpbtg6"]
+
+[ext_resource type="Script" path="res://game/inventory_items/sound_bloop/inventory_item_sound_bloop_state.gd" id="1_mscbj"]
+
+[resource]
+resource_name = "SoundBloop"
+script = ExtResource("1_mscbj")
+script_name = "SoundBloop"
+scene = "res://game/inventory_items/sound_bloop/inventory_item_sound_bloop.tscn"

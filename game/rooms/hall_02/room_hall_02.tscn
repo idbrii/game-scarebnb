@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dw3sgpjilr1i0"]
+[gd_scene load_steps=13 format=3 uid="uid://dw3sgpjilr1i0"]
 
 [ext_resource type="Script" uid="uid://chv4dfsklqcpb" path="res://game/rooms/hall_02/room_hall_02.gd" id="1_lgcfy"]
 [ext_resource type="PackedScene" uid="uid://dyyfokmuh8nr1" path="res://game/rooms/hall_02/props/background/prop_background.tscn" id="2_2qv3b"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://becp2tg7fdhue" path="res://art/room/hall2_prop_plant.png" id="6_ox6wj"]
 [ext_resource type="PackedScene" uid="uid://b1igybrbvhyxk" path="res://game/rooms/hall_02/hotspots/exit_left/hotspot_exit_left.tscn" id="8_rmu7h"]
 [ext_resource type="PackedScene" uid="uid://6rkiqo6qgkiy" path="res://game/rooms/hall_02/hotspots/exit_stairs/hotspot_exit_stairs.tscn" id="9_ox6wj"]
+[ext_resource type="PackedScene" uid="uid://c4rndt6jw041k" path="res://game/rooms/hall_02/hotspots/magazine_rack/hotspot_magazine_rack.tscn" id="10_ox6wj"]
 
 [node name="RoomHall02" type="Node2D"]
 script = ExtResource("1_lgcfy")
@@ -66,6 +67,13 @@ look_at_point = Vector2(-98.3374, 75.322205)
 cursor = 2
 interaction_polygon = PackedVector2Array(-122.5, -112, 110.5, -111, 102.5, 106, -117.5, 111)
 interaction_polygon_position = Vector2(-81.49997, 83.99999)
+
+[node name="MagazineRack" parent="Hotspots" instance=ExtResource("10_ox6wj")]
+position = Vector2(1344, 1009)
+baseline = -31
+walk_to_point = Vector2(-69.00012, -25.500122)
+look_at_point = Vector2(44.999878, -207.00018)
+interaction_polygon = PackedVector2Array(0, -341, 175, -299, 187, 60, -104, -48)
 
 [node name="Regions" type="Node2D" parent="."]
 

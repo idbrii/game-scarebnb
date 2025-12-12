@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://t3o4w5ek54qx"]
+
+[ext_resource type="Texture2D" uid="uid://duyjym7cr5p8w" path="res://art/inventory/item_sound_bloop.png" id="1_052d1"]
+[ext_resource type="Script" uid="uid://d0uwxhknuwun2" path="res://game/inventory_items/sound_bloop/inventory_item_sound_bloop.gd" id="1_227bv"]
+
+[node name="ItemSoundBloop" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_052d1")
+stretch_mode = 5
+script = ExtResource("1_227bv")
+script_name = "SoundBloop"
+description = "Sound Bloop"

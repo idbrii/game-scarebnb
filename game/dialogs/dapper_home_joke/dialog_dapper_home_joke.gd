@@ -7,6 +7,7 @@ extends PopochiuDialog
 func _on_start() -> void:
     # something to execute before showing the dialog options.
     # (!) It MUST always use an await
+    InteractUtil.setup_dapper_joke(self, I.License)
     await E.queue([
         "DapperGhost: Say, do you know how I died?",
         ])

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw53n1e0wcdq3"]
+
+[ext_resource type="Script" uid="uid://cdaf6eapeoorn" path="res://game/inventory_items/sketch/inventory_item_sketch.gd" id="1_by1uq"]
+[ext_resource type="Texture2D" uid="uid://sdc0repiy3ml" path="res://art/inventory/item_sketch.png" id="1_m7te2"]
+
+[node name="ItemSketch" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_m7te2")
+stretch_mode = 5
+script = ExtResource("1_by1uq")
+script_name = "Sketch"
+description = "Sketch"

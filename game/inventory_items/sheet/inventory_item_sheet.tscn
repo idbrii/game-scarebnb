@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx1b2iqpybvmv"]
+
+[ext_resource type="Script" uid="uid://4v055j1lpcg7" path="res://game/inventory_items/sheet/inventory_item_sheet.gd" id="1_qmmpi"]
+[ext_resource type="Texture2D" uid="uid://c7pxmyvuodwg1" path="res://art/inventory/item_sheet.png" id="1_rp3r7"]
+
+[node name="ItemSheet" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_rp3r7")
+stretch_mode = 5
+script = ExtResource("1_qmmpi")
+script_name = "Sheet"
+description = "Sheet"
