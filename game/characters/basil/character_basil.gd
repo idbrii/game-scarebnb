@@ -58,6 +58,19 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 #		await C.player.say("I don't want to give up my key")
 
 
+func play_animation(animation_label: String, animation_fallback := 'idle'):
+	# Same basic structure as PopochiuCharacter.play_animation, but our
+	# "Sprite2D" is an AnimatedSprite2D.
+	var anim := animation_label
+	if not $Sprite2D.sprite_frames.has_animation(anim):
+		anim = animation_fallback
+	$Sprite2D.play(anim)
+	await $Sprite2D.animation_finished
+
+	# Go back to idle state
+	_play_idle()
+
+
 # Use it to play the idle animation for the character
 func _play_idle() -> void:
 	super()

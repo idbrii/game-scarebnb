@@ -20,6 +20,8 @@ It wasn't clear to me that "Look At Point" means "this is where the character lo
 rephrase 
 > Make sure this property *is set to On* to follow the rest of this tutorial!
 
+* There's no mention of animating characters. [Create characters](https://carenalgas.github.io/popochiu/how-to-develop-a-game/create-characters/) specifically skips the sprite sheet and uses a static image. [The scripting guide mentions walk](https://carenalgas.github.io/popochiu/the-engine-handbook/scripting-reference/PopochiuCharacter/) and "If the characer has a [b]$Sprite2D[/b] child" which indicates it needs a Sprite2D, but that's not an animation node!
+
 
 # Template
 
