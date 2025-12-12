@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://da6wsq2uup8vl"]
+[gd_scene load_steps=10 format=3 uid="uid://da6wsq2uup8vl"]
 
 [ext_resource type="Script" uid="uid://ybtx1fxypvbm" path="res://game/rooms/front_desk/room_front_desk.gd" id="1_bskkf"]
 [ext_resource type="PackedScene" uid="uid://cms4e0crby1vl" path="res://game/rooms/front_desk/props/background/prop_background.tscn" id="2_kn2gr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cyo80o4v8s4id" path="res://game/rooms/front_desk/hotspots/calendar/hotspot_calendar.tscn" id="5_oqcwu"]
 [ext_resource type="PackedScene" uid="uid://c6ydy74bgtgik" path="res://game/rooms/front_desk/hotspots/light/hotspot_light.tscn" id="6_0nh58"]
 [ext_resource type="PackedScene" uid="uid://5tukwiiic22k" path="res://game/rooms/front_desk/hotspots/exit_stairs/hotspot_exit_stairs.tscn" id="7_nmxpc"]
+[ext_resource type="PackedScene" uid="uid://clr2jopmn41ok" path="res://game/rooms/front_desk/regions/walk_scale/region_walk_scale.tscn" id="8_swsif"]
 
 [node name="RoomFrontDesk" type="Node2D"]
 script = ExtResource("1_bskkf")
@@ -37,7 +38,7 @@ position = Vector2(960, 540)
 baseline = -540
 walk_to_point = Vector2(871.15186, 625.78357)
 look_at_point = Vector2(911.09546, -47.55197)
-interaction_polygon = PackedVector2Array(-12, -12, -0.7254486, -16.46715, 12, -12, 12, 12, -12, 12)
+interaction_polygon = PackedVector2Array(-136.5, -158.99994, -10.5, -233.99994, 125.5, -167.99994, 122.5, 182.00006, -132.5, 170.00006)
 interaction_polygon_position = Vector2(924.5, -36.000046)
 
 [node name="Light" parent="Hotspots" instance=ExtResource("6_0nh58")]
@@ -45,7 +46,7 @@ position = Vector2(960, 540)
 baseline = -539
 walk_to_point = Vector2(108.41846, 620.0773)
 look_at_point = Vector2(209.22852, 102.71222)
-interaction_polygon = PackedVector2Array(-12, -12, 0.13616943, -16.069687, 12, -12, 12, 12, -12, 12)
+interaction_polygon = PackedVector2Array(-141.40002, -79.900024, -12.400024, -141.90002, 126.599976, -92.900024, 120.599976, 112.099976, -103.400024, 108.099976)
 interaction_polygon_position = Vector2(206.40001, 159.90001)
 
 [node name="ExitStairs" parent="Hotspots" instance=ExtResource("7_nmxpc")]
@@ -59,6 +60,13 @@ interaction_polygon = PackedVector2Array(-131, -537.5, 42, -541.5, 63, 536.5, -1
 interaction_polygon_position = Vector2(-936, 2.5000076)
 
 [node name="Regions" type="Node2D" parent="."]
+
+[node name="WalkScale" parent="Regions" instance=ExtResource("8_swsif")]
+position = Vector2(960, 540)
+scaling = true
+scale_top = 1.5
+scale_bottom = 2.0
+interaction_polygon = PackedVector2Array(-1087, -50, 1229, 8, 1226, 661, -1081, 667)
 
 [node name="Markers" type="Node2D" parent="."]
 
