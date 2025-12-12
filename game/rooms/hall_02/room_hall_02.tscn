@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dw3sgpjilr1i0"]
+[gd_scene load_steps=13 format=3 uid="uid://dw3sgpjilr1i0"]
 
 [ext_resource type="Script" uid="uid://chv4dfsklqcpb" path="res://game/rooms/hall_02/room_hall_02.gd" id="1_lgcfy"]
 [ext_resource type="PackedScene" uid="uid://dyyfokmuh8nr1" path="res://game/rooms/hall_02/props/background/prop_background.tscn" id="2_2qv3b"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cawch70wcabga" path="res://game/rooms/hall_02/hotspots/janitor_door/hotspot_janitor_door.tscn" id="5_1ftkv"]
 [ext_resource type="PackedScene" uid="uid://kjgnu05gkmpv" path="res://game/rooms/hall_02/regions/walk_scale/region_walk_scale.tscn" id="5_al18g"]
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="5_r5irm"]
+[ext_resource type="PackedScene" uid="uid://bacueirrm3k6u" path="res://game/rooms/hall_02/props/plant/prop_plant.tscn" id="5_rmu7h"]
+[ext_resource type="Texture2D" uid="uid://becp2tg7fdhue" path="res://art/room/hall2_prop_plant.png" id="6_ox6wj"]
 [ext_resource type="PackedScene" uid="uid://b1igybrbvhyxk" path="res://game/rooms/hall_02/hotspots/exit_left/hotspot_exit_left.tscn" id="8_rmu7h"]
 [ext_resource type="PackedScene" uid="uid://d4nvp2yrwm6jl" path="res://game/characters/granny_ghost/character_granny_ghost.tscn" id="8_vg7fk"]
 [ext_resource type="PackedScene" uid="uid://6rkiqo6qgkiy" path="res://game/rooms/hall_02/hotspots/exit_stairs/hotspot_exit_stairs.tscn" id="9_ox6wj"]
@@ -30,6 +32,11 @@ texture = ExtResource("3_lxke8")
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 metadata/_edit_lock_ = true
 
+[node name="Plant" parent="Props" instance=ExtResource("5_rmu7h")]
+position = Vector2(208, 677)
+texture = ExtResource("6_ox6wj")
+interaction_polygon = PackedVector2Array(-80, -325, 198, -258, 133, 406, -54, 396)
+
 [node name="Hotspots" type="Node2D" parent="."]
 
 [node name="JanitorDoor" parent="Hotspots" instance=ExtResource("5_1ftkv")]
@@ -48,7 +55,7 @@ baseline = 491
 walk_to_point = Vector2(-912.23676, 512.6101)
 look_at_point = Vector2(-922.6982, 56.49164)
 cursor = 4
-interaction_polygon = PackedVector2Array(-215.5, -538.5, 33.5, -547.5, 69.5, 522.5, -230.5, 530.5)
+interaction_polygon = PackedVector2Array(-215.5, -538.5, 33.5, -547.5, 16.5, -251.5, -100.5, -233.5, -93.5, -71.5, -62.5, 454.5, -230.5, 530.5)
 interaction_polygon_position = Vector2(-746.5, 12.4999695)
 
 [node name="ExitStairs" parent="Hotspots" instance=ExtResource("9_ox6wj")]
