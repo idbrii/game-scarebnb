@@ -9,17 +9,29 @@ extends PopochiuHotspot
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    await RoomUtil.use_door(R.HorseRoom)
+    # Replace the call to E.command_fallback() with your code.
+    PopochiuUtils.e.command_fallback()
+    # For example, you can make the player character walk to this hotspot, gaze at it, and then say
+    # something:
+#    await RoomUtil.use_door(R.NewRoom)
 
 
 # Teleport: Node is double left clicked.
 func _on_double_click() -> void:
-    await RoomUtil.teleport_door(R.HorseRoom)
+    # Replace the call to E.command_fallback() with your code.
+    PopochiuUtils.e.command_fallback()
+    # For example, you could make the player instantly goto another room on an exit hotspot instead
+    # of waiting for the player to walk there.
+#    await RoomUtil.teleport_door(R.NewRoom)
 
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await RoomUtil.look_door("That is the {0}.\nPerfect spot to make hay while the sun shines and sleep soundly when it sets.".format([InteractUtil.get_room_pretty_name(R.HorseRoom)]))
+    # Replace the call to E.command_fallback() with your code.
+    PopochiuUtils.e.command_fallback()
+    # For example, you can make the player character gaze at this hotspot and then say something:
+#    await InteractUtil.approach_and_say("Under the table was a small coin.")
+#    await InteractUtil.face_and_say("A window.")
 
 
 # Unused.

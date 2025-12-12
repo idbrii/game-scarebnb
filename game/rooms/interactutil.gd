@@ -10,8 +10,6 @@ static func get_room_pretty_name(room: PopochiuRoom):
             return "Guest Hall"
         R.CircusRoom:
             return "Three Ring Room"
-        R.Bedroom01:
-            return "Equestrian Room"
         R.HorseRoom:
             return "Equestrian Room"
         R.FrontDesk:

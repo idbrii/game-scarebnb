@@ -9,20 +9,19 @@ extends PopochiuHotspot
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    await RoomUtil.use_door(R.HorseRoom)
+    await RoomUtil.use_door(R.Hall01)
 
 
-# Teleport: Node is double left clicked.
 func _on_double_click() -> void:
-    await RoomUtil.teleport_door(R.HorseRoom)
+    await RoomUtil.teleport_door(R.Hall01)
 
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await RoomUtil.look_door("That is the {0}.\nPerfect spot to make hay while the sun shines and sleep soundly when it sets.".format([InteractUtil.get_room_pretty_name(R.HorseRoom)]))
+    await RoomUtil.look_door("This is the exit back to the {0}.".format([InteractUtil.get_room_pretty_name(R.Hall01)]))
 
 
-# Unused.
+# When the node is middle clicked
 func _on_middle_click() -> void:
     # Replace the call to E.command_fallback() to implement your code.
     PopochiuUtils.e.command_fallback()

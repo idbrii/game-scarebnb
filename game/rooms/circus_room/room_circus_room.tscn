@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://7whniva3dptp"]
+[gd_scene load_steps=7 format=3 uid="uid://7whniva3dptp"]
 
-[ext_resource type="Script" path="res://game/rooms/circus_room/room_circus_room.gd" id="1_gba1i"]
+[ext_resource type="Script" uid="uid://do2lqqgyop5mo" path="res://game/rooms/circus_room/room_circus_room.gd" id="1_gba1i"]
+[ext_resource type="PackedScene" uid="uid://cgwvm31b3tulk" path="res://game/rooms/circus_room/props/background/prop_background.tscn" id="2_itgtw"]
+[ext_resource type="PackedScene" uid="uid://cbjju1chnctc4" path="res://game/rooms/circus_room/walkable_areas/floor/walkable_area_floor.tscn" id="2_nnbud"]
+[ext_resource type="PackedScene" uid="uid://0ufy3bqn1lt3" path="res://game/rooms/circus_room/hotspots/exit_hallway/hotspot_exit_hallway.tscn" id="4_ckmf0"]
+[ext_resource type="PackedScene" uid="uid://dikhaevro3nc3" path="res://game/rooms/circus_room/props/bed/prop_bed.tscn" id="4_jdh74"]
+[ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="4_jrdtu"]
 
 [node name="RoomCircusRoom" type="Node2D"]
 script = ExtResource("1_gba1i")
@@ -11,12 +16,29 @@ popochiu_placeholder = null
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
+[node name="Floor" parent="WalkableAreas" instance=ExtResource("2_nnbud")]
+
 [node name="Props" type="Node2D" parent="."]
 
+[node name="Background" parent="Props" instance=ExtResource("2_itgtw")]
+position = Vector2(960, 540)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Bed" parent="Props" instance=ExtResource("4_jdh74")]
+position = Vector2(960, 540)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
 [node name="Hotspots" type="Node2D" parent="."]
+
+[node name="ExitHallway" parent="Hotspots" instance=ExtResource("4_ckmf0")]
+position = Vector2(960, 540)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Regions" type="Node2D" parent="."]
 
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="CharacterBasil *" parent="Characters" instance=ExtResource("4_jrdtu")]
+position = Vector2(960, 540)

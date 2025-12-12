@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://or4krxwm8sbe"]
+
+[ext_resource type="Script" uid="uid://bwkv35q4wyap5" path="res://game/rooms/nautical_room/walkable_areas/floor/walkable_area_floor.gd" id="1_7k46q"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_u644b"]
+vertices = PackedVector2Array(1471, 264, 732, -5, 570, -169, 787, -134, 1224, -2, 1471, 116, 775, -212, 1284, -86, -431, 251, -432, 88, -175, 149, -41, 49, 157, 224)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(3, 6, 7, 4), PackedInt32Array(8, 9, 10), PackedInt32Array(10, 11, 12), PackedInt32Array(12, 1, 0), PackedInt32Array(12, 0, 8), PackedInt32Array(12, 8, 10)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-41, 49, 157, 224, 732, -5, 570, -169, 787, -134, 775, -212, 1284, -86, 1224, -2, 1471, 116, 1471, 264, -431, 251, -432, 88, -175, 149)])
+agent_radius = 0.0
+
+[node name="Floor" type="Node2D"]
+position = Vector2(960, 540)
+script = ExtResource("1_7k46q")
+script_name = "Floor"
+description = "Floor"
+interaction_polygon = [PackedVector2Array(-41, 49, 157, 224, 732, -5, 570, -169, 787, -134, 775, -212, 1284, -86, 1224, -2, 1471, 116, 1471, 264, -431, 251, -432, 88, -175, 149)]
+interaction_polygon_position = Vector2(-513, 278)
+
+[node name="Perimeter" type="NavigationRegion2D" parent="."]
+visible = false
+modulate = Color(0, 1, 0, 1)
+position = Vector2(-513, 278)
+navigation_polygon = SubResource("NavigationPolygon_u644b")

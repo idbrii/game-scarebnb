@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://6f3s64mtpvjt"]
+[gd_scene load_steps=12 format=3 uid="uid://6f3s64mtpvjt"]
 
-[ext_resource type="Script" path="res://game/rooms/nautical_room/room_nautical_room.gd" id="1_ytbjs"]
+[ext_resource type="Script" uid="uid://buvsrksme3lqo" path="res://game/rooms/nautical_room/room_nautical_room.gd" id="1_ytbjs"]
+[ext_resource type="PackedScene" uid="uid://or4krxwm8sbe" path="res://game/rooms/nautical_room/walkable_areas/floor/walkable_area_floor.tscn" id="2_i0afs"]
+[ext_resource type="PackedScene" uid="uid://dhebv8ley40g6" path="res://game/rooms/nautical_room/props/background/prop_background.tscn" id="2_vrvmb"]
+[ext_resource type="PackedScene" uid="uid://ckafq581s6wr4" path="res://game/rooms/nautical_room/hotspots/exit_hallway/hotspot_exit_hallway.tscn" id="4_d21hu"]
+[ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="4_f2una"]
+[ext_resource type="Texture2D" uid="uid://dowq7wg283gbi" path="res://art/room/pirate.png" id="4_lbpb0"]
+[ext_resource type="PackedScene" uid="uid://dfexox4cs2de3" path="res://game/rooms/nautical_room/props/bed/prop_bed.tscn" id="5_vle6s"]
+[ext_resource type="Texture2D" uid="uid://d260fmi8o17uy" path="res://art/room/pirate_prop_bed.png" id="6_5evop"]
+[ext_resource type="PackedScene" uid="uid://bh3gmpgn4smw2" path="res://game/rooms/nautical_room/props/wardrobe/prop_wardrobe.tscn" id="6_vle6s"]
+[ext_resource type="Texture2D" uid="uid://dl8e44v2atfhe" path="res://art/room/pirate_prop_wardrobe.png" id="8_2vmt3"]
+[ext_resource type="PackedScene" uid="uid://qiipj3hxroft" path="res://game/rooms/nautical_room/hotspots/window/hotspot_window.tscn" id="10_2vmt3"]
 
 [node name="RoomNauticalRoom" type="Node2D"]
 script = ExtResource("1_ytbjs")
@@ -11,12 +21,58 @@ popochiu_placeholder = null
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
+[node name="Floor" parent="WalkableAreas" instance=ExtResource("2_i0afs")]
+interaction_polygon = [PackedVector2Array(-41, 49, 157, 224, 732, -5, 570, -169, 787, -134, 775, -212, 1284, -86, 1224, -2, 1471, 116, 1471, 264, -431, 251, -432, 88, -175, 149)]
+interaction_polygon_position = Vector2(-513, 278)
+
 [node name="Props" type="Node2D" parent="."]
 
+[node name="Background" parent="Props" instance=ExtResource("2_vrvmb")]
+position = Vector2(960, 540)
+texture = ExtResource("4_lbpb0")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+metadata/_edit_lock_ = true
+
+[node name="Bed" parent="Props" instance=ExtResource("5_vle6s")]
+position = Vector2(960, 540)
+input_pickable = true
+texture = ExtResource("6_5evop")
+clickable = true
+baseline = 286
+walk_to_point = Vector2(43.499878, 144)
+look_at_point = Vector2(-282.00006, -88.5)
+interaction_polygon = PackedVector2Array(-570, -89, -102, -124, -24, 23, 207, 106, 221, 278, -372, 506, -566, 278)
+metadata/_edit_lock_ = true
+
+[node name="Wardrobe" parent="Props" instance=ExtResource("6_vle6s")]
+position = Vector2(960, 540)
+input_pickable = true
+texture = ExtResource("8_2vmt3")
+clickable = true
+baseline = 268
+walk_to_point = Vector2(737.9999, 344.99988)
+look_at_point = Vector2(842.9999, -33.00006)
+interaction_polygon = PackedVector2Array(646, -178, 798, -305, 960, -305, 969, 391, 721, 284)
+metadata/_edit_lock_ = true
+
 [node name="Hotspots" type="Node2D" parent="."]
+
+[node name="ExitHallway" parent="Hotspots" instance=ExtResource("4_d21hu")]
+position = Vector2(960, 540)
+baseline = 546
+walk_to_point = Vector2(-943.5, 523.5)
+look_at_point = Vector2(-964.5, 391.5)
+interaction_polygon = PackedVector2Array(-959, -4, -876, 259, -796, 539, -960, 543)
+
+[node name="Window" parent="Hotspots" instance=ExtResource("10_2vmt3")]
+position = Vector2(960, 540)
+interaction_polygon = PackedVector2Array(474, -229, 645, -239, 646, -52, 478, -39)
 
 [node name="Regions" type="Node2D" parent="."]
 
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="CharacterBasil *" parent="Characters" instance=ExtResource("4_f2una")]
+position = Vector2(87, 1053)

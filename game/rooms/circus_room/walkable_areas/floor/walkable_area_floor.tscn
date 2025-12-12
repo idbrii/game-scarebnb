@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbjju1chnctc4"]
+
+[ext_resource type="Script" uid="uid://b1e7owqjmjvff" path="res://game/rooms/circus_room/walkable_areas/floor/walkable_area_floor.gd" id="1_0tpbs"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_x0fwt"]
+vertices = PackedVector2Array(10, 10, -10, 10, -10, -10, 10, -10)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)])
+agent_radius = 0.0
+
+[node name="Floor" type="Node2D"]
+position = Vector2(960, 540)
+script = ExtResource("1_0tpbs")
+script_name = "Floor"
+description = "Floor"
+interaction_polygon = [PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)]
+
+[node name="Perimeter" type="NavigationRegion2D" parent="."]
+visible = false
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_x0fwt")

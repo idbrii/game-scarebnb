@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckafq581s6wr4"]
+
+[ext_resource type="Script" path="res://game/rooms/nautical_room/hotspots/exit_hallway/hotspot_exit_hallway.gd" id="1_or3q4"]
+
+[node name="ExitHallway" type="Area2D"]
+script = ExtResource("1_or3q4")
+script_name = "ExitHallway"
+description = "Exit Hallway"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
