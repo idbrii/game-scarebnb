@@ -251,6 +251,7 @@ hide_during_dialogs = true
 
 [node name="DialogCaption" parent="." instance=ExtResource("5_b83v5")]
 layout_mode = 1
+wrap_width = 500.0
 
 [node name="DialogMenu" parent="." instance=ExtResource("6_75iei")]
 visible = false

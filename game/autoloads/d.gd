@@ -15,4 +15,3 @@ var EvanHomeNoiseComplaint: PDEvanHomeNoiseComplaint : get = get_EvanHomeNoiseCo
 func get_PhonesHallChat() -> PDPhonesHallChat: return get_instance("PhonesHallChat")
 func get_EvanHomeNoiseComplaint() -> PDEvanHomeNoiseComplaint: return get_instance("EvanHomeNoiseComplaint")
 # ---- functions
-
