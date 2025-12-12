@@ -52,7 +52,7 @@ func _option_selected(opt: PopochiuDialogOption) -> void:
 
         "COMEDY":
             # This is a shortcut to skip the intro and go straight into the jokes.
-            await D.say_selected()
+            C.player.say("You were a comedian?")
             stop()
             D.DapperHomeJoke.start()
             return
