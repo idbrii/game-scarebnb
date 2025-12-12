@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2dykte6yjv2m"
-path="res://.godot/imported/ghost_blanket.png-74fff6ac659f593da8219cf4f92f5d7e.ctex"
+uid="uid://lq2qpsnxpyxw"
+path="res://.godot/imported/frontdesk.png-d9c47d42774f65489d1708161a0f6f27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/character/ghost_blanket.png"
-dest_files=["res://.godot/imported/ghost_blanket.png-74fff6ac659f593da8219cf4f92f5d7e.ctex"]
+source_file="res://art/room/frontdesk.png"
+dest_files=["res://.godot/imported/frontdesk.png-d9c47d42774f65489d1708161a0f6f27.ctex"]
 
 [params]
 
