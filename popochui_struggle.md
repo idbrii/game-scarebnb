@@ -53,3 +53,7 @@ Gui inconsistently uses "cancel" vs "Cancel".
     * Fixed. make a PR.
 
 * When working with large images (not pixel art), it's frustrating when the default interaction polygon is super small. Would be awesome if it automatically used the size of the texture.
+
+* CursorType would be easier to use if the directions had a common prefix so they were adjacent in the Hotspot dropdown.
+
+* I thought the rectangular box when editing Hotspot interaction polygon was a convenience to resize my polygon. But instead, it adjusts scale and popochiu seems to regularly reset the scale to 1. This makes my interaction boxes shrink and I was confused why interaction kept getting reset. Instead of just resetting the scale, could popochiu also adjust the polygon to manually scale it up? That would prevent this kind of confusion and even make the scale box useful!

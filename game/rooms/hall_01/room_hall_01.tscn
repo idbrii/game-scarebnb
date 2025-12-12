@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bc5gy710a8e7u"]
+[gd_scene load_steps=14 format=3 uid="uid://bc5gy710a8e7u"]
 
 [ext_resource type="Script" uid="uid://dwkab5ayf10hk" path="res://game/rooms/hall_01/room_hall_01.gd" id="1_0y88w"]
 [ext_resource type="PackedScene" uid="uid://dk45ihc6j0pa3" path="res://game/rooms/hall_01/props/background/prop_background.tscn" id="2_gwg2h"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="8_cbabt"]
 [ext_resource type="PackedScene" uid="uid://bl2x8dvg6jn0n" path="res://game/rooms/hall_01/hotspots/circus_door/hotspot_circus_door.tscn" id="9_gh7o8"]
 [ext_resource type="PackedScene" uid="uid://d31nllkuxefhb" path="res://game/characters/headphone_ghost/character_headphone_ghost.tscn" id="9_hloqe"]
+[ext_resource type="PackedScene" uid="uid://kvn5mu52naty" path="res://game/rooms/hall_01/hotspots/exit_right/hotspot_exit_right.tscn" id="10_fnc7a"]
 
 [node name="RoomHall01" type="Node2D"]
 script = ExtResource("1_0y88w")
@@ -37,7 +38,7 @@ position = Vector2(1632, 860)
 baseline = 222
 walk_to_point = Vector2(-214.35901, 92.23932)
 look_at_point = Vector2(90.94006, -63.65808)
-interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+interaction_polygon = PackedVector2Array(-12, -12, 10.906265, -9.8293495, 13.726135, 15.0061455, -32.80172, 15.399319, -30.894165, 8.256657, -19.531746, 2.5556335)
 metadata/_edit_lock_ = true
 
 [node name="Hotspots" type="Node2D" parent="."]
@@ -45,9 +46,11 @@ metadata/_edit_lock_ = true
 [node name="Exit" parent="Hotspots" instance=ExtResource("5_wp7dk")]
 position = Vector2(960, 540)
 script_name = "NorthExit"
+description = "South Wing Hallway"
 baseline = -534
 walk_to_point = Vector2(89.114746, 208.86243)
 look_at_point = Vector2(116.96301, 86.32977)
+cursor = 0
 interaction_polygon = PackedVector2Array(-86, -47, 274, -47, 295, 248, -77, 233)
 
 [node name="LibraryDoor" parent="Hotspots" instance=ExtResource("6_4kf0y")]
@@ -75,6 +78,16 @@ walk_to_point = Vector2(-194.01196, 353.78656)
 look_at_point = Vector2(-275.80133, 77.98517)
 interaction_polygon = PackedVector2Array(-17.334412, -19.512325, 12.204041, -15.56712, 12, 12, -16.816193, 17.884937)
 interaction_polygon_position = Vector2(-261.95065, 169.81837)
+
+[node name="ExitRight" parent="Hotspots" instance=ExtResource("10_fnc7a")]
+position = Vector2(960, 540)
+description = "Hallway"
+baseline = -534
+walk_to_point = Vector2(751.3208, 448.89044)
+look_at_point = Vector2(926.31177, 68.47479)
+cursor = 6
+interaction_polygon = PackedVector2Array(-204.5, -570.00006, 115.5, -561.00006, 178.5, 460.99994, -17.5, 482.99994, -28.5, 108.99994, -165.5, 91.99994)
+interaction_polygon_position = Vector2(982.50006, 27.000061)
 
 [node name="Regions" type="Node2D" parent="."]
 

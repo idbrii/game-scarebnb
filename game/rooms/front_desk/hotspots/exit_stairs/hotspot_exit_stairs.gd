@@ -9,25 +9,26 @@ extends PopochiuHotspot
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    await InteractUtil.approach_and_say("I'm not ready to visit this wing.")
+    await RoomUtil.use_door(R.Hall02)
 
 
+# Teleport: Node is double left clicked.
 func _on_double_click() -> void:
-    _on_click()
+    await RoomUtil.teleport_door(R.Hall02)
 
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await RoomUtil.look_door("The South Wing. We don't go that way anymore. Not since last Thursday.")
+    await RoomUtil.look_door("These stairs take you up to the guest rooms.")
 
 
-# When the node is middle clicked
+# Unused.
 func _on_middle_click() -> void:
     # Replace the call to E.command_fallback() to implement your code.
     PopochiuUtils.e.command_fallback()
 
 
-# Interact: When the node is left clicked. and there is an inventory item selected
+# When the node is clicked and there is an inventory item selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
     # Replace the call to E.command_fallback() to implement your code.
     PopochiuUtils.e.command_fallback()

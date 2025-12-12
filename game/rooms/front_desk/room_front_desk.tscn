@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://da6wsq2uup8vl"]
+[gd_scene load_steps=9 format=3 uid="uid://da6wsq2uup8vl"]
 
 [ext_resource type="Script" uid="uid://ybtx1fxypvbm" path="res://game/rooms/front_desk/room_front_desk.gd" id="1_bskkf"]
 [ext_resource type="PackedScene" uid="uid://cms4e0crby1vl" path="res://game/rooms/front_desk/props/background/prop_background.tscn" id="2_kn2gr"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="5_62cmu"]
 [ext_resource type="PackedScene" uid="uid://cyo80o4v8s4id" path="res://game/rooms/front_desk/hotspots/calendar/hotspot_calendar.tscn" id="5_oqcwu"]
 [ext_resource type="PackedScene" uid="uid://c6ydy74bgtgik" path="res://game/rooms/front_desk/hotspots/light/hotspot_light.tscn" id="6_0nh58"]
+[ext_resource type="PackedScene" uid="uid://5tukwiiic22k" path="res://game/rooms/front_desk/hotspots/exit_stairs/hotspot_exit_stairs.tscn" id="7_nmxpc"]
 
 [node name="RoomFrontDesk" type="Node2D"]
 script = ExtResource("1_bskkf")
@@ -46,6 +47,16 @@ walk_to_point = Vector2(108.41846, 620.0773)
 look_at_point = Vector2(209.22852, 102.71222)
 interaction_polygon = PackedVector2Array(-12, -12, 0.13616943, -16.069687, 12, -12, 12, 12, -12, 12)
 interaction_polygon_position = Vector2(206.40001, 159.90001)
+
+[node name="ExitStairs" parent="Hotspots" instance=ExtResource("7_nmxpc")]
+position = Vector2(960, 540)
+description = "Stairs to Guest Rooms"
+baseline = -534
+walk_to_point = Vector2(-971.962, 536.386)
+look_at_point = Vector2(-1034.7306, 22.824951)
+cursor = 9
+interaction_polygon = PackedVector2Array(-131, -537.5, 42, -541.5, 63, 536.5, -152, 531.5)
+interaction_polygon_position = Vector2(-936, 2.5000076)
 
 [node name="Regions" type="Node2D" parent="."]
 

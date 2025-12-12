@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://73tpcj1lq4nh"]
+
+[ext_resource type="Script" uid="uid://cwdof3auhh5xg" path="res://game/rooms/hall_02/walkable_areas/exit_left/walkable_area_exit_left.gd" id="1_b5k3s"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_nant7"]
+vertices = PackedVector2Array(-675, 261, -957, 538, -945, -527, -692, -532)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-945, -527, -692, -532, -675, 261, -957, 538)])
+agent_radius = 0.0
+
+[node name="ExitLeft" type="Node2D"]
+position = Vector2(960, 540)
+script = ExtResource("1_b5k3s")
+script_name = "ExitLeft"
+description = "Exit Left"
+interaction_polygon = [PackedVector2Array(-945, -527, -692, -532, -675, 261, -957, 538)]
+
+[node name="Perimeter" type="NavigationRegion2D" parent="."]
+visible = false
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_nant7")

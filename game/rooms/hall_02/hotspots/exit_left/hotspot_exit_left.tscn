@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1igybrbvhyxk"]
+
+[ext_resource type="Script" path="res://game/rooms/hall_02/hotspots/exit_left/hotspot_exit_left.gd" id="1_kpiqj"]
+
+[node name="ExitLeft" type="Area2D"]
+script = ExtResource("1_kpiqj")
+script_name = "ExitLeft"
+description = "Exit Left"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
