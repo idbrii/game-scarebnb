@@ -19,7 +19,7 @@ func _on_double_click() -> void:
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await RoomUtil.look_door("That is the {0}.\nA bit stuffy, but plush.".format([InteractUtil.get_room_pretty_name(R.Bedroom01)]))
+    await RoomUtil.look_door("That is the always entertaining {0}.\nWe steer the coulrophobics clear of this one.".format([InteractUtil.get_room_pretty_name(R.Bedroom01)]))
 
 
 # Unused.

@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://603jrqq0rl30" path="res://game/rooms/hall_01/walkable_areas/floor/walkable_area_floor.gd" id="1_47j2u"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_jl6se"]
-vertices = PackedVector2Array(1154, -24, -10, 10, 519, -329, 747, -341)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(519, -329, 747, -341, 1154, -24, -10, 10)])
+vertices = PackedVector2Array(1134, -20, -10, 10, 542, -305, 723, -311, 1010.66406, -107.328125, 1210, -107)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(0, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(542, -305, 723, -311, 1010.6635, -107.32593, 1210, -107, 1134, -20, -10, 10)])
 agent_radius = 0.0
 
 [node name="Floor" type="Node2D"]
@@ -13,7 +13,7 @@ position = Vector2(417, 1062)
 script = ExtResource("1_47j2u")
 script_name = "Floor"
 description = "Floor"
-interaction_polygon = [PackedVector2Array(519, -329, 747, -341, 1154, -24, -10, 10)]
+interaction_polygon = [PackedVector2Array(542, -305, 723, -311, 1010.6635, -107.32593, 1210, -107, 1134, -20, -10, 10)]
 
 [node name="Perimeter" type="NavigationRegion2D" parent="."]
 visible = false

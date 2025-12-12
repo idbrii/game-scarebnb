@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl2x8dvg6jn0n"]
+
+[ext_resource type="Script" path="res://game/rooms/hall_01/hotspots/circus_door/hotspot_circus_door.gd" id="1_yjm0x"]
+
+[node name="CircusDoor" type="Area2D"]
+script = ExtResource("1_yjm0x")
+script_name = "CircusDoor"
+description = "Circus Door"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
