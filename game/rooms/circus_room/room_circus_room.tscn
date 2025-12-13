@@ -20,7 +20,6 @@ popochiu_placeholder = null
 [node name="WalkableAreas" type="Node2D" parent="."]
 
 [node name="Floor" parent="WalkableAreas" instance=ExtResource("2_nnbud")]
-interaction_polygon = [PackedVector2Array(292, 125, 955, 392, 957, 536, -47, 530, 373, 394, 90, 148)]
 
 [node name="Props" type="Node2D" parent="."]
 
