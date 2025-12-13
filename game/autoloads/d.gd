@@ -7,6 +7,8 @@ const PDEvanHomeNoiseComplaint := preload("res://game/dialogs/evan_home_noise_co
 const PDDapperJokeCar := preload("res://game/dialogs/dapper_joke_car/dialog_dapper_joke_car.gd")
 const PDDapperHomeIntro := preload("res://game/dialogs/dapper_home_intro/dialog_dapper_home_intro.gd")
 const PDDapperJokeSheet := preload("res://game/dialogs/dapper_joke_sheet/dialog_dapper_joke_sheet.gd")
+const PDDapperJokeJailLetter := preload("res://game/dialogs/dapper_joke_jail_letter/dialog_dapper_joke_jail_letter.gd")
+const PDDapperJokeSadSketch := preload("res://game/dialogs/dapper_joke_sad_sketch/dialog_dapper_joke_sad_sketch.gd")
 # ---- classes
 
 # nodes ----
@@ -15,6 +17,8 @@ var EvanHomeNoiseComplaint: PDEvanHomeNoiseComplaint : get = get_EvanHomeNoiseCo
 var DapperJokeCar: PDDapperJokeCar : get = get_DapperJokeCar
 var DapperHomeIntro: PDDapperHomeIntro : get = get_DapperHomeIntro
 var DapperJokeSheet: PDDapperJokeSheet : get = get_DapperJokeSheet
+var DapperJokeJailLetter: PDDapperJokeJailLetter : get = get_DapperJokeJailLetter
+var DapperJokeSadSketch: PDDapperJokeSadSketch : get = get_DapperJokeSadSketch
 # ---- nodes
 
 # functions ----
@@ -23,4 +27,6 @@ func get_EvanHomeNoiseComplaint() -> PDEvanHomeNoiseComplaint: return get_instan
 func get_DapperJokeCar() -> PDDapperJokeCar: return get_instance("DapperJokeCar")
 func get_DapperHomeIntro() -> PDDapperHomeIntro: return get_instance("DapperHomeIntro")
 func get_DapperJokeSheet() -> PDDapperJokeSheet: return get_instance("DapperJokeSheet")
+func get_DapperJokeJailLetter() -> PDDapperJokeJailLetter: return get_instance("DapperJokeJailLetter")
+func get_DapperJokeSadSketch() -> PDDapperJokeSadSketch: return get_instance("DapperJokeSadSketch")
 # ---- functions

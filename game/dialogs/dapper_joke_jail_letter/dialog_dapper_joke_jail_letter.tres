@@ -1,0 +1,29 @@
+[gd_resource type="Resource" load_steps=6 format=3 uid="uid://c6gokwwryrx4x"]
+
+[ext_resource type="Script" uid="uid://m70lhemw53rj" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_firg6"]
+[ext_resource type="Script" uid="uid://xjg0wc2apjq" path="res://game/dialogs/dapper_joke_jail_letter/dialog_dapper_joke_jail_letter.gd" id="2_emo8t"]
+
+[sub_resource type="Resource" id="Resource_firg6"]
+resource_name = "GOOD"
+script = ExtResource("1_firg6")
+id = "GOOD"
+text = "What were you in for, again?"
+visible = false
+
+[sub_resource type="Resource" id="Resource_emo8t"]
+resource_name = "BAD"
+script = ExtResource("1_firg6")
+id = "BAD"
+text = "No I didn’t."
+
+[sub_resource type="Resource" id="Resource_uamo7"]
+resource_name = "EXIT"
+script = ExtResource("1_firg6")
+id = "EXIT"
+text = "(Make an excuse to leave.)"
+
+[resource]
+resource_name = "DapperJokeJailLetter"
+script = ExtResource("2_emo8t")
+script_name = "DapperJokeJailLetter"
+options = Array[ExtResource("1_firg6")]([SubResource("Resource_firg6"), SubResource("Resource_emo8t"), SubResource("Resource_uamo7")])

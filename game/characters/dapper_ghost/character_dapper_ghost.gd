@@ -23,6 +23,8 @@ func _on_click() -> void:
     var jokes = [
             D.DapperJokeCar,
             D.DapperJokeSheet,
+            D.DapperJokeJailLetter,
+            D.DapperJokeSadSketch,
         ]
 
     await C.player.walk_to_clicked()
