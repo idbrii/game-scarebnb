@@ -202,8 +202,11 @@ func _on_selection_changed() -> void:
 ## Handles the editor config that allows the WAs polygons to be always visible,
 ## not only during editing.
 func _set_walkable_areas_visibility() -> void:
+	var root = EditorInterface.get_edited_scene_root()
+	if not root:
+		return
 	for child in PopochiuEditorHelper.get_all_children(
-		EditorInterface.get_edited_scene_root().find_child("WalkableAreas")
+		root.find_child("WalkableAreas")
 	):
 		# Not a polygon? Skip
 		if not PopochiuEditorHelper.is_popochiu_obj_polygon(child):
