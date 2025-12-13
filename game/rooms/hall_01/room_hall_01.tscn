@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bc5gy710a8e7u"]
+[gd_scene load_steps=14 format=3 uid="uid://bc5gy710a8e7u"]
 
 [ext_resource type="Script" uid="uid://dwkab5ayf10hk" path="res://game/rooms/hall_01/room_hall_01.gd" id="1_0y88w"]
 [ext_resource type="PackedScene" uid="uid://dk45ihc6j0pa3" path="res://game/rooms/hall_01/props/background/prop_background.tscn" id="2_gwg2h"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="8_cbabt"]
 [ext_resource type="PackedScene" uid="uid://bl2x8dvg6jn0n" path="res://game/rooms/hall_01/hotspots/circus_door/hotspot_circus_door.tscn" id="9_gh7o8"]
 [ext_resource type="PackedScene" uid="uid://kvn5mu52naty" path="res://game/rooms/hall_01/hotspots/exit_right/hotspot_exit_right.tscn" id="10_fnc7a"]
+[ext_resource type="PackedScene" uid="uid://b3aue7w50k56x" path="res://game/rooms/hall_01/hotspots/flower_pot/hotspot_flower_pot.tscn" id="11_fnc7a"]
 
 [node name="RoomHall01" type="Node2D"]
 script = ExtResource("1_0y88w")
@@ -35,7 +36,7 @@ metadata/_edit_lock_ = true
 [node name="Chair" parent="Props" instance=ExtResource("5_t3nlx")]
 position = Vector2(1632, 860)
 baseline = 222
-walk_to_point = Vector2(-214.35901, 92.23932)
+walk_to_point = Vector2(-313.5664, 120.58435)
 look_at_point = Vector2(90.94006, -63.65808)
 interaction_polygon = PackedVector2Array(-12, -12, 10.906265, -9.8293495, 13.726135, 15.0061455, -32.80172, 15.399319, -30.894165, 8.256657, -19.531746, 2.5556335)
 metadata/_edit_lock_ = true
@@ -86,6 +87,14 @@ look_at_point = Vector2(926.31177, 68.47479)
 cursor = 6
 interaction_polygon = PackedVector2Array(-204.5, -570.00006, 115.5, -561.00006, 178.5, 460.99994, -17.5, 482.99994, -28.5, 108.99994, -165.5, 91.99994)
 interaction_polygon_position = Vector2(982.50006, 27.000061)
+
+[node name="FlowerPot" parent="Hotspots" instance=ExtResource("11_fnc7a")]
+position = Vector2(837, 776)
+baseline = -1
+walk_to_point = Vector2(94.793945, 48.017944)
+look_at_point = Vector2(-7.86499, -46.776062)
+interaction_polygon = PackedVector2Array(-68, -126, 24, -73, 22, 14, -53, 18)
+interaction_polygon_position = Vector2(5, -18)
 
 [node name="Regions" type="Node2D" parent="."]
 

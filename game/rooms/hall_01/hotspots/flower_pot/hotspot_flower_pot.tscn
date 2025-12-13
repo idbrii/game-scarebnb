@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3aue7w50k56x"]
+
+[ext_resource type="Script" path="res://game/rooms/hall_01/hotspots/flower_pot/hotspot_flower_pot.gd" id="1_2jb1i"]
+
+[node name="FlowerPot" type="Area2D"]
+script = ExtResource("1_2jb1i")
+script_name = "FlowerPot"
+description = "Flower Pot"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
