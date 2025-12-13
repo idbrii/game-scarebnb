@@ -38,7 +38,7 @@ position = Vector2(1632, 860)
 baseline = 222
 walk_to_point = Vector2(-313.5664, 120.58435)
 look_at_point = Vector2(90.94006, -63.65808)
-interaction_polygon = PackedVector2Array(-12, -12, 10.906265, -9.8293495, 13.726135, 15.0061455, -32.80172, 15.399319, -30.894165, 8.256657, -19.531746, 2.5556335)
+interaction_polygon = PackedVector2Array(-11.486816, -12.712627, 12.067398, -10.288055, 13.726135, 15.0061455, -32.80172, 15.399319, -30.894165, 8.256657, -16.877747, 2.4245758)
 metadata/_edit_lock_ = true
 
 [node name="Hotspots" type="Node2D" parent="."]
@@ -67,7 +67,7 @@ description = "Aft Cabin Door"
 baseline = 332
 walk_to_point = Vector2(396.43018, 357.20886)
 look_at_point = Vector2(498.97717, 26.877014)
-interaction_polygon = PackedVector2Array(495, -124, 679.29285, -226.81506, 666.29285, 318.18494, 542.29285, 380.18494, 496.29285, 348.18494)
+interaction_polygon = PackedVector2Array(495, -124, 679.29285, -226.81506, 663.29285, 306.18494, 542.29285, 380.18494, 496.29285, 348.18494)
 interaction_polygon_position = Vector2(-96.29287, -0.18490791)
 
 [node name="CircusDoor" parent="Hotspots" instance=ExtResource("9_gh7o8")]
