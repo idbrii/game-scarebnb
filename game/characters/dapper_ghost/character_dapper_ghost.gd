@@ -21,8 +21,8 @@ func _on_room_set() -> void:
 # Interact: When the node is left clicked.
 func _on_click() -> void:
     var jokes = [
-            D.DapperHomeJoke,
-            D.DapperHomeJoke2,
+            D.DapperJokeCar,
+            D.DapperJokeSheet,
         ]
 
     await C.player.walk_to_clicked()
@@ -33,7 +33,6 @@ func _on_click() -> void:
                 dialogue.start()
                 break
     else:
-        #~ has_seen_intro = true
         D.DapperHomeIntro.start()
 
 
@@ -56,13 +55,13 @@ func _on_middle_click() -> void:
 
 
 # When the node is clicked and there is an inventory item selected
-func _on_item_used(_item: PopochiuInventoryItem) -> void:
+func _on_item_used(item: PopochiuInventoryItem) -> void:
     # Replace the call to E.command_fallback() to implement your code.
     E.command_fallback()
     # For example, you can make the player character say something when the Key item is used in this
     # character. Note that you have to change the name of the `_item` parameter to `item`.
-#    if item == I.Key:
-#        await C.player.say("I don't want to give up my key")
+    #~ if item == I.Sheet:
+    #~     await C.player.say("I don't want to give up my key")
 
 
 # Use it to play the idle animation for the character

@@ -23,7 +23,7 @@ id = "EXIT"
 text = "(Make an excuse to leave.)"
 
 [resource]
-resource_name = "DapperHomeJoke"
+resource_name = "DapperJokeCar"
 script = ExtResource("2_m64vb")
-script_name = "DapperHomeJoke"
+script_name = "DapperJokeCar"
 options = Array[ExtResource("1_y6n4f")]([SubResource("Resource_y6n4f"), SubResource("Resource_m64vb"), SubResource("Resource_s41dv")])
