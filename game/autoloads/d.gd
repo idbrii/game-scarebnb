@@ -4,9 +4,9 @@ extends "res://addons/popochiu/engine/interfaces/i_dialog.gd"
 # classes ----
 const PDPhonesHallChat := preload("res://game/dialogs/phones_hall_chat/dialog_phones_hall_chat.gd")
 const PDEvanHomeNoiseComplaint := preload("res://game/dialogs/evan_home_noise_complaint/dialog_evan_home_noise_complaint.gd")
-const PDDapperJokeCar := preload("res://game/dialogs/dapper_home_joke/dialog_dapper_home_joke.gd")
+const PDDapperJokeCar := preload("res://game/dialogs/dapper_joke_car/dialog_dapper_joke_car.gd")
 const PDDapperHomeIntro := preload("res://game/dialogs/dapper_home_intro/dialog_dapper_home_intro.gd")
-const PDDapperJokeSheet := preload("res://game/dialogs/dapper_home_joke_2/dialog_dapper_home_joke_2.gd")
+const PDDapperJokeSheet := preload("res://game/dialogs/dapper_joke_sheet/dialog_dapper_joke_sheet.gd")
 # ---- classes
 
 # nodes ----
