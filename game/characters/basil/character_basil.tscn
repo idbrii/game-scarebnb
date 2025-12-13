@@ -39,6 +39,7 @@ animations = [{
 }]
 
 [node name="CharacterBasil" type="Area2D"]
+input_pickable = false
 script = ExtResource("1_ikao3")
 text_color = Color(0.2, 0.8, 0.8, 1)
 flips_when = 2
@@ -47,6 +48,7 @@ dialog_pos = Vector2(-17.118713, -422.26135)
 popochiu_placeholder = null
 script_name = "Basil"
 description = "Basil"
+clickable = false
 cursor = 8
 interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
