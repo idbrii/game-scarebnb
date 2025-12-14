@@ -106,16 +106,19 @@ func _on_move_ended() -> void:
 
 func say_afterlife():
     await E.queue([
-        "DapperGhost: Kid. I gotta say… I haven’t laughed like that in a long while. Y’know that feelin’? A good laugh like that, lifts a weight off your soul. Ahh. Yep. Feels like the upper floor is a-callin’. Too bad I gotta give you a one-star review for not havin’ a mini-bar.",
-        "Player: !!! What the–?",
-        "DapperGhost: C’mon, kid! I thought you knew a joke when you heard one! See you on the flipside. ",
+        "DapperGhost: [shake]Haw haw haw![/shake] ",
+        "DapperGhost: Ah, kid!!! The timing! The punchlines! I think I was too hard on ya. You’ve got chops, kid. If this B'n'B thing don’t work out, look me up. ‘Course, you’ll have to die first. [shake]Haw haw haw![/shake] ",
+        "DapperGhost: Ahhh. Only a good laugh can lift a weight off your soul like that. I feel ready to step onto the big stage in the sky... ",
+        "DapperGhost: Too bad I gotta give you a one-star review for not havin’ a mini-bar.",
+        "Player: [shake]!!! What the–?[/shake]",
+        "DapperGhost: C’mon, kid! I thought you knew a joke when you heard one! [shake]Haw haw haw![/shake]",
     ])
 
 
 func say_idle():
     var line = Random.choose_value([
-        "Y’got any jokes? Any punchlines? I’m dyin’ of boredom over here. ",
-        "Mind bonkin’ your head with somethin’? I could use a laugh. But not too hard! I don’t want you hauntin’ me forever… ",
-        "Maybe I shoulda been a lawyer. They go straight to Heaven. Or was that the other way… ",
+        "Y’got any jokes? Any punchlines? I’m [shake]dyin’[/shake] of boredom over here. ",
+        "Y’mind bonkin’ your head with somethin’? I could use a laugh. [shake]But not too hard![/shake] I don’t want you hauntin’ me forever… ",
+        "Maybe I shoulda been a lawyer. They go [i]straight[/i] to Heaven. Or was that the other way… ",
     ])
     await say(line)
