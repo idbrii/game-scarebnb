@@ -56,7 +56,7 @@ baseline = -534
 walk_to_point = Vector2(-971.962, 536.386)
 look_at_point = Vector2(-1034.7306, 22.824951)
 cursor = 9
-interaction_polygon = PackedVector2Array(-131, -537.5, 42, -541.5, 63, 536.5, -152, 531.5)
+interaction_polygon = PackedVector2Array(-131, -537.5, 42, -541.5, 47, 34.5, 339, 214.5, 240, 563.5, -138, 547.5)
 interaction_polygon_position = Vector2(-936, 2.5000076)
 
 [node name="Regions" type="Node2D" parent="."]
