@@ -44,3 +44,10 @@ static func setup_dapper_joke(d, item):
         d.turn_on_options(["GOOD"])
     else:
         d.turn_off_options(["GOOD"])
+
+
+static func ghost_ascend_to_afterlife(ghost: PopochiuCharacter):
+    ghost.has_ascended = true
+    await ghost.say_afterlife()
+    await Animators.fade_out(ghost.get_node("Sprite2D"), 1.0)
+    ghost.visible = false

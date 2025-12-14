@@ -10,6 +10,7 @@ var state: Data = load("res://game/characters/dapper_ghost/character_dapper_ghos
 
 
 var has_seen_intro := false
+var has_ascended := false
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
@@ -33,7 +34,9 @@ func _on_click() -> void:
         for dialogue in jokes:
             if not dialogue.has_completed_good_joke:
                 dialogue.start()
-                break
+                return
+        InteractUtil.ghost_ascend_to_afterlife(self)
+
     else:
         D.DapperHomeIntro.start()
 
@@ -57,7 +60,7 @@ func _on_middle_click() -> void:
 
 
 # When the node is clicked and there is an inventory item selected
-func _on_item_used(item: PopochiuInventoryItem) -> void:
+func _on_item_used(_item: PopochiuInventoryItem) -> void:
     # Replace the call to E.command_fallback() to implement your code.
     E.command_fallback()
     # For example, you can make the player character say something when the Key item is used in this
@@ -101,4 +104,18 @@ func _on_move_ended() -> void:
     #pass
 
 
+func say_afterlife():
+    await E.queue([
+        "DapperGhost: Kid. I gotta say… I haven’t laughed like that in a long while. Y’know that feelin’? A good laugh like that, lifts a weight off your soul. Ahh. Yep. Feels like the upper floor is a-callin’. Too bad I gotta give you a one-star review for not havin’ a mini-bar.",
+        "Player: !!! What the–?",
+        "DapperGhost: C’mon, kid! I thought you knew a joke when you heard one! See you on the flipside. ",
+    ])
 
+
+func say_idle():
+    var line = Random.choose_value([
+        "Y’got any jokes? Any punchlines? I’m dyin’ of boredom over here. ",
+        "Mind bonkin’ your head with somethin’? I could use a laugh. But not too hard! I don’t want you hauntin’ me forever… ",
+        "Maybe I shoulda been a lawyer. They go straight to Heaven. Or was that the other way… ",
+    ])
+    await say(line)
