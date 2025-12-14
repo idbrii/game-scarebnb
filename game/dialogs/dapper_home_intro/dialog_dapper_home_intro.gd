@@ -4,6 +4,21 @@ extends PopochiuDialog
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
+func _build_options():
+    return [
+        create_option("DRINK")
+            .with_text("I don’t know.")
+            ,
+
+        create_option("BAR")
+            .with_text("From a bar?")
+            ,
+
+        create_option("COMEDY")
+            .with_text("(DEV SKIP) You were a comedian?")
+            ,
+    ]
+
 func _on_start() -> void:
     # something to execute before showing the dialog options.
     # (!) It MUST always use an await
@@ -14,9 +29,6 @@ func _on_start() -> void:
 
 
 func _option_selected(opt: PopochiuDialogOption) -> void:
-    # You can make the player character say the selected option with:
-    #~ await D.say_selected()
-
     var followup = [
         "DapperGhost:(whispered) [i](C’mon kid… I’m settin’ you up for GOLD here.)[/i]",
         "Player: Gold? Like a tip?",

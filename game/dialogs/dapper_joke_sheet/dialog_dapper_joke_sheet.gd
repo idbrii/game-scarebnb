@@ -4,6 +4,13 @@ extends ScareJokeDialog
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
+func get_goodbad_options():
+    return {
+        GOOD = "Now why would you say a thing like that?",
+        BAD = "Yes, exercise is good for overall health.",
+    }
+
+
 func get_good_item():
     return I.Sheet
 

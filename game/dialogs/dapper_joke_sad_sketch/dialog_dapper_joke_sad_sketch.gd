@@ -4,6 +4,13 @@ extends ScareJokeDialog
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
+func get_goodbad_options():
+    return {
+        GOOD = "Yes. You [i]have[/i] been going through some things lately…",
+        BAD = "No. Just checking.",
+    }
+
+
 func get_good_item():
     return I.Sketch
 

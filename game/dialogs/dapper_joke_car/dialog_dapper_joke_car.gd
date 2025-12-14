@@ -4,6 +4,13 @@ extends ScareJokeDialog
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
+func get_goodbad_options():
+    return {
+        GOOD = "Oh, a terrible car accident.",
+        BAD = "Oh, heavens no. I’d never ask that.",
+    }
+
+
 func get_good_item():
     return I.License
 

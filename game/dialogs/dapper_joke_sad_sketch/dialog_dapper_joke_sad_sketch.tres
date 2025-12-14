@@ -1,29 +1,9 @@
-[gd_resource type="Resource" load_steps=6 format=3 uid="uid://dwhd1w8bmw0jb"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dwhd1w8bmw0jb"]
 
 [ext_resource type="Script" uid="uid://m70lhemw53rj" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_6wp7y"]
 [ext_resource type="Script" uid="uid://cay22abjkn3yp" path="res://game/dialogs/dapper_joke_sad_sketch/dialog_dapper_joke_sad_sketch.gd" id="2_yqe51"]
-
-[sub_resource type="Resource" id="Resource_6wp7y"]
-resource_name = "GOOD"
-script = ExtResource("1_6wp7y")
-id = "GOOD"
-text = "Yes. You [i]have[/i] been going through some things lately…"
-visible = false
-
-[sub_resource type="Resource" id="Resource_yqe51"]
-resource_name = "BAD"
-script = ExtResource("1_6wp7y")
-id = "BAD"
-text = "No. Just checking."
-
-[sub_resource type="Resource" id="Resource_y230f"]
-resource_name = "EXIT"
-script = ExtResource("1_6wp7y")
-id = "EXIT"
-text = "(Make an excuse to leave.)"
 
 [resource]
 resource_name = "DapperJokeSadSketch"
 script = ExtResource("2_yqe51")
 script_name = "DapperJokeSadSketch"
-options = Array[ExtResource("1_6wp7y")]([SubResource("Resource_6wp7y"), SubResource("Resource_yqe51"), SubResource("Resource_y230f")])
