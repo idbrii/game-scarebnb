@@ -39,13 +39,6 @@ static func face_and_say(text):
     await C.player.say(text)
 
 
-static func setup_dapper_joke(d, item):
-    if item.in_inventory:
-        d.turn_on_options(["GOOD"])
-    else:
-        d.turn_off_options(["GOOD"])
-
-
 static func ghost_ascend_to_afterlife(ghost: PopochiuCharacter):
     ghost.has_ascended = true
     await ghost.say_afterlife()

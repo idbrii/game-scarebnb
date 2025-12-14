@@ -72,7 +72,12 @@ func _build_options():
 func _on_start() -> void:
     # something to execute before showing the dialog options.
     # (!) It MUST always use an await
-    InteractUtil.setup_dapper_joke(self, get_good_item())
+
+    if get_good_item().in_inventory:
+        turn_on_options(["GOOD"])
+    else:
+        turn_off_options(["GOOD"])
+
     await E.queue([
         "DapperGhost: Hey, you’re back. You wanna try a joke with me? Alright, here we go…",
         ])
