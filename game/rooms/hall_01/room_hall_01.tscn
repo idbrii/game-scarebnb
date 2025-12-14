@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bc5gy710a8e7u"]
+[gd_scene load_steps=16 format=3 uid="uid://bc5gy710a8e7u"]
 
 [ext_resource type="Script" uid="uid://dwkab5ayf10hk" path="res://game/rooms/hall_01/room_hall_01.gd" id="1_0y88w"]
 [ext_resource type="PackedScene" uid="uid://dk45ihc6j0pa3" path="res://game/rooms/hall_01/props/background/prop_background.tscn" id="2_gwg2h"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://ow2iw78ox6yc" path="res://game/rooms/hall_01/props/chair/prop_chair.tscn" id="5_t3nlx"]
 [ext_resource type="PackedScene" uid="uid://dca6dkwrmcd82" path="res://game/rooms/hall_01/hotspots/exit/hotspot_exit.tscn" id="5_wp7dk"]
 [ext_resource type="PackedScene" uid="uid://qbq2bh38tl2q" path="res://game/rooms/hall_01/hotspots/library_door/hotspot_library_door.tscn" id="6_4kf0y"]
+[ext_resource type="PackedScene" uid="uid://gpq6qxqrqhpx" path="res://game/rooms/hall_01/props/sketch_scrap/prop_sketch_scrap.tscn" id="6_fprjk"]
 [ext_resource type="PackedScene" uid="uid://cs2cw3j6yopr6" path="res://game/rooms/hall_01/hotspots/pirate_door/hotspot_pirate_door.tscn" id="7_b1ob0"]
+[ext_resource type="Texture2D" uid="uid://sdc0repiy3ml" path="res://art/inventory/item_sketch.png" id="7_mliir"]
 [ext_resource type="PackedScene" uid="uid://bav3nlxxn5edy" path="res://game/rooms/hall_01/regions/walk_scale/region_walk_scale.tscn" id="8_8cdjc"]
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="8_cbabt"]
 [ext_resource type="PackedScene" uid="uid://bl2x8dvg6jn0n" path="res://game/rooms/hall_01/hotspots/circus_door/hotspot_circus_door.tscn" id="9_gh7o8"]
@@ -40,6 +42,16 @@ walk_to_point = Vector2(-313.5664, 120.58435)
 look_at_point = Vector2(90.94006, -63.65808)
 interaction_polygon = PackedVector2Array(-11.486816, -12.712627, 12.067398, -10.288055, 13.726135, 15.0061455, -32.80172, 15.399319, -30.894165, 8.256657, -16.877747, 2.4245758)
 metadata/_edit_lock_ = true
+
+[node name="SketchScrap" parent="Props" instance=ExtResource("6_fprjk")]
+position = Vector2(1678, 920)
+texture = ExtResource("7_mliir")
+link_to_item = "Sketch"
+description = "Scrap of paper"
+baseline = 292
+walk_to_point = Vector2(-239.91992, 21.537659)
+look_at_point = Vector2(9.516602, -5.5096436)
+interaction_polygon = PackedVector2Array(-34, -47, 46, -50, 41, 53, -43, 50)
 
 [node name="Hotspots" type="Node2D" parent="."]
 

@@ -5,21 +5,12 @@ extends PopochiuProp
 # the function until the sequence of events finishes.
 
 
-var has_collected_sketch := false
-
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    # TODO: For some reason, you can't click on the chair. The interaction
-    # polygon seems fine, but it doesn't work :(
-    if has_collected_sketch:
-        await InteractUtil.approach_and_say("I spent days finding this perfect spot.\nI wouldn't move this chair an inch!")
-
-    else:
-        await InteractUtil.approach_and_say("I found a crumpled piece of paper under the cushion.")
-        I.Sketch.add()
-        has_collected_sketch = true
+    await InteractUtil.approach_and_say("I found a crumpled piece of paper under the cushion.")
+    I.Sketch.add()
 
 
 # Teleport: Node is double left clicked.
@@ -32,6 +23,7 @@ func _on_double_click() -> void:
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
     await InteractUtil.face_and_say("A delightfully plush chair placed in an aesthetically-pleasing location.")
+    await C.player.say("There's some trash on an otherwise immaculate chair.")
 
 
 # When the node is middle clicked
