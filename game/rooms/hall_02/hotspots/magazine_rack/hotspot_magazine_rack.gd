@@ -10,7 +10,7 @@ extends PopochiuHotspot
 # Interact: When the node is left clicked.
 func _on_click() -> void:
     if I.Magazine.can_collect():
-        await InteractUtil.approach_and_say("A panoply of pamphlets and periodicals. You find it fun to just flap at the pages with your limp hand. Flap flap flap–what’s this? Something just fell out of the rack!")
+        await InteractUtil.approach_and_say("A panoply of pamphlets and periodicals. I find it fun to just flap at the pages with my limp hand. Flap flap flap–what’s this? Something just fell out of the rack!")
         InteractUtil.drop_item_into_world(I.Magazine, self)
 
     else:
