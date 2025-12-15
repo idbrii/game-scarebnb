@@ -35,7 +35,7 @@ func _on_click() -> void:
             if not dialogue.has_completed_good_joke:
                 dialogue.start()
                 return
-        InteractUtil.ghost_ascend_to_afterlife(self)
+        await InteractUtil.ghost_ascend_to_afterlife(self)
 
     else:
         D.DapperHomeIntro.start()
