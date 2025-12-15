@@ -39,7 +39,6 @@ window/size/mode=2
 window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 window/size/width=1920
 window/size/height=1080
 

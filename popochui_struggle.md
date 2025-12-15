@@ -40,6 +40,10 @@ Neither tutorial nor example show how to use E.queue([]). The video tutorial doe
 
 Gui inconsistently uses "cancel" vs "Cancel".
 
+* Selecting GameTypes.HD (2D) causes grey borders when my backgrounds aren't bigger than the screen. It's because of this line:
+    ProjectSettings.set_setting(PopochiuResources.STRETCH_ASPECT, "expand")
+  Changing my settings to use "keep" instead fixes it.
+
 
 # Functionality
 
@@ -49,7 +53,7 @@ Gui inconsistently uses "cancel" vs "Cancel".
 
 * Would be nice to give pretty names to rooms so you can reference them from script. That way it's much easier to rename the room later. I could do this with a custom subclass of PopochiuRoom, but feels like a missing piece. Instead, I implemented a map function.
 
-* It's not clear the the project setting "text_speed" is the time between characters. I found it very confusing that it only went up to 0.1. However, it looks like Godot doesn't yet support setting tooltips on these settings: https://github.com/godotengine/godot-proposals/discussions/8224
+* It's not clear the project setting "text_speed" is the time between characters. I found it very confusing that it only went up to 0.1. However, it looks like Godot doesn't yet support setting tooltips on these settings: https://github.com/godotengine/godot-proposals/discussions/8224
 
 * Many of the "create new" popups should put focus on the name of the object instead of the ok button -- you can't click ok until you provide a name.
     * Fixed. make a PR.
