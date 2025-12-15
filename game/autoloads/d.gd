@@ -9,6 +9,7 @@ const PDDapperHomeIntro := preload("res://game/dialogs/dapper_home_intro/dialog_
 const PDDapperJokeSheet := preload("res://game/dialogs/dapper_joke_sheet/dialog_dapper_joke_sheet.gd")
 const PDDapperJokeJailLetter := preload("res://game/dialogs/dapper_joke_jail_letter/dialog_dapper_joke_jail_letter.gd")
 const PDDapperJokeSadSketch := preload("res://game/dialogs/dapper_joke_sad_sketch/dialog_dapper_joke_sad_sketch.gd")
+const PDEvanMusicFreestyle := preload("res://game/dialogs/evan_music_freestyle/dialog_evan_music_freestyle.gd")
 # ---- classes
 
 # nodes ----
@@ -19,6 +20,7 @@ var DapperHomeIntro: PDDapperHomeIntro : get = get_DapperHomeIntro
 var DapperJokeSheet: PDDapperJokeSheet : get = get_DapperJokeSheet
 var DapperJokeJailLetter: PDDapperJokeJailLetter : get = get_DapperJokeJailLetter
 var DapperJokeSadSketch: PDDapperJokeSadSketch : get = get_DapperJokeSadSketch
+var EvanMusicFreestyle: PDEvanMusicFreestyle : get = get_EvanMusicFreestyle
 # ---- nodes
 
 # functions ----
@@ -29,4 +31,5 @@ func get_DapperHomeIntro() -> PDDapperHomeIntro: return get_instance("DapperHome
 func get_DapperJokeSheet() -> PDDapperJokeSheet: return get_instance("DapperJokeSheet")
 func get_DapperJokeJailLetter() -> PDDapperJokeJailLetter: return get_instance("DapperJokeJailLetter")
 func get_DapperJokeSadSketch() -> PDDapperJokeSadSketch: return get_instance("DapperJokeSadSketch")
+func get_EvanMusicFreestyle() -> PDEvanMusicFreestyle: return get_instance("EvanMusicFreestyle")
 # ---- functions

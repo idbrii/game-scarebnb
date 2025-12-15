@@ -10,6 +10,7 @@ var state: Data = load("res://game/characters/headphone_ghost/character_headphon
 
 
 var seen_intro := false
+var has_ascended := false
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
@@ -23,7 +24,7 @@ func _on_click() -> void:
     await C.player.walk_to_clicked()
     await C.player.face_clicked()
     if seen_intro:
-        _idle_talk()
+        D.EvanMusicFreestyle.start()
     else:
         _intro_convo()
         seen_intro = true
@@ -50,13 +51,37 @@ func _on_middle_click() -> void:
 
 
 # When the node is clicked and there is an inventory item selected
-func _on_item_used(_item: PopochiuInventoryItem) -> void:
-    # Replace the call to E.command_fallback() to implement your code.
-    E.command_fallback()
-    # For example, you can make the player character say something when the Key item is used in this
-    # character. Note that you have to change the name of the `_item` parameter to `item`.
-#    if item == I.Key:
-#        await C.player.say("I don't want to give up my key")
+func _on_item_used(item: PopochiuInventoryItem) -> void:
+    if try_accept_new_sound(item):
+        return
+
+    match item:
+        I.Letter:
+            await C.player.say("I don't think he has the patience for reading.")
+
+
+func try_accept_new_sound(item: PopochiuInventoryItem):
+    var is_sound := true
+    match item:
+        I.SoundBloop:
+            say("Bloop-a-bloop! Hm. That's blooping on the beat!")
+        I.SoundNeigh:
+            say("Na na na neigh. That one's a winnie-r.")
+        I.SoundBonk:
+            say("Ba ba bonk. Bonka bonka.")
+        I.SoundZweee:
+            say("ZweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeEEEEEEEEEEEeeeeeeeeeee.")
+        I.SoundHonk:
+            say("It could be the new cow bell.")
+        I.SoundDing:
+            say("It's almost too small to hear, but dink dink I think that's it!")
+        _:
+            is_sound = false
+    if is_sound:
+        item.remove(true)
+        D.EvanMusicFreestyle.turn_on_options([item.script_name.to_upper()])
+
+    return is_sound
 
 
 # Use it to play the idle animation for the character

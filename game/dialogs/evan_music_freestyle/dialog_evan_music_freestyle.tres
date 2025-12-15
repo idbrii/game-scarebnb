@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://tq5ht4hvn0vt"]
+
+[ext_resource type="Script" uid="uid://m70lhemw53rj" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_o3s5j"]
+[ext_resource type="Script" path="res://game/dialogs/evan_music_freestyle/dialog_evan_music_freestyle.gd" id="2_n10gl"]
+
+[resource]
+resource_name = "EvanMusicFreestyle"
+script = ExtResource("2_n10gl")
+script_name = "EvanMusicFreestyle"
