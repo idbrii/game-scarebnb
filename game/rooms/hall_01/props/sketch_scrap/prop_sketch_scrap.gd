@@ -11,6 +11,7 @@ extends PopochiuProp
 func _on_click() -> void:
     await InteractUtil.approach_and_say("I found a crumpled piece of paper under the cushion.")
     I.Sketch.add()
+    # We link to sketch, so we can't get clicked again.
 
 
 # Teleport: Node is double left clicked.

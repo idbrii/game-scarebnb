@@ -4,22 +4,17 @@ extends PopochiuHotspot
 # Use await E.queue([]) if you want to pause the execution of
 # the function until the sequence of events finishes.
 
-var can_collect_license := false
-var can_collect_letter := false
-
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    if can_collect_license:
+    if I.License.can_collect():
         await InteractUtil.approach_and_say("Someone left their license behind these flowers!")
         I.License.add()
-        can_collect_license = false
 
-    elif can_collect_license:
+    elif I.Letter.can_collect():
         await InteractUtil.approach_and_say("There was a letter left behind the license behind the flowers!!")
         I.Letter.add()
-        can_collect_letter = false
 
     else:
         await InteractUtil.approach_and_say("They smell like a summer meadow... Or maybe just a meadow air freshener.")

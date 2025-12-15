@@ -5,7 +5,6 @@ extends PopochiuHotspot
 # the function until the sequence of events finishes.
 
 
-var can_collect_sheet := true
 var generic_lines := [
     "The door jostles against a mountain of junk, unable to open more than an inch. The junk trembles menacingly, and you shut the door before it has a chance to burst out.",
     "You go to open the Broom Closet, but a deep, haunting voice floats from beyond the door: “Occupied.”",
@@ -15,12 +14,11 @@ var generic_lines := [
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    if can_collect_sheet:
+    if I.Sheet.can_collect():
         await InteractUtil.approach_and_say("I shove the door open an inch, pushing against a mountain of junk inside.")
         # TODO: drop Fonk
         await C.player.say("FONK. An object of note tumbles out just as I manage to slam the door shut again.")
         I.Sheet.add()
-        can_collect_sheet = false
 
     else:
         await InteractUtil.approach_and_say(Random.choose_value(generic_lines))

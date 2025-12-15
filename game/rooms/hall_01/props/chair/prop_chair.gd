@@ -13,13 +13,12 @@ var has_collected_sketch := false
 func _on_click() -> void:
     # TODO: For some reason, you can't click on the chair. The interaction
     # polygon seems fine, but it doesn't work :(
-    if has_collected_sketch:
-        await InteractUtil.approach_and_say("I spent days finding this perfect spot.\nI wouldn't move this chair an inch!")
-
-    else:
+    if I.Sketch.can_collect():
         await InteractUtil.approach_and_say("I found a crumpled piece of paper under the cushion.")
         I.Sketch.add()
-        has_collected_sketch = true
+
+    else:
+        await InteractUtil.approach_and_say("I spent days finding this perfect spot.\nI wouldn't move this chair an inch!")
 
 
 # Teleport: Node is double left clicked.

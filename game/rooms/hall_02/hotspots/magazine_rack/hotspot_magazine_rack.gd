@@ -4,18 +4,15 @@ extends PopochiuHotspot
 # Use await E.queue([]) if you want to pause the execution of
 # the function until the sequence of events finishes.
 
-var can_collect_magazine := false
-
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    if can_collect_magazine:
+    if I.Magazine.can_collect():
         await InteractUtil.approach_and_say("A panoply of pamphlets and periodicals. You find it fun to just flap at the pages with your limp hand. Flap flap flap–what’s this? Something just fell out of the rack!")
         # TODO: drop magazine
         I.Magazine.add()
-        can_collect_magazine = false
 
     else:
         await InteractUtil.approach_and_say("Some of the pamphlets proffer local haunts that the guests can visit. Unhaunted house tours are popular.")

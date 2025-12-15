@@ -1,4 +1,4 @@
-extends PopochiuInventoryItem
+extends ScareInventoryItem
 
 const Data := preload('inventory_item_sketch_state.gd')
 

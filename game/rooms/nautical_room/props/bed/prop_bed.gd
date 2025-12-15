@@ -5,20 +5,17 @@ extends PopochiuProp
 # the function until the sequence of events finishes.
 
 
-var has_collected_coin := false
-
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    if has_collected_coin:
-        await InteractUtil.approach_and_say("There's nothing else back there.")
-
-    else:
+    if I.Coin.can_collect():
         await InteractUtil.approach_and_say("Something's fallen behind the bed.")
         await C.player.say("It's a coin!")
         I.Coin.add()
-        has_collected_coin = true
+
+    else:
+        await InteractUtil.approach_and_say("There's nothing else back there.")
 
 
 # Teleport: Node is double left clicked.
