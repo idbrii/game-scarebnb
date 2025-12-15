@@ -38,7 +38,8 @@ func _on_double_click() -> void:
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await InteractUtil.face_and_say("One of our spectral... er, special guests.")
+    await InteractUtil.face_and_say("Granny ran this ghost B&B for decades. She left this house to me.")
+    await C.player.say("She told me that she fondly remembers my childhood visits and that I loved it because I have “The Sight,” just like her.")
 
 
 # When the node is middle clicked
@@ -95,7 +96,7 @@ func _on_move_ended() -> void:
 
 func _intro_convo():
     E.queue([
-        "Hi dearie. My puzzle isn't done yet, so you'll just have to wait a bit.",
+        "GrannyGhost: Hi dearie. My puzzle isn't done yet, so you'll just have to wait a bit.",
     ])
 
 func _idle_talk():
