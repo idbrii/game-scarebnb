@@ -41,7 +41,7 @@ animations = [{
 [node name="CharacterBasil" type="Area2D"]
 input_pickable = false
 script = ExtResource("1_ikao3")
-text_color = Color(0.2, 0.8, 0.8, 1)
+text_color = Color(0.3103457, 0.9064325, 0.9056735, 1)
 flips_when = 2
 walk_speed = 500.0
 dialog_pos = Vector2(-17.118713, -422.26135)

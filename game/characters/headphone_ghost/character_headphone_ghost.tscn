@@ -86,7 +86,7 @@ _data = {
 
 [node name="CharacterHeadphoneGhost" type="Area2D"]
 script = ExtResource("1_4gm31")
-text_color = Color(0.72855246, 0.72913647, 0.7980651, 1)
+text_color = Color(0.6985992, 0.5970969, 0.8074527, 1)
 flips_when = 1
 dialog_pos = Vector2(-9.288208, -363.64624)
 popochiu_placeholder = null

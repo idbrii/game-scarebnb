@@ -60,7 +60,7 @@ _data = {
 
 [node name="CharacterDapperGhost" type="Area2D"]
 script = ExtResource("1_b5dh1")
-text_color = Color(0.8499311, 0.35447973, 0.34536615, 1)
+text_color = Color(0.95243794, 0.6294, 0.60793805, 1)
 dialog_pos = Vector2(-29.692444, -478.06488)
 popochiu_placeholder = null
 script_name = "DapperGhost"
