@@ -4,34 +4,41 @@ extends PopochiuHotspot
 # Use await E.queue([]) if you want to pause the execution of
 # the function until the sequence of events finishes.
 
-
-var has_collected_letter := false
+var can_collect_license := false
+var can_collect_letter := false
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    if has_collected_letter:
-        await InteractUtil.approach_and_say("They smell like a summer meadow... Or maybe just a meadow air freshener.")
+    if can_collect_license:
+        await InteractUtil.approach_and_say("Someone left their license behind these flowers!")
+        I.License.add()
+        can_collect_license = false
+
+    elif can_collect_license:
+        await InteractUtil.approach_and_say("There was a letter left behind the license behind the flowers!!")
+        I.Letter.add()
+        can_collect_letter = false
 
     else:
-        await InteractUtil.approach_and_say("There was a letter left behind the flowers here!")
-        I.Letter.add()
-        has_collected_letter = true
+        await InteractUtil.approach_and_say("They smell like a summer meadow... Or maybe just a meadow air freshener.")
 
 
 # Teleport: Node is double left clicked.
 func _on_double_click() -> void:
     # Replace the call to E.command_fallback() with your code.
     PopochiuUtils.e.command_fallback()
-    # For example, you could make the player instantly goto another room on an exit hotspot instead
-    # of waiting for the player to walk there.
-#    await RoomUtil.teleport_door(R.NewRoom)
 
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await InteractUtil.face_and_say("We try to keep something to entertain guests when they're waiting for their local haunts to open.")
+    await (
+        InteractUtil
+        . face_and_say(
+            "We try to keep something to entertain guests when they're waiting for their local haunts to open."
+        )
+    )
 
 
 # Unused.
