@@ -84,7 +84,7 @@ interaction_polygon = PackedVector2Array(-465, -220, 115, -236, 198, -102, 376, 
 position = Vector2(661, 449)
 baseline = 12
 walk_to_point = Vector2(466.73718, 251.11542)
-look_at_point = Vector2(-26.619995, -122.451935)
+look_at_point = Vector2(-75.03662, -163.95184)
 interaction_polygon = PackedVector2Array(-307, -321, 255, -216, 236, 6, -300, -29)
 
 [node name="WallHorseShoe" parent="Hotspots" instance=ExtResource("13_mw36a")]

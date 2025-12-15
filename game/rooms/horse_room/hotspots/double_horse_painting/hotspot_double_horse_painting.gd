@@ -10,7 +10,7 @@ extends PopochiuHotspot
 # Interact: When the node is left clicked.
 func _on_click() -> void:
     if I.SoundNeigh.can_collect():
-        await InteractUtil.approach_and_say("Two horses, painted in a neo-realist style. They seem to recognize the horse in the painting on the other wall, and are unsure whether or not to bother him for a photo.")
+        await InteractUtil.face_and_say("Two horses, painted in a neo-realist style. They seem to recognize the horse in the painting on the other wall, and are unsure whether or not to bother him for a photo.")
         InteractUtil.drop_sound_item(I.SoundNeigh, self)
         await C.player.say("NEIGH, they think. Too embarrassing.")
 
@@ -19,7 +19,7 @@ func _on_click() -> void:
             "Their flared nostrils make you look away and blush.",
             "Stallion is not a word to be thrown around lightly.",
         ]
-        await InteractUtil.approach_and_say(Random.choose_value(generic_lines))
+        await InteractUtil.face_and_say(Random.choose_value(generic_lines))
 
 
 # Teleport: Node is double left clicked.
