@@ -9,6 +9,8 @@ const Data := preload('character_granny_ghost_state.gd')
 var state: Data = load("res://game/characters/granny_ghost/character_granny_ghost.tres")
 
 
+var seen_intro := false
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 # When the room in which this node is located finishes being added to the tree
@@ -18,11 +20,13 @@ func _on_room_set() -> void:
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    # Replace the call to E.command_fallback() to implement your code.
-    E.command_fallback()
-    # For example, you can make the player character walk to this character, gaze at it, and then
-    # say something:
-#    await InteractUtil.approach_and_say("Hi!")
+    await C.player.walk_to_clicked()
+    await C.player.face_clicked()
+    if seen_intro:
+        _idle_talk()
+    else:
+        _intro_convo()
+        seen_intro = true
 
 
 # Teleport: Node is double left clicked.
@@ -34,11 +38,7 @@ func _on_double_click() -> void:
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    # Replace the call to E.command_fallback() to implement your code.
-    E.command_fallback()
-    # For example, you can make the player character gaze at this character and then say something:
-#    await InteractUtil.approach_and_say("Under the table was a small coin.")
-#    await InteractUtil.face_and_say("A window.")
+    await InteractUtil.face_and_say("One of our spectral... er, special guests.")
 
 
 # When the node is middle clicked
@@ -93,3 +93,17 @@ func _on_move_ended() -> void:
 
 
 
+func _intro_convo():
+    E.queue([
+        "Hi dearie. My puzzle isn't done yet, so you'll just have to wait a bit.",
+    ])
+
+func _idle_talk():
+    var lines = [
+        "I’m just so proud of you, Basil. I wish I could pinch your cheeks–to [i]death![/i] Then I’d have them with me in the afterlife! [shake]Hee hee hee![/shake]",
+        "I knew I left this B&B to the right person. Mainly because you’re the only person who inherited [shake]The Sight[/shake] from me! ",
+        "The guests here need your help, Basil. Look after them carefully, will you, dear?",
+        "I love horses. Why, they’re my second favourite animal. I would’ve decorated this room after my first favourite animal, but axolotl decorations cost [shake]TWICE as much![/shake] Can you be-[i]lieve[/i] that?? Tsk. ",
+        "By week’s end, if we have a low [b]Guest Score[/b] on [i]Trivaghost,[/i] (Oh I just love that dashing man’s [i]big[/i] teeth! [shake]Homina homina![/shake]), the [b]Inspector[/b] will shut us down! Then our guests will go [shake]straight to Purgatory–no chance of redemption, no shot at a nice afterlife! A-and that includes m-me![/shake] ",
+    ]
+    await say(Random.choose_value(lines))
