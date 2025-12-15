@@ -9,13 +9,19 @@ extends PopochiuProp
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    if I.Coin.can_collect():
-        await InteractUtil.approach_and_say("Something's fallen behind the bed.")
-        await C.player.say("It's a coin!")
-        I.Coin.add()
+    if I.SoundBonk.can_collect():
+        await InteractUtil.approach_and_say("I touch the mattress, expecting the familiar flex and bounce of a waterbed, but I BONK my fingers against something hard.")
+        InteractUtil.drop_sound_item(I.SoundBonk, self)
+        await C.player.say("Another touch confirms it—it’s a sand mattress. A small crab scuttles under the sheets before reburying itself in the mattress.")
 
     else:
-        await InteractUtil.approach_and_say("There's nothing else back there.")
+        var generic_lines := [
+            "How many crabs are in there?",
+            "I'll have to ask our cleaning staff about this. Or the landscaper?",
+        ]
+        await InteractUtil.approach_and_say(Random.choose_value(generic_lines))
+
+
 
 
 # Teleport: Node is double left clicked.

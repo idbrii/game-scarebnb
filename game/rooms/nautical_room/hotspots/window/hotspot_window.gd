@@ -10,16 +10,7 @@ extends PopochiuHotspot
 # Interact: When the node is left clicked.
 func _on_click() -> void:
     await C.player.walk_to_clicked()
-    await C.player.face_clicked()
-    await E.wait(0.5)
-    for n in 3:
-        await C.player.face_left()
-        await E.wait(0.3)
-        await C.player.face_right()
-        await E.wait(0.3)
-    await C.player.face_clicked()
-    await C.player.say("I wanted to open the window,")
-    await C.player.say("but I can't find the handle.")
+    _on_right_click()
 
 
 func _on_double_click() -> void:
@@ -33,8 +24,7 @@ func _on_double_click() -> void:
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
     await C.player.face_clicked()
-    await C.player.say("The weather is so nice today.")
-    await C.player.say("Can I open that window?")
+    await C.player.say("This should look into the adjacent room, but there’s just open sea, calling my name ([i]if[/i] my name was “Lysander”).")
 
 
 # When the node is middle clicked

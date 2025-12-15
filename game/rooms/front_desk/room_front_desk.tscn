@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://da6wsq2uup8vl"]
+[gd_scene load_steps=11 format=3 uid="uid://da6wsq2uup8vl"]
 
 [ext_resource type="Script" uid="uid://ybtx1fxypvbm" path="res://game/rooms/front_desk/room_front_desk.gd" id="1_bskkf"]
 [ext_resource type="PackedScene" uid="uid://cms4e0crby1vl" path="res://game/rooms/front_desk/props/background/prop_background.tscn" id="2_kn2gr"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c6ydy74bgtgik" path="res://game/rooms/front_desk/hotspots/light/hotspot_light.tscn" id="6_0nh58"]
 [ext_resource type="PackedScene" uid="uid://5tukwiiic22k" path="res://game/rooms/front_desk/hotspots/exit_stairs/hotspot_exit_stairs.tscn" id="7_nmxpc"]
 [ext_resource type="PackedScene" uid="uid://clr2jopmn41ok" path="res://game/rooms/front_desk/regions/walk_scale/region_walk_scale.tscn" id="8_swsif"]
+[ext_resource type="PackedScene" uid="uid://dcu520jenxylv" path="res://game/rooms/front_desk/hotspots/service_bell/hotspot_service_bell.tscn" id="8_uo3r5"]
 
 [node name="RoomFrontDesk" type="Node2D"]
 script = ExtResource("1_bskkf")
@@ -59,6 +60,13 @@ cursor = 9
 interaction_polygon = PackedVector2Array(-131, -537.5, 42, -541.5, 47, 34.5, 339, 214.5, 240, 563.5, -138, 547.5)
 interaction_polygon_position = Vector2(-936, 2.5000076)
 
+[node name="ServiceBell" parent="Hotspots" instance=ExtResource("8_uo3r5")]
+position = Vector2(1757, 821)
+baseline = -9
+walk_to_point = Vector2(-132.00024, 122.99988)
+look_at_point = Vector2(13.499756, -51.000122)
+interaction_polygon = PackedVector2Array(-37, -80, 0, -105, 35, -78, 62, 0, -59, -6)
+
 [node name="Regions" type="Node2D" parent="."]
 
 [node name="WalkScale" parent="Regions" instance=ExtResource("8_swsif")]
@@ -67,6 +75,7 @@ scaling = true
 scale_top = 1.5
 scale_bottom = 2.0
 interaction_polygon = PackedVector2Array(-1087, -50, 1229, 8, 1226, 661, -1081, 667)
+metadata/_edit_lock_ = true
 
 [node name="Markers" type="Node2D" parent="."]
 

@@ -1,5 +1,5 @@
 @tool
-extends PopochiuProp
+extends PopochiuHotspot
 # You can use E.queue([]) to trigger a sequence of events.
 # Use await E.queue([]) if you want to pause the execution of
 # the function until the sequence of events finishes.
@@ -9,37 +9,34 @@ extends PopochiuProp
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    if I.SoundZweee.can_collect():
-        await InteractUtil.approach_and_say("Empty, except for some junk like a singed treasure map, a bejeweled dagger, a parrot’s skeleton, a live parrot that can do like 100 cool sound effects including but not limited to ZWEEE, and a freshly-baked cinnamon bun.")
-        InteractUtil.drop_sound_item(I.SoundZweee, self)
-        await C.player.say("But I'll close it and move on.")
+    if I.SoundDing.can_collect():
+        await InteractUtil.approach_and_say("dink!")
+        InteractUtil.drop_sound_item(I.SoundDing, self)
+        await C.player.say("It’s the quietest bell I’ve ever heard, as though rung from somewhere deep, deep under murky emerald water. Just thinking about it sends a chill up my spine.")
 
     else:
         var generic_lines := [
-            "I'm still thinking about sound effect #64. That parrot is wild.",
-            "The dagger sparkled, but I shouldn't touch it.",
-            "Does the skeleton parrot inspire the live one?",
+            "I don't want to hear that distant tinkle again today.",
+            "I hit my daily dinks limit.",
         ]
         await InteractUtil.approach_and_say(Random.choose_value(generic_lines))
-
 
 
 # Teleport: Node is double left clicked.
 func _on_double_click() -> void:
     # Replace the call to E.command_fallback() with your code.
     PopochiuUtils.e.command_fallback()
-    # For example, you could make the player instantly do something instead of walking there first
+    # For example, you could make the player instantly goto another room on an exit hotspot instead
+    # of waiting for the player to walk there.
+#    await RoomUtil.teleport_door(R.NewRoom)
 
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    # Replace the call to E.command_fallback() to implement your code.
-    PopochiuUtils.e.command_fallback()
-    # For example, you can make the player character gaze at this character and then say something:
-#    await InteractUtil.face_and_say("A deck of cards")
+    await InteractUtil.face_and_say("A bell for guests to ring to get my attention.")
 
 
-# When the node is middle clicked
+# Unused.
 func _on_middle_click() -> void:
     # Replace the call to E.command_fallback() to implement your code.
     PopochiuUtils.e.command_fallback()
@@ -50,21 +47,9 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
     # Replace the call to E.command_fallback() to implement your code.
     PopochiuUtils.e.command_fallback()
     # For example, you can make the player character say something when the Key item is used in this
-    # prop. Note that you have to change the name of the `_item` parameter to `item`.
+    # hotspot. Note that you have to change the name of the `_item` parameter to `item`.
 #    if item == I.Key:
-#        await C.player.say("I can't do that")
-
-
-# When an inventory item linked to this Prop (link_to_item) is removed from
-# the inventory (i.e. when it is used in something that makes use of the object).
-func _on_linked_item_removed() -> void:
-    pass
-
-
-# When an inventory item linked to this Prop (link_to_item) is discarded from
-# the inventory (i.e. when the player throws the object out of the inventory).
-func _on_linked_item_discarded() -> void:
-    pass
+#        await C.player.say("No can do")
 
 
 
