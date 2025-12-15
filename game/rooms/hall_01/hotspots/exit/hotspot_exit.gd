@@ -4,12 +4,18 @@ extends PopochiuHotspot
 # Use await E.queue([]) if you want to pause the execution of
 # the function until the sequence of events finishes.
 
-
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
+
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    await InteractUtil.approach_and_say("I'm not ready to visit this wing.")
+    var lines = [
+        "I feel as though a cold hand holds me back from going further. This wing is not meant for the living.",
+        "When I was little, visiting Granny Grace here, I mis-hacked a hacky sack and sent it flying into the impenetrable dark of this hallway, never to be hacked again.",
+        "The South Wing. A portal to another dimension, or simply an unfinished portion of the house? The former, obviously.",
+        "Inexplicably, the breath is stolen from my lungs as I approach the South Wing. A fan of breathing, I turn back.",
+    ]
+    await InteractUtil.approach_and_say(Random.choose_value(lines))
 
 
 func _on_double_click() -> void:
@@ -18,7 +24,9 @@ func _on_double_click() -> void:
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await RoomUtil.look_door("The South Wing. We don't go that way anymore. Not since last Thursday.")
+    await RoomUtil.look_door(
+        "The South Wing. We don't go that way anymore. Not since last Thursday."
+    )
 
 
 # When the node is middle clicked
