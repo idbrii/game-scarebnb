@@ -5,11 +5,6 @@ extends PopochiuHotspot
 # the function until the sequence of events finishes.
 
 
-var generic_lines := [
-    "The door jostles against a mountain of junk, unable to open more than an inch. The junk trembles menacingly, and you shut the door before it has a chance to burst out.",
-    "You go to open the Broom Closet, but a deep, haunting voice floats from beyond the door: “Occupied.”",
-]
-
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Virtual ░░░░ {{{1
 
 # Interact: When the node is left clicked.
@@ -21,6 +16,10 @@ func _on_click() -> void:
         I.Sheet.add()
 
     else:
+        var generic_lines := [
+            "The door jostles against a mountain of junk, unable to open more than an inch. The junk trembles menacingly, and you shut the door before it has a chance to burst out.",
+            "You go to open the Broom Closet, but a deep, haunting voice floats from beyond the door: “Occupied.”",
+        ]
         await InteractUtil.approach_and_say(Random.choose_value(generic_lines))
 
 
