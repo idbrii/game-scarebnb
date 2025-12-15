@@ -61,6 +61,7 @@ position = Vector2(960, 540)
 baseline = 546
 walk_to_point = Vector2(-943.5, 523.5)
 look_at_point = Vector2(-964.5, 391.5)
+cursor = 4
 interaction_polygon = PackedVector2Array(-959, -4, -876, 259, -796, 539, -960, 543)
 
 [node name="Window" parent="Hotspots" instance=ExtResource("10_2vmt3")]
