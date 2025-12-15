@@ -12,4 +12,4 @@ texture = ExtResource("1_052d1")
 stretch_mode = 5
 script = ExtResource("1_227bv")
 script_name = "SoundBloop"
-description = "Sound Bloop"
+description = "Bloop"

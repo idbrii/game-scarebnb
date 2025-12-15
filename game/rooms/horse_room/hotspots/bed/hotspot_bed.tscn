@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://r5x58tve33u6"]
+
+[ext_resource type="Script" path="res://game/rooms/horse_room/hotspots/bed/hotspot_bed.gd" id="1_pkli0"]
+
+[node name="Bed" type="Area2D"]
+script = ExtResource("1_pkli0")
+script_name = "Bed"
+description = "Bed"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

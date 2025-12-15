@@ -9,6 +9,11 @@ const PIILicense := preload("res://game/inventory_items/license/inventory_item_l
 const PIIMagazine := preload("res://game/inventory_items/magazine/inventory_item_magazine.gd")
 const PIISketch := preload("res://game/inventory_items/sketch/inventory_item_sketch.gd")
 const PIISoundBloop := preload("res://game/inventory_items/sound_bloop/inventory_item_sound_bloop.gd")
+const PIISoundNeigh := preload("res://game/inventory_items/sound_neigh/inventory_item_sound_neigh.gd")
+const PIISoundBonk := preload("res://game/inventory_items/sound_bonk/inventory_item_sound_bonk.gd")
+const PIISoundZweee := preload("res://game/inventory_items/sound_zweee/inventory_item_sound_zweee.gd")
+const PIISoundHonk := preload("res://game/inventory_items/sound_honk/inventory_item_sound_honk.gd")
+const PIISoundDing := preload("res://game/inventory_items/sound_ding/inventory_item_sound_ding.gd")
 # ---- classes
 
 # nodes ----
@@ -19,6 +24,11 @@ var License: PIILicense : get = get_License
 var Magazine: PIIMagazine : get = get_Magazine
 var Sketch: PIISketch : get = get_Sketch
 var SoundBloop: PIISoundBloop : get = get_SoundBloop
+var SoundNeigh: PIISoundNeigh : get = get_SoundNeigh
+var SoundBonk: PIISoundBonk : get = get_SoundBonk
+var SoundZweee: PIISoundZweee : get = get_SoundZweee
+var SoundHonk: PIISoundHonk : get = get_SoundHonk
+var SoundDing: PIISoundDing : get = get_SoundDing
 # ---- nodes
 
 # functions ----
@@ -29,5 +39,10 @@ func get_License() -> PIILicense: return get_item_instance("License")
 func get_Magazine() -> PIIMagazine: return get_item_instance("Magazine")
 func get_Sketch() -> PIISketch: return get_item_instance("Sketch")
 func get_SoundBloop() -> PIISoundBloop: return get_item_instance("SoundBloop")
+func get_SoundNeigh() -> PIISoundNeigh: return get_item_instance("SoundNeigh")
+func get_SoundBonk() -> PIISoundBonk: return get_item_instance("SoundBonk")
+func get_SoundZweee() -> PIISoundZweee: return get_item_instance("SoundZweee")
+func get_SoundHonk() -> PIISoundHonk: return get_item_instance("SoundHonk")
+func get_SoundDing() -> PIISoundDing: return get_item_instance("SoundDing")
 # ---- functions
 

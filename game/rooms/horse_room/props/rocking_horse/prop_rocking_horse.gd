@@ -9,13 +9,18 @@ extends PopochiuProp
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    # Replace the call to E.command_fallback() to implement your code.
-    PopochiuUtils.e.command_fallback()
-    # For example, you can make the player character walk to this prop, gaze at it, and then say
-    # something:
-#    await C.player.walk_to_clicked()
-#    await C.player.face_clicked()
-#    await InteractUtil.approach_and_say("Not picking that up!")
+    if I.SoundHonk.can_collect():
+        await InteractUtil.approach_and_say("The rocking horse is frozen mid-gallop, a look of panic streaked across its visage as though aware, despite all its efforts, all its massive strength and speed, it is going nowhere, and cannot escape its fate as a trifling distraction for drooling idiots.")
+        InteractUtil.drop_sound_item(I.SoundHonk, self)
+        await C.player.say("HONK if you hate mondays, amIright?")
+
+    else:
+        var generic_lines := [
+            "Honk.",
+            "Honk honk.",
+            "I'm still reeling from the last time.",
+        ]
+        await InteractUtil.approach_and_say(Random.choose_value(generic_lines))
 
 
 # Teleport: Node is double left clicked.

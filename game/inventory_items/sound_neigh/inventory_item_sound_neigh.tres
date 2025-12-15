@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://hd22qaxnayl5"]
+
+[ext_resource type="Script" path="res://game/inventory_items/sound_neigh/inventory_item_sound_neigh_state.gd" id="1_4gy33"]
+
+[resource]
+resource_name = "SoundNeigh"
+script = ExtResource("1_4gy33")
+script_name = "SoundNeigh"
+scene = "res://game/inventory_items/sound_neigh/inventory_item_sound_neigh.tscn"

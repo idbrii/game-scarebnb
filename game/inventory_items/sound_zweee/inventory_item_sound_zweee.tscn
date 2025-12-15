@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnnqd154dfc5o"]
+
+[ext_resource type="Script" path="res://game/inventory_items/sound_zweee/inventory_item_sound_zweee.gd" id="1_7b5s3"]
+
+[node name="ItemSoundZweee" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+stretch_mode = 5
+script = ExtResource("1_7b5s3")
+script_name = "SoundZweee"
+description = "Zweee"

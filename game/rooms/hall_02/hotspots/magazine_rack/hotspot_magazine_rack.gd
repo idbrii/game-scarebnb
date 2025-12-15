@@ -11,8 +11,7 @@ extends PopochiuHotspot
 func _on_click() -> void:
     if I.Magazine.can_collect():
         await InteractUtil.approach_and_say("A panoply of pamphlets and periodicals. You find it fun to just flap at the pages with your limp hand. Flap flap flap–what’s this? Something just fell out of the rack!")
-        # TODO: drop magazine
-        I.Magazine.add()
+        InteractUtil.drop_item_into_world(I.Magazine, self)
 
     else:
         await InteractUtil.approach_and_say("Some of the pamphlets proffer local haunts that the guests can visit. Unhaunted house tours are popular.")

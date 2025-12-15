@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://hq8r80cwk4qs"]
+
+[ext_resource type="Script" uid="uid://ckkr5kq8injrs" path="res://game/inventory_items/sound_honk/inventory_item_sound_honk.gd" id="1_p6vp7"]
+[ext_resource type="Texture2D" uid="uid://ovx6po27kvxj" path="res://art/inventory/item_sound_honk.png" id="1_thxv1"]
+
+[node name="ItemSoundHonk" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_thxv1")
+stretch_mode = 5
+script = ExtResource("1_p6vp7")
+script_name = "SoundHonk"
+description = "Honk"

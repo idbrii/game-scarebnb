@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2vj2joe2c1sd"]
+
+[ext_resource type="Script" path="res://game/rooms/horse_room/hotspots/wall_horse_shoe/hotspot_wall_horse_shoe.gd" id="1_ouros"]
+
+[node name="WallHorseShoe" type="Area2D"]
+script = ExtResource("1_ouros")
+script_name = "WallHorseShoe"
+description = "Wall Horse Shoe"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

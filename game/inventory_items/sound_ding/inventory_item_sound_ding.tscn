@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwuwk5qql33ov"]
+
+[ext_resource type="Texture2D" uid="uid://enou3ibmwycm" path="res://art/inventory/item_sound_dink.png" id="1_1cucd"]
+[ext_resource type="Script" uid="uid://cus1nw0k2ekfw" path="res://game/inventory_items/sound_ding/inventory_item_sound_ding.gd" id="1_xfobf"]
+
+[node name="ItemSoundDing" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_1cucd")
+stretch_mode = 5
+script = ExtResource("1_xfobf")
+script_name = "SoundDing"
+description = "Dink"

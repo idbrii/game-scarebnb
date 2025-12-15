@@ -9,16 +9,15 @@ extends PopochiuHotspot
 
 # Interact: When the node is left clicked.
 func _on_click() -> void:
-    if I.Sheet.can_collect():
-        await InteractUtil.approach_and_say("I shove the door open an inch, pushing against a mountain of junk inside.")
-        InteractUtil.drop_sound_item(I.FonkSound, self)
-        await C.player.say("FONK. I got momentarily tangled in an old sheet just as I manage to slam the door shut again.")
-        I.Sheet.add()
+    if I.SoundNeigh.can_collect():
+        await InteractUtil.approach_and_say("Two horses, painted in a neo-realist style. They seem to recognize the horse in the painting on the other wall, and are unsure whether or not to bother him for a photo.")
+        InteractUtil.drop_sound_item(I.SoundNeigh, self)
+        await C.player.say("NEIGH, they think. Too embarrassing.")
 
     else:
         var generic_lines := [
-            "The door jostles against a mountain of junk, unable to open more than an inch. The junk trembles menacingly, and you shut the door before it has a chance to burst out.",
-            "You go to open the Broom Closet, but a deep, haunting voice floats from beyond the door: “Occupied.”",
+            "Their flared nostrils make you look away and blush.",
+            "Stallion is not a word to be thrown around lightly.",
         ]
         await InteractUtil.approach_and_say(Random.choose_value(generic_lines))
 
@@ -34,8 +33,7 @@ func _on_double_click() -> void:
 
 # Look: When the node is right clicked.
 func _on_right_click() -> void:
-    await InteractUtil.face_and_say("Where we keep the cleaning supplies...")
-    await InteractUtil.face_and_say("And maybe the cleaners too?")
+    _on_click()
 
 
 # Unused.

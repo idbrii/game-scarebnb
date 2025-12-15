@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://djmva2o53dl4l"]
+[gd_scene load_steps=16 format=3 uid="uid://djmva2o53dl4l"]
 
 [ext_resource type="Script" uid="uid://2j3b2xb2gxek" path="res://game/rooms/horse_room/room_horse_room.gd" id="1_usna1"]
 [ext_resource type="PackedScene" uid="uid://cg6uvl3ml8bpv" path="res://game/rooms/horse_room/props/background/prop_background.tscn" id="2_a273q"]
@@ -10,7 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://cdbxrxv3ogx3" path="res://art/room/horse_prop_bed.png" id="6_qv5e0"]
 [ext_resource type="PackedScene" uid="uid://gsah8wmkdeg2" path="res://game/rooms/horse_room/props/rocking_horse/prop_rocking_horse.tscn" id="7_qv5e0"]
 [ext_resource type="Texture2D" uid="uid://dkbe54kg87swo" path="res://art/room/horse_prop_toy.png" id="8_gekwn"]
+[ext_resource type="PackedScene" uid="uid://d2rd7usn5r4bm" path="res://game/rooms/horse_room/hotspots/trunk/hotspot_trunk.tscn" id="10_ppa7b"]
+[ext_resource type="PackedScene" uid="uid://r5x58tve33u6" path="res://game/rooms/horse_room/hotspots/bed/hotspot_bed.tscn" id="11_3xhyl"]
 [ext_resource type="PackedScene" uid="uid://d4nvp2yrwm6jl" path="res://game/characters/granny_ghost/character_granny_ghost.tscn" id="11_otv3t"]
+[ext_resource type="PackedScene" uid="uid://oyhwwhy4d6u8" path="res://game/rooms/horse_room/hotspots/double_horse_painting/hotspot_double_horse_painting.tscn" id="12_r2ofj"]
+[ext_resource type="PackedScene" uid="uid://d2vj2joe2c1sd" path="res://game/rooms/horse_room/hotspots/wall_horse_shoe/hotspot_wall_horse_shoe.tscn" id="13_mw36a"]
 
 [node name="RoomHorseRoom" type="Node2D"]
 script = ExtResource("1_usna1")
@@ -22,7 +26,6 @@ popochiu_placeholder = null
 [node name="WalkableAreas" type="Node2D" parent="."]
 
 [node name="Floor" parent="WalkableAreas" instance=ExtResource("2_xxjwv")]
-interaction_polygon = [PackedVector2Array(273, 122, 960, 313, 957, 538, 87, 541, 309, 475, 286, 287, 58, 131)]
 
 [node name="Props" type="Node2D" parent="."]
 
@@ -31,6 +34,7 @@ position = Vector2(960, 540)
 texture = ExtResource("4_tvnmi")
 look_at_point = Vector2(62.999878, 20.999939)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+metadata/_edit_lock_ = true
 
 [node name="Bed" parent="Props" instance=ExtResource("4_pimc8")]
 position = Vector2(960, 540)
@@ -41,6 +45,7 @@ baseline = 348
 walk_to_point = Vector2(127.49988, 132)
 look_at_point = Vector2(-264.00006, 58.49994)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+metadata/_edit_lock_ = true
 
 [node name="RockingHorse" parent="Props" instance=ExtResource("7_qv5e0")]
 position = Vector2(960, 540)
@@ -49,6 +54,7 @@ baseline = 277
 walk_to_point = Vector2(395.99976, 245.99988)
 look_at_point = Vector2(652.4999, 43.49994)
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+metadata/_edit_lock_ = true
 
 [node name="Hotspots" type="Node2D" parent="."]
 
@@ -59,6 +65,34 @@ walk_to_point = Vector2(874.4999, 478.5)
 look_at_point = Vector2(926.99976, 338.99988)
 cursor = 6
 interaction_polygon = PackedVector2Array(729, 316, 958, 179, 960, 538, 648, 542)
+
+[node name="Trunk" parent="Hotspots" instance=ExtResource("10_ppa7b")]
+position = Vector2(1035, 928)
+baseline = 82
+walk_to_point = Vector2(236.99988, 53.999878)
+look_at_point = Vector2(37.499878, -58.50006)
+interaction_polygon = PackedVector2Array(-297, -38, 82, -147, 218, -88, 195, 73, -195, 189, -304, 125)
+
+[node name="Bed" parent="Hotspots" instance=ExtResource("11_3xhyl")]
+position = Vector2(811, 731)
+baseline = 126
+walk_to_point = Vector2(-464.9627, 246.67877)
+look_at_point = Vector2(-133.09998, -144.63531)
+interaction_polygon = PackedVector2Array(-465, -220, 115, -236, 198, -102, 376, -130, 382, 41, -79, 137, -264, 308, -440, 94)
+
+[node name="DoubleHorsePainting" parent="Hotspots" instance=ExtResource("12_r2ofj")]
+position = Vector2(661, 449)
+baseline = 12
+walk_to_point = Vector2(466.73718, 251.11542)
+look_at_point = Vector2(-26.619995, -122.451935)
+interaction_polygon = PackedVector2Array(-307, -321, 255, -216, 236, 6, -300, -29)
+
+[node name="WallHorseShoe" parent="Hotspots" instance=ExtResource("13_mw36a")]
+position = Vector2(174, 444)
+baseline = -5
+walk_to_point = Vector2(166.47751, 537.2463)
+look_at_point = Vector2(-4.7097473, -49.14453)
+interaction_polygon = PackedVector2Array(-103, -275, 99, -244, 79, -24, -4, 12, -108, -43)
 
 [node name="Regions" type="Node2D" parent="."]
 

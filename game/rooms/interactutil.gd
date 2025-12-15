@@ -44,3 +44,12 @@ static func ghost_ascend_to_afterlife(ghost: PopochiuCharacter):
     await ghost.say_afterlife()
     await Animators.fade_out(ghost.get_node("Sprite2D"), 1.0)
     ghost.visible = false
+
+
+static func drop_sound_item(item: PopochiuInventoryItem, source):
+    drop_item_into_world(item, source)
+
+
+static func drop_item_into_world(item: PopochiuInventoryItem, _source):
+    # HACK: For now just add to inventory.
+    item.add()

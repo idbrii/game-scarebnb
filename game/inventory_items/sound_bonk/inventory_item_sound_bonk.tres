@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dmo6e7jy0oedx"]
+
+[ext_resource type="Script" path="res://game/inventory_items/sound_bonk/inventory_item_sound_bonk_state.gd" id="1_b8r3a"]
+
+[resource]
+resource_name = "SoundBonk"
+script = ExtResource("1_b8r3a")
+script_name = "SoundBonk"
+scene = "res://game/inventory_items/sound_bonk/inventory_item_sound_bonk.tscn"
