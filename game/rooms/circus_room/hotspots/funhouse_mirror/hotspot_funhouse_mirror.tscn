@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8eonpv2rr4d8"]
+
+[ext_resource type="Script" path="res://game/rooms/circus_room/hotspots/funhouse_mirror/hotspot_funhouse_mirror.gd" id="1_xova0"]
+
+[node name="FunhouseMirror" type="Area2D"]
+script = ExtResource("1_xova0")
+script_name = "FunhouseMirror"
+description = "Funhouse Mirror"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

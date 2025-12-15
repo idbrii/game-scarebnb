@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dw3sgpjilr1i0"]
+[gd_scene load_steps=15 format=3 uid="uid://dw3sgpjilr1i0"]
 
 [ext_resource type="Script" uid="uid://chv4dfsklqcpb" path="res://game/rooms/hall_02/room_hall_02.gd" id="1_lgcfy"]
 [ext_resource type="PackedScene" uid="uid://dyyfokmuh8nr1" path="res://game/rooms/hall_02/props/background/prop_background.tscn" id="2_2qv3b"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://b1igybrbvhyxk" path="res://game/rooms/hall_02/hotspots/exit_left/hotspot_exit_left.tscn" id="8_rmu7h"]
 [ext_resource type="PackedScene" uid="uid://6rkiqo6qgkiy" path="res://game/rooms/hall_02/hotspots/exit_stairs/hotspot_exit_stairs.tscn" id="9_ox6wj"]
 [ext_resource type="PackedScene" uid="uid://c4rndt6jw041k" path="res://game/rooms/hall_02/hotspots/magazine_rack/hotspot_magazine_rack.tscn" id="10_ox6wj"]
+[ext_resource type="PackedScene" uid="uid://yimsfkkr40ht" path="res://game/rooms/hall_02/hotspots/chess_horse/hotspot_chess_horse.tscn" id="11_6ftg0"]
+[ext_resource type="PackedScene" uid="uid://dtd6vmp03qyxh" path="res://game/rooms/hall_02/hotspots/phone/hotspot_phone.tscn" id="12_31bdv"]
 
 [node name="RoomHall02" type="Node2D"]
 script = ExtResource("1_lgcfy")
@@ -74,6 +76,20 @@ baseline = -31
 walk_to_point = Vector2(-69.00012, -25.500122)
 look_at_point = Vector2(44.999878, -207.00018)
 interaction_polygon = PackedVector2Array(0, -341, 175, -299, 187, 60, -104, -48)
+
+[node name="ChessHorse" parent="Hotspots" instance=ExtResource("11_6ftg0")]
+position = Vector2(1071, 757)
+baseline = 47
+walk_to_point = Vector2(-111.32001, 18.834595)
+look_at_point = Vector2(-7.2490234, -136.90778)
+interaction_polygon = PackedVector2Array(-51, -201, 41, -162, 60, -50, 40, -29, 33, 63, -49, 51)
+
+[node name="HallPhone" parent="Hotspots" instance=ExtResource("12_31bdv")]
+position = Vector2(1651, 592)
+baseline = 154
+walk_to_point = Vector2(-274.00134, 460.60608)
+look_at_point = Vector2(22.439941, -2.3619995)
+interaction_polygon = PackedVector2Array(-70, -187, 167, -286, 135, 224, -58, 153)
 
 [node name="Regions" type="Node2D" parent="."]
 

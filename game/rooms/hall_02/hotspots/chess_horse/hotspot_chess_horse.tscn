@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://yimsfkkr40ht"]
+
+[ext_resource type="Script" path="res://game/rooms/hall_02/hotspots/chess_horse/hotspot_chess_horse.gd" id="1_oy2nj"]
+
+[node name="ChessHorse" type="Area2D"]
+script = ExtResource("1_oy2nj")
+script_name = "ChessHorse"
+description = "Chess Horse"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://7whniva3dptp"]
+[gd_scene load_steps=12 format=3 uid="uid://7whniva3dptp"]
 
 [ext_resource type="Script" uid="uid://do2lqqgyop5mo" path="res://game/rooms/circus_room/room_circus_room.gd" id="1_gba1i"]
 [ext_resource type="PackedScene" uid="uid://cgwvm31b3tulk" path="res://game/rooms/circus_room/props/background/prop_background.tscn" id="2_itgtw"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bosdb7rkslkgd" path="res://game/characters/basil/character_basil.tscn" id="4_jrdtu"]
 [ext_resource type="Texture2D" uid="uid://t41w2ibbawtw" path="res://art/room/clown.png" id="4_pfwxb"]
 [ext_resource type="Texture2D" uid="uid://b5jcjflgc5ijx" path="res://art/room/clown_prop_bed.png" id="6_bmd06"]
+[ext_resource type="PackedScene" uid="uid://c8eonpv2rr4d8" path="res://game/rooms/circus_room/hotspots/funhouse_mirror/hotspot_funhouse_mirror.tscn" id="8_awq53"]
 [ext_resource type="PackedScene" uid="uid://cchoj1w6n8jxe" path="res://game/characters/dapper_ghost/character_dapper_ghost.tscn" id="9_bmd06"]
+[ext_resource type="PackedScene" uid="uid://cvr6c14783qbi" path="res://game/rooms/circus_room/hotspots/flower_pot/hotspot_flower_pot.tscn" id="9_iov7t"]
 
 [node name="RoomCircusRoom" type="Node2D"]
 script = ExtResource("1_gba1i")
@@ -47,6 +49,19 @@ walk_to_point = Vector2(-23.630615, -24.219849)
 look_at_point = Vector2(61.43579, -127.355835)
 cursor = 6
 interaction_polygon = PackedVector2Array(-185, -191, 70, -344, 73, 68, -330, 61)
+
+[node name="FunhouseMirror" parent="Hotspots" instance=ExtResource("8_awq53")]
+position = Vector2(1790, 614)
+baseline = 247
+walk_to_point = Vector2(-234.00024, 266.99994)
+look_at_point = Vector2(5.999756, -49.5)
+interaction_polygon = PackedVector2Array(-31, -393, 97, -385, 65, 299, -127, 252)
+
+[node name="FlowerPot" parent="Hotspots" instance=ExtResource("9_iov7t")]
+position = Vector2(158, 848)
+walk_to_point = Vector2(242.99982, 111)
+look_at_point = Vector2(-18.000137, -148.50006)
+interaction_polygon = PackedVector2Array(-150, -409, 114, -363, 124, -120, 61, -108, 59, 111, -62, 99, -100.37851, -122.548645, -143, -118)
 
 [node name="Regions" type="Node2D" parent="."]
 
