@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://djc46hkexupor"]
+
+[ext_resource type="Script" uid="uid://cu3x0vj0u1qea" path="res://game/inventory_items/sound_ring/inventory_item_sound_ring.gd" id="1_b05nb"]
+[ext_resource type="Texture2D" uid="uid://dnjbjnhaltq2t" path="res://art/inventory/item_sound_ring.png" id="1_sgntd"]
+
+[node name="ItemSoundRing" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_sgntd")
+stretch_mode = 5
+script = ExtResource("1_b05nb")
+script_name = "SoundRing"
+description = "Ring"

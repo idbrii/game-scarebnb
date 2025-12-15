@@ -14,6 +14,7 @@ const PIISoundBonk := preload("res://game/inventory_items/sound_bonk/inventory_i
 const PIISoundZweee := preload("res://game/inventory_items/sound_zweee/inventory_item_sound_zweee.gd")
 const PIISoundHonk := preload("res://game/inventory_items/sound_honk/inventory_item_sound_honk.gd")
 const PIISoundDing := preload("res://game/inventory_items/sound_ding/inventory_item_sound_ding.gd")
+const PIISoundRing := preload("res://game/inventory_items/sound_ring/inventory_item_sound_ring.gd")
 # ---- classes
 
 # nodes ----
@@ -29,6 +30,7 @@ var SoundBonk: PIISoundBonk : get = get_SoundBonk
 var SoundZweee: PIISoundZweee : get = get_SoundZweee
 var SoundHonk: PIISoundHonk : get = get_SoundHonk
 var SoundDing: PIISoundDing : get = get_SoundDing
+var SoundRing: PIISoundRing : get = get_SoundRing
 # ---- nodes
 
 # functions ----
@@ -44,5 +46,6 @@ func get_SoundBonk() -> PIISoundBonk: return get_item_instance("SoundBonk")
 func get_SoundZweee() -> PIISoundZweee: return get_item_instance("SoundZweee")
 func get_SoundHonk() -> PIISoundHonk: return get_item_instance("SoundHonk")
 func get_SoundDing() -> PIISoundDing: return get_item_instance("SoundDing")
+func get_SoundRing() -> PIISoundRing: return get_item_instance("SoundRing")
 # ---- functions
 

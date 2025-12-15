@@ -1,12 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnnqd154dfc5o"]
+[gd_scene load_steps=3 format=3 uid="uid://cnnqd154dfc5o"]
 
-[ext_resource type="Script" path="res://game/inventory_items/sound_zweee/inventory_item_sound_zweee.gd" id="1_7b5s3"]
+[ext_resource type="Script" uid="uid://c5gom5vb111la" path="res://game/inventory_items/sound_zweee/inventory_item_sound_zweee.gd" id="1_7b5s3"]
+[ext_resource type="Texture2D" uid="uid://budpty5losdb7" path="res://art/inventory/item_sound_zweee.png" id="1_8a84y"]
 
 [node name="ItemSoundZweee" type="TextureRect"]
 texture_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 4
 mouse_filter = 0
+texture = ExtResource("1_8a84y")
 stretch_mode = 5
 script = ExtResource("1_7b5s3")
 script_name = "SoundZweee"

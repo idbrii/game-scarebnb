@@ -1,12 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://byg0un74b3k77"]
+[gd_scene load_steps=3 format=3 uid="uid://byg0un74b3k77"]
 
-[ext_resource type="Script" path="res://game/inventory_items/sound_bonk/inventory_item_sound_bonk.gd" id="1_2mnwi"]
+[ext_resource type="Script" uid="uid://b1li8tylrx6n2" path="res://game/inventory_items/sound_bonk/inventory_item_sound_bonk.gd" id="1_2mnwi"]
+[ext_resource type="Texture2D" uid="uid://dwl1ftikn7xdx" path="res://art/inventory/item_sound_bonk.png" id="1_j36fx"]
 
 [node name="ItemSoundBonk" type="TextureRect"]
 texture_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 4
 mouse_filter = 0
+texture = ExtResource("1_j36fx")
 stretch_mode = 5
 script = ExtResource("1_2mnwi")
 script_name = "SoundBonk"
